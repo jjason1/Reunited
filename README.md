@@ -18,7 +18,7 @@
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
  > * This project is interesting to our team because it provides us with a more flexible creative space. Projects such as chess or library systems have very specific and strict rules, which would limit our creative implementations. It would leave us with little to no freedom to introduce new features into our game, so we found the idea of a text-based RPG intriguing as it is the exact opposite. RPGs can turn into any project you desire because there is an endless number of possiblities you can bring to the table. We are able to customize our story in any way we want, which is why we decided to do a text-based RPG.
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ > * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
