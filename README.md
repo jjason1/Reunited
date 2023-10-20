@@ -21,10 +21,20 @@
  > * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
  > * What will be the input/output of your project?
  > * Features Provided by Our Project:
- >   * Primary Features:
+ >   * Primary Features: 
  >     * Turn-based
+>      * Story line will be seperated in chapters with savepoints at the start of each chapter
+>      * Enemy AI/Boss AI
+>      * Enemy-scaling (Enemies of different levels have different statuses.)
+>      * Character experience system
+>      * Combat system (How damage is calculated)
+>      * Different character classes(3)
  >   * Potential Features:
- >     * Enemy-scaling (Enemies of different levels have different statuses.)
+>      * Buy skills/Enchanced weapons
+>      * Follower characters
+>      * Alternative story line
+>      * Enemies drop item after defeat
+>      * Sound effect (Background music)
  > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
