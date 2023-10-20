@@ -20,12 +20,12 @@
  > * This project is interesting to our team because it provides us with a more flexible creative space. Projects such as chess or library systems have very specific and strict rules, which would limit our creative implementations. It would leave us with little to no freedom to introduce new features into our game, so we found the idea of a text-based RPG intriguing as it is the exact opposite. RPGs can turn into any project you desire because there is an endless number of possiblities you can bring to the table. We are able to customize our story in any way we want, which is why we decided to do a text-based RPG.
  > * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
  > * What will be the input/output of your project?
- > * What are the features that the project provides?
- >  * Primary Features:
- >    * Turn-based
- >  * Potential Features:
- >    * Enemy-scaling (Enemies of different levels have different statuses)
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+ > * Features Provided by Our Project:
+ >   * Primary Features:
+ >     * Turn-based
+ >   * Potential Features:
+ >     * Enemy-scaling (Enemies of different levels have different statuses.)
+ > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
  > ## Phase II
