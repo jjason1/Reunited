@@ -22,33 +22,33 @@
  > * What will be the input/output of your project?
  > * Input:
  >    * In menu:
- >          * Start game
- >          * Continue game for saved data
- >          * Developers name
+ >      * Start game
+ >      * Continue game for saved data
+ >      * Developers name
  >    * In game(but not in battle):
- >          * Move to another area
- >          * Chat with other
- >          * Change equipment
- >          * Show status(hp, money)
- >          * Start battle
- >          * escape
+ >      * Move to another area
+ >      * Chat with other
+ >      * Change equipment
+ >      * Show status(hp, money)
+ >      * Start battle
+ >      * escape
  >    * In battle:
- >          * Using skills
- >          * Target enemy
- >          * Escape
+ >      * Using skills
+ >      * Target enemy
+ >      * Escape
  >    * Between chapters:
- >          * Save data
+ >      * Save data
  > * Output:
  >    * In menu:
- >          * Show start, continue and show developers name options
+ >      * Show start, continue and show developers name options
  >    * In game:
- >          * Cout the area description when user move to a area
- >          * Show dialog options and NPC’s conversation when using chat
+ >      * Cout the area description when user move to a area
+ >      * Show dialog options and NPC’s conversation when using chat
  >    * In battle:
- >          * Show status(hp, atk, buff, debuff)
- >          * Show enemy lists and their status
- >          * Show abilities
- >          * Show ally’s status
+ >      * Show status(hp, atk, buff, debuff)
+ >      * Show enemy lists and their status
+ >      * Show abilities
+ >      * Show ally’s status
  > * Features Provided by Our Project:
  >   * Primary Features: 
  >     * Turn-based
