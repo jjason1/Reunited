@@ -59,18 +59,18 @@
  > * Features Provided by Our Project:
  >   * Primary Features: 
  >     * Turn-based
->      * Story line will be seperated in chapters with savepoints at the start of each chapter
->      * Enemy AI/Boss AI
->      * Enemy-scaling (Enemies of different levels have different statuses.)
->      * Character experience system
->      * Combat system (How damage is calculated)
->      * Different character classes(3)
+ >     * Story line will be separated into chapters with savepoints at the start of each chapter
+ >     * Enemy AI/Boss AI
+ >     * Enemy-scaling (Enemies of different levels have different statuses.)
+ >     * Character experience system
+ >     * Combat system (How damage is calculated.)
+ >     * Different character classes (Around 3 types.)
  >   * Potential Features:
->      * Buy skills/Enchanced weapons
->      * Follower characters
->      * Alternative story line
->      * Enemies drop item after defeat
->      * Sound effect (Background music)
+ >     * Skills and/or enchanted weapons
+ >     * NPC Followers
+ >     * Alternative story line
+ >     * Enemy item drops
+ >     * Sound effects (Background music)
  > * This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
