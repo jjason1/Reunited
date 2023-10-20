@@ -21,6 +21,9 @@
  > * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
+>  * Primary Features:
+>  > * Turn-based
+>  * Potential Features:
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added.
