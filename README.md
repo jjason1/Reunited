@@ -1,11 +1,6 @@
- > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
- > Prompt text is any lines beginning with "\>"
- > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # Reunited
 
- > Authors: [Jason Lin](https://github.com/jjason1), [Cheng-Shun Chuang](https://github.com/ulrixon), [Aamir Khan](https://github.com/Akhan521), [Boyi Li](https://github.com)
-
- > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
+ Authors: [Jason Lin](https://github.com/jjason1), [Cheng-Shun Chuang](https://github.com/ulrixon), [Aamir Khan](https://github.com/Akhan521), [Boyi Li](https://github.com/Bli181)
 
  > ## Expectations
  > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
@@ -15,51 +10,51 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
- > * This project is interesting to our team because it provides us with a more flexible creative space. Projects such as chess or library systems have very specific and strict rules, which would limit our creative implementations. It would leave us with little to no freedom to introduce new features into our game, so we found the idea of a text-based RPG intriguing as it is the exact opposite. RPGs can turn into any project you desire because there is an endless number of possiblities you can bring to the table. We are able to customize our story in any way we want, which is why we decided to do a text-based RPG.
- > * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
- > * Input Will Include:
- >    * In Menu:
- >      * Start game
- >      * Continue game from save file
- >      * Developer names
- >    * In Game (But not in battle):
- >      * Move to another area
- >      * Chat with others (NPCs)
- >      * Show status (Hp, def, etc.)
- >      * Start battle
- >      * Escape/run
- >    * In Battle:
- >      * Target enemy
- >      * Escape/run
- >    * Between Chapters:
- >      * Save data
- > * Output Will Include:
- >    * In Menu:
- >      * Display prompts/text for our menu options
- >    * In Game:
- >      * Display area descriptions
- >      * Show dialog options and NPC conversations
- >    * In Battle:
- >      * Show status (Hp, atk, buffs, debuffs, etc.)
- >      * Show enemy lists and their statuses
- >      * Show abilities
- >      * Show NPC statuses
- > * Features Provided by Our Project:
- >   * Primary Features: 
- >     * Turn-based
- >     * Story line will be separated into chapters with savepoints at the start of each chapter
- >     * Enemy AI/Boss AI
- >     * Enemy-scaling (Enemies of different levels have different statuses.)
- >     * Character experience system
- >     * Combat system (How damage is calculated.)
- >     * Different character classes (Around 3 types.)
- >   * Potential Features:
- >     * Skills and/or enchanted weapons
- >     * NPC Followers
- >     * Alternative story line
- >     * Enemy item drops
- >     * Sound effects (Background music)
- > 
+* This project is interesting to our team because it provides us with a more flexible creative space. Projects such as chess or library systems have very specific and strict rules, which would limit our creative implementations. It would leave us with little to no freedom to introduce new features into our game, so we found the idea of a text-based RPG intriguing as it is the exact opposite. RPGs can turn into any project you desire because there is an endless number of possiblities you can bring to the table. We are able to customize our story in any way we want, which is why we decided to do a text-based RPG.
+* Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
+* Input Will Include:
+  * In Menu:
+    * Start game
+    * Continue game from save file
+    * Developer names
+  * In Game (But not in battle):
+    * Move to another area
+    * Chat with others (NPCs)
+    * Show status (Hp, def, etc.)
+  * Start battle
+    * Escape/run
+    * In Battle:
+    * Target enemy
+    * Escape/run
+  * Between Chapters:
+    * Save data
+* Output Will Include:
+  * In Menu:
+    * Display prompts/text for our menu options
+  * In Game:
+    * Display area descriptions
+    * Show dialog options and NPC conversations
+  * In Battle:
+    * Show status (Hp, atk, buffs, debuffs, etc.)
+    * Show enemy lists and their statuses
+    * Show abilities
+    * Show NPC statuses
+* Features Provided by Our Project:
+  * Primary Features: 
+    * Turn-based
+    * Story line will be separated into chapters with savepoints at the start of each chapter
+    * Enemy AI/Boss AI
+    * Enemy-scaling (Enemies of different levels have different statuses.)
+    * Character experience system
+    * Combat system (How damage is calculated.)
+    * Different character classes (Around 3 types.)
+  * Potential Features:
+    * Skills and/or enchanted weapons
+    * NPC Followers
+    * Alternative story line
+    * Enemy item drops
+    * Sound effects (Background music)
+  
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
