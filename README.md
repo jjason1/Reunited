@@ -67,12 +67,10 @@
  >     * The tasks you are planning for the first sprint
  >     * How work will be divided between the team members
 ## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
 ### Navigation Diagram
 ![Navigation Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20User%20Interface%20Specification%20-%20Nav.%20Diagram.png)
 Our users will first enter a menu phase and will be given three options to select from. If users choose to start a new game, they will start the game from the first chapter. If they choose to load a save file, they will continue from the chapter they had previously left off on. If they choose to display the developers, the developer names, contributions, and other relevant information will be displayed.
-
 
 ### Screen Layouts
 ![Screen Layouts](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20User%20Interface%20Specification%20-%20Screen%20Layouts.png)
@@ -80,7 +78,7 @@ This graphic illustrates the screen layouts of each of the screens that users wi
 
 ## Class Diagram
 ![Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
-We've presented two core classes, namely the "Character" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. 
+We've presented two core classes, namely the "Character" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. For example, we've added the LoadFile and SaveFile classes to manage save files within our game. We've also added the Combat class to handle the combat present throughout our game. As the graphic above illustrates, we've included the CharacterTeam and EnemyTeam classes to implement team-based gameplay. These are a few examples of the classes we've designed for our game. Refer to the graphic above for more information regarding each class.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
