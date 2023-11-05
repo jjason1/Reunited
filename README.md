@@ -80,7 +80,7 @@ This graph illustrates the layout appearance of each screen that the player will
 
 ## Class Diagram
 ![Our Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+ > We've presented two core classes, namely the "enemy" and "character" classes, from which various derived classes have been created, each incorporating distinct functions and variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
