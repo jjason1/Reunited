@@ -71,16 +71,16 @@
 
 ### Navigation Diagram
 ![Navigation Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20User%20Interface%20Specification%20-%20Nav.%20Diagram.png)
-> Our users will first enter a menu phase select one out of three options like Start new game, Load save file, and show developers name. If just start the game, then they will start the game in first chapter. If they choose load file, they will start from the Chapter they have save and continue the game. If they click developers, it will show our name and jobs or contributions.
+Our users will first enter a menu phase and will be given three options to select from. If users choose to start a new game, they will start the game from the first chapter. If they choose to load a save file, they will continue from the chapter they had previously left off on. If they choose to display the developers, the developer names, contributions, and other relevant information will be displayed.
 
 
 ### Screen Layouts
-![Our screen layout](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20User%20Interface%20Specification%20-%20Screen%20Layouts.png)
-This graph illustrates the layout appearance of each screen that the player will encounter. We also included some terminal examples.
+![Screen Layouts](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20User%20Interface%20Specification%20-%20Screen%20Layouts.png)
+This graphic illustrates the screen layouts of each of the screens that users will come across. Additionally, we included some terminal examples of what users may see in certain screens.
 
 ## Class Diagram
-![Our Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
- > We've presented two core classes, namely the "enemy" and "character" classes, from which various derived classes have been created, each incorporating distinct functions and variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience.
+![Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
+We've presented two core classes, namely the "Character" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. 
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
