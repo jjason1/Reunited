@@ -76,7 +76,7 @@
 
 ### Screen Layouts
 ![Our screen layout](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20User%20Interface%20Specification%20-%20Screen%20Layouts.png)
-This graph illustrates the layout appearance of each screen that the player will encounter.
+This graph illustrates the layout appearance of each screen that the player will encounter. We also included some terminal examples.
 
 ## Class Diagram
 ![Our Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
