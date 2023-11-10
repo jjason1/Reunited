@@ -1,6 +1,9 @@
 #include "gtest/gtest.h"
 #include "../src/Enemies/Enemy.cpp"
+<<<<<<< HEAD
 #include <sstream>
+=======
+>>>>>>> c60040b (Adding an enemy class and tests)
 
 TEST(EnemyClassSuite, testNewEnemy){
     int level=1;
@@ -45,6 +48,7 @@ TEST(EnemyClassSuite, testInvalidLevel){
     EXPECT_DEATH(new Enemy(name, level), "Your level must not be less than 0!");
 }
 
+<<<<<<< HEAD
 TEST(EnemyClassSuite, testCheckMovable){
     int level=1;
     string name="Aamir";
@@ -113,6 +117,8 @@ TEST(EnemyClassSuite, testTakeDamage){
     EXPECT_EQ(e->getHealth(),90);
 }
 
+=======
+>>>>>>> c60040b (Adding an enemy class and tests)
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);

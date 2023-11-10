@@ -9,11 +9,21 @@ Enemy::Enemy(string name, int level){
     //Our level can't be less than 0.
     assert(level>=0 && "Your level must not be less than 0!");
     //Setting default values.
+<<<<<<< HEAD
     this->setHealth(0);
     this->setDefense(0);
     this->setAttack(0);
     this->setIncrmnts(0,0,0);
     this->setMovable(true);
+=======
+    this->health=0;
+    this->defense=0;
+    this->attack=0;
+    this->atkIncrmnt=0;
+    this->defIncrmnt=0;
+    this->hpIncrmnt=0;
+    this->isMovable=true;
+>>>>>>> c60040b (Adding an enemy class and tests)
 }
 
 void Enemy::getStatus(ostream &out){
@@ -31,6 +41,7 @@ string Enemy::getName(){
     return name;
 }
 
+<<<<<<< HEAD
 void Enemy::setAttack(int atk){
     this->attack=atk;
 }
@@ -69,11 +80,18 @@ bool Enemy::checkMovable(){
     return this->isMovable;
 }
 
+=======
+/*
+>>>>>>> c60040b (Adding an enemy class and tests)
 void Enemy::takeDamage(int dmg){
     //Reduce our health by the specified damage.
     this->health -= dmg;
 }
+<<<<<<< HEAD
 /*
+=======
+
+>>>>>>> c60040b (Adding an enemy class and tests)
 void Enemy::normalAttack(Character *c){
     //The character takes damage from the enemy.
     c->takeDamage(this->attack);
