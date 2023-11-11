@@ -16,11 +16,20 @@ class Enemy {
             level;
         bool isMovable;
         string name;
-        void takeDamage();
     public:
+        Enemy(string, int);
         void getStatus(ostream &);
         string getName();
-        Enemy(string, int);
+        bool checkMovable();
+        void setHealth(int);
+        void setDefense(int);
+        void setAttack(int);
+        int getHealth();
+        int getDefense();
+        int getAttack();
+        void setIncrmnts(int,int,int);
+        void setMovable(bool);
+        void takeDamage(int);
         //void normalAttack(Character *);
 };
 
