@@ -1,65 +1,75 @@
+#include "../lib/Characters/Character.h"
+#include "../lib/checkInput.h"
+#include <cstdio>
+#include <cstring>
 #include <iostream>
-#include <ostream>
 #include <istream>
+#include <ostream>
 #include <string>
-#include "../src/Characters/Character.h"
-using std::cout;
 using std::endl;
 using std::ostream;
-using std::runtime_error;
 using std::string;
 
-void checkInput(std::istream &in)
-{
-  if (in.fail())
-  {
-    throw runtime_error("input failure.");
+void option1_1_1(std::ostream &out, std::istream &in, string input,
+                 Character *mainCharacter) {
+
+  out << "[Select Option]" << endl;
+  out << "1- Stay here Anne, I\'m going to help this poor guy." << endl;
+  getline(in, input);
+  checkInput(in);
+  while (input != "1") {
+    out << "input again" << endl;
+    getline(in, input);
+    checkInput(in);
+  }
+
+  if (std::strcmp(input.c_str(), "1") == 0) {
+    out << "You: Stay here Anne, I\'m going to help this poor guy." << endl;
   }
 }
 
-void option1_1_1(std::ostream &out, std::istream &in, string input, Character *mainCharacter) // for choose to move forward to forest or first talk
+void option1_1_2(std::ostream &out, std::istream &in, string input,
+                 Character *mainCharacter) // for choose to move forward to
+                                           // forest or first talk
 {
   out << "[Select Option]" << endl;
-  out << "1- Look around" << endl;
-  out << "2- Talk to Isabella" << endl;
-  out << "3- Move forward" << endl;
-  in >> input;
-  while (input != "1" && input != "2" && input != "3")
-  {
-    /* code */
+  out << "1- Stop right there, don’t touch that girl!" << endl;
+  out << "2- (Silently approach)" << endl;
+  std::getline(in, input);
+  checkInput(in);
+  while (input != "1" && input != "2") {
+    out << "input again" << endl;
+    getline(in, input);
+    checkInput(in);
   }
-  
-  if(in == "2")
-  {
-    out << "You turn to Isabella, who has been walking silently by your side,\
-     and decide to strike up a conversation."
+
+  if (std::strcmp(input.c_str(), "1") == 0) {
+    out << "Stop right there, don’t touch that girl!"
         << endl;
-    out << "You: How are you holding up, Isabella? It's been a tough journey so far." << endl;
-    out << "Isabella: I'm exhausted, " << mainCharacter->showCharacterName() << ", but we have to keep moving." << endl;
-    out << "You:  I know it's been hard, but we'll find a new home soon, I promise." << endl;
-    out << "You continue through the forest, determined to find a new home.\
-     The dense trees seem to close in around you, making you acutely aware of the solitude of your journey."
-        << endl;
-  }
-  else if (in == "1")
-  {
-    /* code */
-  }
-  
+    
+  } else if (std::strcmp(input.c_str(), "2") == 0) {
+    out << "(Silently approach)" << endl;
+  } 
 }
 
-void chapter1_1_2(std::ostream &out, std::istream &in, Character *mainCharacter)
-{
+void chapter1_1_2(std::ostream &out, std::istream &in,
+                  Character *mainCharacter) {
   string input;
-
+  out << "Chapter1.1" << endl;
   out << "[Forest Clearing]" << endl;
-  out << "Your journey began in a land ravaged by the cruel hands of war, \
-     and now you find yourself standing in the heart of a dense forest. \
-     You,"
-      << mainCharacter->showCharacterName() << ", have embarked on this quest alongside your sister, \
-     Isabella, in search of a new home and a chance for redemption. \
-     Your previous town was pillaged, and your hearts are heavy with \
-     the memories of its destruction."
+  out << "System: Our journey began in a land ravaged by the cruel hands of war,\
+          and now you and your sister Anny are escaping from the war. After several days running,\
+          you find yourself standing in the heart of a dense forest."
       << endl;
+  out << endl;
+  out << "Anny: Where are we going? Is there any town or city nearby?" << endl;
+  option1_1_1(out, in, input, mainCharacter);
+  out << "No one is going to help you hehe! (The bandit lick his blade and no "
+         "one knows what he is going to do next)"
+      << endl;
+  option1_1_2(out, in, input, mainCharacter);
+  out << "Bandit: What the hell you idiots doing? I gotto kill ya all." << endl;
+  out << "System: You encounter with a bandit.";
   
+      
 }
