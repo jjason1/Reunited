@@ -101,6 +101,18 @@ TEST(EnemyClassSuite, testSetAttack){
     EXPECT_EQ(e->getAttack(),10);
 }
 
+TEST(EnemyClassSuite, testTakeDamage){
+    //Arrange.
+    int level=1;
+    string name="Ryan";
+    Enemy *e=new Enemy(name, level);
+    e->setHealth(100);
+    //Act.
+    e->takeDamage(10);
+    //Assert.
+    EXPECT_EQ(e->getHealth(),90);
+}
+
 int main(int argc, char **argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
