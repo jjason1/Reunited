@@ -70,6 +70,5 @@ void chapter1_1_2(std::ostream &out, std::istream &in,
   option1_1_2(out, in, input, mainCharacter);
   out << "Bandit: What the hell you idiots doing? I gotto kill ya all." << endl;
   out << "System: You encounter with a bandit.";
-  
-      
+  // need to implement combat start here
 }
