@@ -4,12 +4,12 @@
 #include <iostream>
 #include <ostream>
 
-TEST(testDeveloper, testDeveloperOutput) {
+TEST(testshowDevelopers, testshowDevelopersOutput) {
 
   std::stringstream testOut;
   std::stringstream confirmOut;
-  showDeveloper(testOut);
-  confirmOut << "Developer's name:\n"
+  showDevelopers(testOut);
+  confirmOut << "Developer names:\n"
                 "Jason Lin,\n"
                 "Cheng-Shun Chuang,\n"
                 "Aamir Khan,\n"

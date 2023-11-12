@@ -1,4 +1,4 @@
 #include <iostream>
 #include <ostream>
 
-void showDeveloper(std::ostream& out);
+void showDevelopers(std::ostream& out);
