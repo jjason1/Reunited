@@ -19,9 +19,8 @@ private:
 
     bool isMovable;
     string name;
-    
 
-    public:
+public:
     Character(string);
     void getStatus(ostream &);
     void setHealth(int);
@@ -36,7 +35,6 @@ private:
     int getAttack();
     string getName();
     bool checkMovable();
-    
 };
 
 #endif
