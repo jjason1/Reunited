@@ -16,7 +16,6 @@ class Enemy {
             level;
         bool isMovable;
         string name;
-<<<<<<< HEAD
     public:
         Enemy(string, int);
         void getStatus(ostream &);
@@ -31,13 +30,6 @@ class Enemy {
         void setIncrmnts(int,int,int);
         void setMovable(bool);
         void takeDamage(int);
-=======
-        void takeDamage();
-    public:
-        void getStatus(ostream &);
-        string getName();
-        Enemy(string, int);
->>>>>>> c60040b (Adding an enemy class and tests)
         //void normalAttack(Character *);
 };
 

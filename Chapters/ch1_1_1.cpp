@@ -1,7 +1,8 @@
-#include "../lib/Characters/Character.h"
-#include "../lib/Characters/Mage.h"
-#include "../lib/Characters/Samurai.h"
-#include "../lib/Characters/Warrior.h"
+#include "../lib/Characters/Character.hpp"
+#include "../lib/Chapters/Chapter1_1.hpp"
+#include "../lib/Characters/Mage.hpp"
+#include "../lib/Characters/Samurai.hpp"
+#include "../lib/Characters/Warrior.hpp"
 #include "../lib/checkInput.h"
 #include "../lib/checkInput.h"
 #include <iostream>
@@ -14,7 +15,7 @@ using std::string;
 
 
 
-void jobDescription(std::ostream &out) {
+void Chapter1_1::jobDescription() {
   out << "w-Warrior" << endl;
   out << "Description: As a Warrior, your primary role is to be the stalwart \
     defender of your party, ensuring the safety of your comrades on the battlefield.\
@@ -39,30 +40,29 @@ void jobDescription(std::ostream &out) {
       << endl;
 }
 
-Character *chooseClass(string &cls, const string name, std::ostream &out,
-                       std::istream &in) {
+void Chapter1_1::chooseClass() {
   out << "What kind of job class you want?" << endl;
-  jobDescription(out);
-  std::getline(in, cls);
+  jobDescription();
+  std::getline(in, input);
   checkInput(in);
-  while (cls != "w" && cls != "m" && cls != "s") {
+  while (input != "w" && input != "m" && input != "s") {
 
-    out << "Please input class again(w for Warrior, m for Mage, s for Samurai)";
-    std::getline(in, cls);
+    out << "Please input class again(w for Warrior, m for Mage, s for Samurai):";
+    std::getline(in, input);
   }
-  if (cls == "w") {
+  if (input == "w") {
     Warrior *w = new Warrior(name);
-    return w;
-  } else if (cls == "m") {
+    setMainCharacter(w);
+  } else if (input == "m") {
     Mage *m = new Mage(name);
-    return m;
+    setMainCharacter(m);
   } else {
     Samurai *s = new Samurai(name);
-    return s;
+    setMainCharacter(s);
   }
 }
 
-Character *chapter1_1_1(std::ostream &out, std::istream &in) {
+void Chapter1_1::runChapter1_1_1() {
   string name;
   string cls;
 
@@ -72,7 +72,6 @@ Character *chapter1_1_1(std::ostream &out, std::istream &in) {
       << endl;
   std::getline(in, name);
   checkInput(in);
-  return chooseClass(cls, name, out, in);
+  chooseClass();
 
-  return chooseClass(cls, name, out, in);
 }

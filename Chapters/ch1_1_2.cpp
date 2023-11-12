@@ -1,4 +1,5 @@
-#include "../lib/Characters/Character.h"
+#include "../lib/Characters/Character.hpp"
+#include "../lib/Chapters/Chapter1_1.hpp"
 #include "../lib/checkInput.h"
 #include <cstdio>
 #include <cstring>
@@ -10,8 +11,7 @@ using std::endl;
 using std::ostream;
 using std::string;
 
-void option1_1_1(std::ostream &out, std::istream &in, string input,
-                 Character *mainCharacter) {
+void Chapter1_1::option1_1_1() {
 
   out << "[Select Option]" << endl;
   out << "1- Stay here Anne, I\'m going to help this poor guy." << endl;
@@ -28,8 +28,7 @@ void option1_1_1(std::ostream &out, std::istream &in, string input,
   }
 }
 
-void option1_1_2(std::ostream &out, std::istream &in, string input,
-                 Character *mainCharacter) // for choose to move forward to
+void Chapter1_1::option1_1_2() // for choose to move forward to
                                            // forest or first talk
 {
   out << "[Select Option]" << endl;
@@ -52,9 +51,7 @@ void option1_1_2(std::ostream &out, std::istream &in, string input,
   } 
 }
 
-void chapter1_1_2(std::ostream &out, std::istream &in,
-                  Character *mainCharacter) {
-  string input;
+void Chapter1_1::runChapter1_1_2() {
   out << "Chapter1.1" << endl;
   out << "[Forest Clearing]" << endl;
   out << "System: Our journey began in a land ravaged by the cruel hands of war,\
@@ -63,11 +60,11 @@ void chapter1_1_2(std::ostream &out, std::istream &in,
       << endl;
   out << endl;
   out << "Anny: Where are we going? Is there any town or city nearby?" << endl;
-  option1_1_1(out, in, input, mainCharacter);
+  option1_1_1();
   out << "No one is going to help you hehe! (The bandit lick his blade and no "
          "one knows what he is going to do next)"
       << endl;
-  option1_1_2(out, in, input, mainCharacter);
+  option1_1_2();
   out << "Bandit: What the hell you idiots doing? I gotto kill ya all." << endl;
   out << "System: You encounter with a bandit.";
   // need to implement combat start here

@@ -1,7 +1,7 @@
 #ifndef WARRIOR_H
 #define WARRIOR_H
 #include <string>
-#include "Character.h"
+#include "Character.hpp"
 using std::string;
 
 class Warrior: public Character

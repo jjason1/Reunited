@@ -1,7 +1,7 @@
 #ifndef COMBAT_H
 #define COMBAT_H
 #include <string>
-#include "./Characters/Character.h"
+#include "./Characters/Character.hpp"
 #include "./Enemies/Enemy.hpp"
 #include <vector>
 using std::string;

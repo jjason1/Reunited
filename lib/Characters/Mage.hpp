@@ -1,7 +1,7 @@
 #ifndef MAGE_H
 #define MAGE_H
 #include <string>
-#include "Character.h"
+#include "Character.hpp"
 using std::string;
 
 class Mage: public Character
