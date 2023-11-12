@@ -1,11 +1,11 @@
-#ifndef CHARACTERS_HPP
-#define CHARACTERS_HPP
+#ifndef CHARACTER_HPP
+#define CHARACTER_HPP
 
 #include <iostream>
 #include <fstream>
 using namespace std;
 
-class Characters
+class Character
 {
 private:
     int health,
