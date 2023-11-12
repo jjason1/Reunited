@@ -6,6 +6,7 @@
 #include "../Chapters/ch1_1_1.cpp"
 #include "../Chapters/ch1_1_2.cpp"
 #include "../Chapters/ch1_1.cpp"
+#include "../Chapters/checkInput.cpp"
 #include <gtest/gtest.h>
 #include <iostream>
 #include <istream>
@@ -18,6 +19,7 @@ TEST(TestCH1_1_1, TestjobDescription) // test if output are equal
 {
   std::stringstream testout;
   std::stringstream testin;
+  std::stringstream testss;
   Chapter1_1* ch11 = new Chapter1_1(testout, testin);
   std::stringstream ss;
   ss << "w-Warrior" << endl;
@@ -43,9 +45,9 @@ TEST(TestCH1_1_1, TestjobDescription) // test if output are equal
        and your precision ensures that your strikes find their mark."
      << endl;
 
-  ch11->jobDescription();
+  testss << ch11->getOutput().rdbuf();
 
-  EXPECT_TRUE(testss.str() == ss.str());
+  EXPECT_TRUE( testss.str() == ss.str());
 }
 
 int runTests(int argc, char *argv[]) {
