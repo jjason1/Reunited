@@ -1,11 +1,11 @@
 #ifndef SAMURAI_HPP
 #define SAMURAI_HPP
-#include "Enemy.hpp"
+#include "Characters.hpp"
 
 #include <iostream>
 using namespace std;
 
-class Samurai : public Enemy{
+class Samurai : public Characters{
 public:
     void directStrike(Enemy *);
     void sheathBlade(Enemy *);
