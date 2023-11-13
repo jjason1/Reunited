@@ -1,5 +1,5 @@
 #include "../lib/Characters/Character.hpp"
-#include "../lib/Chapters/Chapter1_1.hpp"
+#include "../lib/Chapters/Chapter1Part1.hpp"
 #include "../lib/Characters/Mage.hpp"
 #include "../lib/Characters/Samurai.hpp"
 #include "../lib/Characters/Warrior.hpp"
@@ -15,7 +15,7 @@ using std::string;
 
 
 
-void Chapter1_1::jobDescription() {
+void Chapter1Part1::jobDescription() {
   out << "w-Warrior" << endl;
   out << "Description: As a Warrior, your primary role is to be the stalwart \
     defender of your party, ensuring the safety of your comrades on the battlefield.\
@@ -40,7 +40,7 @@ void Chapter1_1::jobDescription() {
       << endl;
 }
 
-void Chapter1_1::chooseClass() {
+void Chapter1Part1::chooseClass() {
   out << "What kind of job class you want?" << endl;
   jobDescription();
   std::getline(in, input);
@@ -62,7 +62,7 @@ void Chapter1_1::chooseClass() {
   }
 }
 
-void Chapter1_1::runChapter1_1_1() {
+void Chapter1Part1::runChapter1Part1Part1() {
   string name;
   string cls;
 

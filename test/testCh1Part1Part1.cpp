@@ -1,13 +1,13 @@
-#include "../lib/Chapters/Chapter1_1.hpp"
+#include "../lib/Chapters/Chapter1Part1.hpp"
 #include "../lib/Characters/Character.hpp"
 #include "../lib/Characters/Mage.hpp"
 #include "../lib/Characters/Samurai.hpp"
 #include "../lib/Characters/Warrior.hpp"
-#include "../Chapters/ch1_1_1.cpp"
-#include "../Chapters/ch1_1_2.cpp"
-#include "../Chapters/ch1_1.cpp"
+#include "../Chapters/ch1Part1Part1.cpp"
+#include "../Chapters/ch1Part1Part2.cpp"
+#include "../Chapters/ch1Part1.cpp"
 #include "../Chapters/checkInput.cpp"
-#include <gtest/gtest.h>
+#include "gtest/gtest.h"
 #include <iostream>
 #include <istream>
 #include <ostream>
@@ -15,12 +15,12 @@
 #include <string>
 using std::stringstream;
 
-TEST(TestCH1_1_1, TestjobDescription) // test if output are equal
+TEST(TestCH1Part1Part1, TestjobDescription) // test if output are equal
 {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream testss;
-  Chapter1_1* ch11 = new Chapter1_1(testout, testin);
+  Chapter1Part1* ch11 = new Chapter1Part1(testout, testin);
   std::stringstream ss;
   ss << "w-Warrior" << endl;
   ss << "Description: As a Warrior, your primary role is to be the stalwart \

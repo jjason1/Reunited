@@ -1,5 +1,5 @@
 #include "../lib/Characters/Character.hpp"
-#include "../lib/Chapters/Chapter1_1.hpp"
+#include "../lib/Chapters/Chapter1Part1.hpp"
 #include "../lib/checkInput.h"
 #include <cstdio>
 #include <cstring>
@@ -11,10 +11,10 @@ using std::endl;
 using std::ostream;
 using std::string;
 
-void Chapter1_1::option1_1_1() {
+void Chapter1Part1::option1Part1Part1() {
 
   out << "[Select Option]" << endl;
-  out << "1- Stay here Anne, I\'m going to help this poor guy." << endl;
+  out << "1- Stay here Annie, I\'m going to help this poor guy." << endl;
   getline(in, input);
   checkInput(in);
   while (input != "1") {
@@ -28,7 +28,7 @@ void Chapter1_1::option1_1_1() {
   }
 }
 
-void Chapter1_1::option1_1_2() // for choose to move forward to
+void Chapter1Part1::option1Part1Part2() // for choose to move forward to
                                            // forest or first talk
 {
   out << "[Select Option]" << endl;
@@ -51,20 +51,20 @@ void Chapter1_1::option1_1_2() // for choose to move forward to
   } 
 }
 
-void Chapter1_1::runChapter1_1_2() {
+void Chapter1Part1::runChapter1Part1Part2() {
   out << "Chapter1.1" << endl;
   out << "[Forest Clearing]" << endl;
   out << "System: Our journey began in a land ravaged by the cruel hands of war,\
-          and now you and your sister Anny are escaping from the war. After several days running,\
+          and now you and your sister Annie are escaping from the war. After several days running,\
           you find yourself standing in the heart of a dense forest."
       << endl;
   out << endl;
-  out << "Anny: Where are we going? Is there any town or city nearby?" << endl;
-  option1_1_1();
+  out << "Annie: Where are we going? Is there any town or city nearby?" << endl;
+  option1Part1Part1();
   out << "No one is going to help you hehe! (The bandit lick his blade and no "
          "one knows what he is going to do next)"
       << endl;
-  option1_1_2();
+  option1Part1Part2();
   out << "Bandit: What the hell you idiots doing? I gotto kill ya all." << endl;
   out << "System: You encounter with a bandit.";
   // need to implement combat start here

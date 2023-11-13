@@ -10,7 +10,7 @@ using std::endl;
 using std::ostream;
 using std::string;
 
-class Chapter1_1 {
+class Chapter1Part1 {
 private:
   ostream &out;
   std::istream &in;
@@ -18,19 +18,19 @@ private:
   string input;
   string name;
 public:
-  Chapter1_1(ostream &outout, std::istream &inin);
+  Chapter1Part1(ostream &outout, std::istream &inin);
   void setMainCharacter(class Character*);
   void setInput(string input);
   string getMainCharacterName();
   string getInput();
   ostream& getOutput();
-  void runChapter1_1();
+  void runChapter1Part1();
   void jobDescription();
   void chooseClass();
-  void runChapter1_1_1();
-  void option1_1_1();
-  void option1_1_2();
-  void runChapter1_1_2();
+  void runChapter1Part1Part1();
+  void option1Part1Part1();
+  void option1Part1Part2();
+  void runChapter1Part1Part2();
 
 };
 
