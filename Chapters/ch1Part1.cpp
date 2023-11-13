@@ -3,7 +3,6 @@
 #include "../lib/Characters/Samurai.hpp"
 #include "../lib/Characters/Warrior.hpp"
 #include "../lib/Chapters/Chapter1Part1.hpp"
-
 #include <iostream>
 #include <istream>
 #include <ostream>
@@ -32,6 +31,6 @@ ostream& Chapter1Part1::getOutput() {
     }
 
 void Chapter1Part1::runChapter1Part1() {
-  runChapter1Part1Part1();
-  runChapter1Part1Part2();  
+  runChapter1Part1Sub1();
+  runChapter1Part1Sub2();  
     }

@@ -11,7 +11,7 @@ using std::endl;
 using std::ostream;
 using std::string;
 
-void Chapter1Part1::option1Part1Part1() {
+void Chapter1Part1::option1Part1Sub1() {
 
   out << "[Select Option]" << endl;
   out << "1- Stay here Annie, I\'m going to help this poor guy." << endl;
@@ -28,7 +28,7 @@ void Chapter1Part1::option1Part1Part1() {
   }
 }
 
-void Chapter1Part1::option1Part1Part2() // for choose to move forward to
+void Chapter1Part1::option1Part1Sub2() // for choose to move forward to
                                            // forest or first talk
 {
   out << "[Select Option]" << endl;
@@ -51,20 +51,20 @@ void Chapter1Part1::option1Part1Part2() // for choose to move forward to
   } 
 }
 
-void Chapter1Part1::runChapter1Part1Part2() {
+void Chapter1Part1::runChapter1Part1Sub2() {
   out << "Chapter1.1" << endl;
-  out << "[Forest Clearing]" << endl;
-  out << "System: Our journey began in a land ravaged by the cruel hands of war,\
-          and now you and your sister Annie are escaping from the war. After several days running,\
-          you find yourself standing in the heart of a dense forest."
+  out << endl;
+  out << "System: Our journey begins in a land ravaged by the cruel hands of war,\
+and now you and your sister Annie are escaping from the war. After several days of running,\
+you find yourself standing in the heart of a dense forest."
       << endl;
   out << endl;
   out << "Annie: Where are we going? Is there any town or city nearby?" << endl;
-  option1Part1Part1();
+  option1Part1Sub1();
   out << "No one is going to help you hehe! (The bandit lick his blade and no "
          "one knows what he is going to do next)"
       << endl;
-  option1Part1Part2();
+  option1Part1Sub2();
   out << "Bandit: What the hell you idiots doing? I gotto kill ya all." << endl;
   out << "System: You encounter with a bandit.";
   // need to implement combat start here

@@ -1,5 +1,5 @@
-#ifndef CHAPTER1_1_H
-#define CHAPTER1_1_H
+#ifndef CHAPTER1PART1_H
+#define CHAPTER1PART1_H
 #include <cstddef>
 #include <iostream>
 #include <istream>
@@ -27,10 +27,10 @@ public:
   void runChapter1Part1();
   void jobDescription();
   void chooseClass();
-  void runChapter1Part1Part1();
-  void option1Part1Part1();
-  void option1Part1Part2();
-  void runChapter1Part1Part2();
+  void runChapter1Part1Sub1();
+  void option1Part1Sub1();
+  void option1Part1Sub2();
+  void runChapter1Part1Sub2();
 
 };
 

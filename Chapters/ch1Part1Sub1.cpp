@@ -62,7 +62,7 @@ void Chapter1Part1::chooseClass() {
   }
 }
 
-void Chapter1Part1::runChapter1Part1Part1() {
+void Chapter1Part1::runChapter1Part1Sub1() {
   string name;
   string cls;
 

@@ -3,8 +3,8 @@
 #include "../lib/Characters/Mage.hpp"
 #include "../lib/Characters/Samurai.hpp"
 #include "../lib/Characters/Warrior.hpp"
-#include "../Chapters/ch1Part1Part1.cpp"
-#include "../Chapters/ch1Part1Part2.cpp"
+#include "../Chapters/ch1Part1Sub1.cpp"
+#include "../Chapters/ch1Part1Sub2.cpp"
 #include "../Chapters/ch1Part1.cpp"
 #include "../Chapters/checkInput.cpp"
 #include "gtest/gtest.h"
@@ -15,7 +15,7 @@
 #include <string>
 using std::stringstream;
 
-TEST(TestCH1Part1Part1, TestjobDescription) // test if output are equal
+TEST(TestCH1Part1Sub1, TestjobDescription) // test if output are equal
 {
   std::stringstream testout;
   std::stringstream testin;
