@@ -1,6 +1,15 @@
 #include "../../lib/Enemies/Goblin.hpp"
 
-Goblin::Goblin(string name,int level) : Enemy::Enemy(name,level){}
+Goblin::Goblin(string name,int level) : Enemy::Enemy(name,level){
+    //Setting our stat increments:
+    int hpInc,defInc,atkInc;
+    hpInc = defInc = atkInc = 5;
+    this->setIncrmnts(hpInc,defInc,atkInc);
+    //Base stats:
+    this->setHealth(200);
+    this->setDefense(90);
+    this->setAttack(30);
+}
 
 /*
 void Goblin::lifeSwipe(Character *c){

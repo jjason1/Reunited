@@ -26,11 +26,10 @@ TEST(GoblinClassSuite, testNormalAttack){
     Goblin *g=new Goblin("Jason",1);
     Character *c=new Character("Boyi");
     c->setHealth(100); //Setting the character's hp.
-    g->setAttack(15);  //Setting the goblin's atk.
     //Act.
     g->normalAttack(c);
     //Assert.
-    EXPECT_EQ(c->getHealth(),85);
+    EXPECT_EQ(c->getHealth(),70);
 }
 
 TEST(GoblinClassSuite, testLifeSwipe){
@@ -42,6 +41,6 @@ TEST(GoblinClassSuite, testLifeSwipe){
     g->lifeSwipe(c);   //Steals 10 hp from the character.
     //Assert.
     EXPECT_EQ(c->getHealth(),90); //Character's hp decreases by 10.
-    EXPECT_EQ(g->getHealth(),10); //Goblin's hp increases by 10.
+    EXPECT_EQ(g->getHealth(),210); //Goblin's hp increases by 10.
 }
 */
