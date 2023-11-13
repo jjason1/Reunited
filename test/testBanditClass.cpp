@@ -25,6 +25,7 @@ TEST(BanditClassSuite, testNormalAttack){
     //Arrange.
     Bandit *b=new Bandit("Aamir",1);
     Character *c=new Character("Ryan");
+    c->setHealth(100); //Setting the character's hp.
     //Act.
     b->normalAttack(c);
     //Assert.
