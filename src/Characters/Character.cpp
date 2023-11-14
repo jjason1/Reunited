@@ -76,6 +76,16 @@ void Character::setMovable(bool status)
     this->isMovable = status;
 }
 
+void Character::getatkDstrbtn()
+{
+    return this->atkDstrbtn;
+}
+
+void Character::setatkDstrbtn(int num)
+{
+    this->atkDstrbtn = num;
+}
+
 bool Character::checkMovable()
 {
     return this->isMovable;

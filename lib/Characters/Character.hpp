@@ -22,6 +22,8 @@ private:
 
 public:
     Character(string);
+    void getatkDstrbtn();
+    void setatkDstrbtn(int);
     void getStatus(ostream &);
     void setHealth(int);
     void setDefense(int);

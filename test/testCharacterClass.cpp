@@ -2,7 +2,7 @@
 #include "../src/Characters/Character.cpp"
 #include <sstream>
 
-TEST(CharacterClassSuite, testNewEnemy)
+TEST(CharacterClassSuite, testNewCharacter)
 {
     string name = "Jason";
     EXPECT_NO_THROW(new Character(name));
@@ -108,8 +108,18 @@ TEST(CharacterClassSuite, testTakeDamage)
     EXPECT_EQ(c->getHealth(), 90);
 }
 
-int main(int argc, char **argv)
+TEST(CharacterClassSuite, testSetatkDstrbtn){}
 {
-    ::testing::InitGoogleTest(&argc, argv);
-    return RUN_ALL_TESTS();
+    string name = "Boyi";
+    Character *c = new Character(name);
+    c->setAttack(10);
+    EXPECT_EQ(c->getAttack(), 10);
 }
+
+TEST(CharacterClassSuite, testatkDstrbtn){
+    string name = "Jason";
+    Character *c = new Character(name);
+    c->setatkDstrbtn(12);
+    EXPECT_EQ(c->getatkDstrbtn(), 12);
+}
+
