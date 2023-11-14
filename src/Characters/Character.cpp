@@ -1,4 +1,4 @@
-#include "../../lib/Characters/Characters.hpp"
+#include "../../lib/Characters/Character.hpp"
 #include <assert.h>
 
 using namespace std;
@@ -76,12 +76,12 @@ void Character::setMovable(bool status)
     this->isMovable = status;
 }
 
-void Character::getatkDstrbtn()
+int Character::getAtkDstrbtn()
 {
     return this->atkDstrbtn;
 }
 
-void Character::setatkDstrbtn(int num)
+void Character::setAtkDstrbtn(int num)
 {
     this->atkDstrbtn = num;
 }
