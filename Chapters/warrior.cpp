@@ -2,5 +2,5 @@
 #include<string>
 
 class Warrior : public Character {
-
+    
 };
