@@ -18,7 +18,7 @@ TEST(GoblinClassSuite, testInvalidLevelGoblin){
     string name="Ryan";
     EXPECT_DEATH(new Goblin(name, level), "Your level must not be less than 0!");
 }
-/*
+
 TEST(GoblinClassSuite, testNormalAttack){
     //Arrange.
     Goblin *g=new Goblin("Jason",1);
@@ -29,7 +29,7 @@ TEST(GoblinClassSuite, testNormalAttack){
     //Assert.
     EXPECT_EQ(c->getHealth(),70);
 }
-*/
+
 TEST(GoblinClassSuite, testLifeSwipe){
     //Arrange.
     Goblin *g=new Goblin("Ryan",1);
