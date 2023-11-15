@@ -72,9 +72,11 @@ bool Enemy::checkMovable(){
 void Enemy::takeDamage(int dmg){
     //Reduce our health by the specified damage.
     this->health -= dmg;
+    cout<<this->getName()<<" took "<<dmg<<" damage."<<endl;
 }
 
 void Enemy::normalAttack(Character *c){
     //The character takes damage from the enemy.
+    cout<<this->getName()<<" used a normal attack on "<<c->getName()<<"."<<endl;
     c->takeDamage(this->attack);
 }
