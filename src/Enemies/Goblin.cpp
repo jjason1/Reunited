@@ -11,7 +11,6 @@ Goblin::Goblin(string name,int level) : Enemy::Enemy(name,level){
     this->setAttack(30);
 }
 
-/*
 void Goblin::lifeSwipe(Character *c){
     //Health to be stolen.
     int stolenHp=10;
@@ -20,4 +19,3 @@ void Goblin::lifeSwipe(Character *c){
     //The stolen hp is added to the goblin's hp.
     this->setHealth(this->getHealth()+stolenHp);
 }
-*/

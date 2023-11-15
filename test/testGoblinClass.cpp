@@ -1,6 +1,5 @@
 #include "gtest/gtest.h"
 #include "../src/Enemies/Goblin.cpp"
-#include <sstream>
 
 TEST(GoblinClassSuite, testNewGoblin){
     int level=1;
@@ -19,7 +18,6 @@ TEST(GoblinClassSuite, testInvalidLevelGoblin){
     string name="Ryan";
     EXPECT_DEATH(new Goblin(name, level), "Your level must not be less than 0!");
 }
-
 /*
 TEST(GoblinClassSuite, testNormalAttack){
     //Arrange.
@@ -31,7 +29,7 @@ TEST(GoblinClassSuite, testNormalAttack){
     //Assert.
     EXPECT_EQ(c->getHealth(),70);
 }
-
+*/
 TEST(GoblinClassSuite, testLifeSwipe){
     //Arrange.
     Goblin *g=new Goblin("Ryan",1);
@@ -43,4 +41,3 @@ TEST(GoblinClassSuite, testLifeSwipe){
     EXPECT_EQ(c->getHealth(),90); //Character's hp decreases by 10.
     EXPECT_EQ(g->getHealth(),210); //Goblin's hp increases by 10.
 }
-*/
