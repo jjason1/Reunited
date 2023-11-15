@@ -14,6 +14,7 @@ Bandit::Bandit(string name,int level) : Enemy::Enemy(name,level){
 void Bandit::stun(Character *c){
     //The player is stunned for one turn.
     c->setMovable(false);
+    cout<<this->getName()<<" stunned "<<c->getName()<<"."<<endl;
 }
 
 
