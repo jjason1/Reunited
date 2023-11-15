@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include "../Characters/Character.hpp"
 using namespace std;
 
 class Enemy {
@@ -30,7 +31,7 @@ class Enemy {
         void setIncrmnts(int,int,int);
         void setMovable(bool);
         void takeDamage(int);
-        //void normalAttack(Character *);
+        void normalAttack(Character *);
 };
 
 #endif /* ENEMY_HPP */

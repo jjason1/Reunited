@@ -73,9 +73,8 @@ void Enemy::takeDamage(int dmg){
     //Reduce our health by the specified damage.
     this->health -= dmg;
 }
-/*
+
 void Enemy::normalAttack(Character *c){
     //The character takes damage from the enemy.
     c->takeDamage(this->attack);
 }
-*/
