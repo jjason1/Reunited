@@ -1,3 +1,4 @@
+.vscode/
 CMakeCache.txt
 CMakeFiles/
 Makefile
@@ -14,4 +15,3 @@ src/test
 test/CMakeFiles/
 test/Makefile
 test/cmake_install.cmake
-.vscode/
