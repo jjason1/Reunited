@@ -11,9 +11,8 @@ Bandit::Bandit(string name,int level) : Enemy::Enemy(name,level){
     this->setAttack(25);
 }
 
-/*
 void Bandit::stun(Character *c){
     //The player is stunned for one turn.
     c->setMovable(false);
 }
-*/
+
