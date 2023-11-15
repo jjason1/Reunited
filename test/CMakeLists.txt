@@ -5,6 +5,7 @@ add_subdirectory(googletest)
 
 add_executable(runAllTests
     testEnemyClass.cpp
+    testGoblinClass.cpp
     testBanditClass.cpp
     testCharacterClass.cpp
     testshowDevelopers.cpp
