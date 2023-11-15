@@ -16,3 +16,4 @@ void Bandit::stun(Character *c){
     c->setMovable(false);
 }
 
+
