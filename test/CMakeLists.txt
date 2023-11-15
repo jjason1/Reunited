@@ -7,6 +7,7 @@ add_executable(runAllTests
     testEnemyClass.cpp
     testGoblinClass.cpp
     testBanditClass.cpp
+    testEnemyTeamClass.cpp
     testCharacterClass.cpp
     testCharacterTeamClass.cpp
     testshowDevelopers.cpp
