@@ -1,7 +1,7 @@
 #include "../../lib/Enemies/Golem.hpp"
 #include <iostream>
 
-including namespace std;
+using namespace std;
 
 
 Golem::Golem(string name, int level) : Enemy(name, level) {
@@ -11,8 +11,8 @@ Golem::Golem(string name, int level) : Enemy(name, level) {
 }
 
 void Golem::lazerBlaze(Character *target) {
-    if(taget == nullptr){
-        cout << "Target cannot be null."
+    if(target == nullptr){
+        cout << "Target cannot be null." <<endl;
     }
     target->takeDamage(this->getAttack()); 
     cout<< this->getName() << " attacks " << target->getName() << " with lazer blaze!" <<endl;
@@ -21,5 +21,11 @@ void Golem::lazerBlaze(Character *target) {
 void Golem::earthquake(vector<Character *> &targets) {
      for (Character *target : targets) {
         target->takeDamage(this->getAttack());
+        cout<< this->getName() << " attacks " << target->getName() << " with earthquake!" <<endl;
      }
+}
+
+void Golem::shieldGen() {
+    this->setDefense(this->getDefense() + 500);
+    cout << this->getName() << " generates a protective shield!" <<endl;
 }
