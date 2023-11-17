@@ -7,6 +7,10 @@ add_executable(runAllTests
 
   test_ch1_1_1.cpp
     testEnemyClass.cpp
+    testGoblinClass.cpp
+    testBanditClass.cpp
+    testCharacterClass.cpp
+    testshowDevelopers.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
