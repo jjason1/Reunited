@@ -3,6 +3,7 @@
 #include <ostream>
 #include <stdexcept>
 #include <string>
+#include <sstream>
 using std::endl;
 
 Help::Help(std::istream &inin, std::ostream &outout) : out(outout), in(inin) {}
@@ -33,7 +34,7 @@ void Help::display() {
   if (in.fail()) {
     throw std::runtime_error("Input failure.");
   }
-  while (input != "1" || input != "2" || input != "3" || input != "4") {
+  while (!(input == "1" || input == "2" || input == "3" || input == "4")) {
     out << "Please input again:" << endl;
     std::getline(in, input);
     if (in.fail()) {
