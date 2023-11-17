@@ -28,11 +28,12 @@ void Help::display() {
   out << "1- Save file instruction" << endl;
   out << "2- Load file instruction" << endl;
   out << "3- Combat instruction" << endl;
+  out << "4- Back to menu" << endl;
   std::getline(in, input);
   if (in.fail()) {
     throw std::runtime_error("Input failure.");
   }
-  while (input != "1" || input != "2" || input != "3") {
+  while (input != "1" || input != "2" || input != "3" || input != "4") {
     out << "Please input again:" << endl;
     std::getline(in, input);
     if (in.fail()) {
@@ -55,7 +56,7 @@ void Help::display() {
            "small chapter. For example, if you save a file in chapter 1.1, "
            "then you will only be able to start from the start of chapter 1.1."
         << endl;
-  } else if (std::strcmp(input.c_str(), "2") == 0) {
+  } else if (std::strcmp(input.c_str(), "3") == 0) {
     out << "Combat instruction:" << endl;
     out << "When you encounter a battle, your team will attack first, after "
            "your team’s member have use some skills or attacks, the enemy team "
@@ -65,5 +66,8 @@ void Help::display() {
            "target skill. If it is a AOE skill, you do not need to specify and "
            "will automatically use the skill when you choose it."
         << endl;
+  }
+  else if (std::strcmp(input.c_str(), "4") == 0) { // back to menu will be implement in menu fuction call menu display again
+    
   }
 }
