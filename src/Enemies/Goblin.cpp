@@ -18,4 +18,6 @@ void Goblin::lifeSwipe(Character *c){
     c->takeDamage(stolenHp);
     //The stolen hp is added to the goblin's hp.
     this->setHealth(this->getHealth()+stolenHp);
+    cout<<this->getName()<<" used life swipe on "<<c->getName()
+        <<" and stole "<<stolenHp<<" hp from "<<c->getName()<<"."<<endl;
 }
