@@ -7,7 +7,7 @@ using namespace std;
 
 class Character
 {
-private:
+protected:
     int health,
         defense,
         attack,
