@@ -14,7 +14,6 @@ Character::Character(string name)
     this->setAttack(0);
     this->setIncrmnts(0, 0, 0);
     this->setMovable(true);
-    this->atkDstrbtn = 0;
 }
 
 void Character::getStatus(ostream &out)

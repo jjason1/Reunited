@@ -14,7 +14,7 @@ private:
         hpIncrmnt,
         defIncrmnt,
         atkIncrmnt,
-        level,
+        level;
         bool isMovable;
     string name;
 
