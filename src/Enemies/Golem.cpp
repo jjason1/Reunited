@@ -4,7 +4,7 @@
 using namespace std;
 
 
-Golem::Golem(string name, int level) : Enemy(name, level) {
+Golem::Golem(string name, int level) : Enemy::Enemy(name, level) {
     this->setHealth(3000);
     this->setAttack(50);
     this->setDefense(1000);

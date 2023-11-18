@@ -10,7 +10,7 @@ using namespace std;
 class Golem : public Enemy {
 public:
 
-    Golem(string name, int level);
+    Golem(string name);
     void lazerBlaze(Character *target);
     void earthquake(vector<Character *> &targets);
     void shieldGen();
