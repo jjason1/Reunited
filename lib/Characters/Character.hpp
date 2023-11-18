@@ -15,28 +15,23 @@ private:
         defIncrmnt,
         atkIncrmnt,
         level,
-        atkDstrbtn;
-
-    bool isMovable;
+        bool isMovable;
     string name;
 
 public:
     Character(string);
-    int getAtkDstrbtn();
-    void setAtkDstrbtn(int);
-    void getStatus(ostream &);
     void setHealth(int);
     void setDefense(int);
     void setAttack(int);
     void setIncrmnts(int, int, int);
-    void levelUp();
-    void takeDamage(int);
-    void setMovable(bool);
     int getHealth();
     int getDefense();
     int getAttack();
     string getName();
+    void getStatus(ostream &);
+    void takeDamage(int);
     bool checkMovable();
+    void setMovable(bool);
 };
 
 #endif

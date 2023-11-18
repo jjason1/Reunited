@@ -108,16 +108,4 @@ TEST(CharacterClassSuite, testTakeDamage)
     EXPECT_EQ(c->getHealth(), 90);
 }
 
-TEST(CharacterClassSuite, testSetAtkDstrbtn){
-    string name = "Jason";
-    Character *c = new Character(name);
-    c->setAtkDstrbtn(12);
-    EXPECT_EQ(c->getAtkDstrbtn(), 12);
-}
-
-TEST(CharacterClassSuite, testGetAtkDstrbtn){
-    string name = "Jason";
-    Character *c = new Character(name);
-    EXPECT_EQ(c->getAtkDstrbtn(), 0);
-}
 

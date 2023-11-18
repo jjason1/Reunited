@@ -76,16 +76,6 @@ void Character::setMovable(bool status)
     this->isMovable = status;
 }
 
-int Character::getAtkDstrbtn()
-{
-    return this->atkDstrbtn;
-}
-
-void Character::setAtkDstrbtn(int num)
-{
-    this->atkDstrbtn = num;
-}
-
 bool Character::checkMovable()
 {
     return this->isMovable;
@@ -94,9 +84,4 @@ bool Character::checkMovable()
 void Character::takeDamage(int dmg)
 {
     this->health -= dmg;
-}
-
-void Character::levelUp()
-{
-    level += 1;
 }
