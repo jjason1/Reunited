@@ -18,8 +18,8 @@ TEST(EnemyClassSuite, testGetName){
 TEST(EnemyClassSuite, testGetStatus){
     //Arrange.
     int level=1;
-    string name="Boyi";
-    string status="\nBoyi's Status: \n"
+    string name="Aamir";
+    string status="\nAamir's Status: \n"
                   "--------------------------\n"
                   "Level   = 1\n"
                   "Health  = 0\n"

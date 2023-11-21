@@ -15,7 +15,7 @@ protected:
         defIncrmnt,
         atkIncrmnt,
         level;
-        bool isMovable;
+    bool isMovable;
     string name;
 
 public:
