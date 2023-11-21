@@ -48,6 +48,16 @@ TEST(CharacterClassSuite, testCheckMovable)
     EXPECT_TRUE(status == true);
 }
 
+TEST(CharacterClassSuite, testCheckNotMovable)
+{
+    int level = 1;
+    string name = "John";
+    Character *c = new Character(name);
+    c->setMovable(false);
+    bool status = c->checkMovable();
+    EXPECT_TRUE(status == false);
+}
+
 TEST(CharacterClassSuite, testGetHealth)
 {
     string name = "Jason";
