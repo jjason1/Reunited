@@ -72,16 +72,15 @@ This graphic illustrates the screen layouts of each of the screens that users wi
 We've presented two core classes, namely the "Player" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. For example, we've added the LoadFile and SaveFile classes to manage save files within our game. We've also added the Combat class to handle the combat present throughout our game. As the graphic above illustrates, we've included the PlayerTeam and EnemyTeam classes to implement team-based gameplay. These are a few examples of the classes we've designed for our game. Refer to the graphic above for more information regarding each class.
  
  > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
+
+Considering the Single Responsibility Principle, we introduced a Chapter Class that would break our story down across multiple chapters, as opposed to having a single Story Class handling our entire story at once. Similarly, we introduced a SubChapter Class to further break our chapters down. This allows us to handle tasks within chapters more efficiently and effectively. It primarily separates responsibilities between chapters and subchapters, making it easier to organize and complete our tasks. 
+
+When considering the Open-Closed Principle, we decided to create interfaces for our chapters and subchapters. For example, we designed an interface for our chapters, so that all derived chapters could implement the same interface with the same functions, albeit different definitions. This allows us to write code that is “open for extension and closed for modification”. Given the common interface, all of our derived classes can implement the same functions, and future extension of our storyline will be easier to accommodate.
+
+After considering the Liskov-Substitution Principle, we chose to design interfaces for our chapters and subchapters. Our project makes use of these interfaces in our functions, so that any instances of their subtypes may be used, without altering the correctness of our project. This allows us to write code that is more flexible and correct, as it ensures the correctness of our program regardless of whether we use base class or subtype instances.
+
+Considering the Interface-Segregation Principle, we wanted our design to not force the user to depend on methods or interfaces they wouldn’t need to use. To solve this consideration, we designed a Character Interface that our Player and Enemy classes would derive from. From there, our Player class would implement its own functionality, while the Enemy class would implement its specific functionality. Players would now be distinct from enemies, and each could rely on its own specific functionality. This allows us to only implement what is necessary and remove unrequired implementations. Through this change, our code is now more clear and efficient.
+
  > * Perform a new sprint plan like you did in Phase II.
  > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
  
