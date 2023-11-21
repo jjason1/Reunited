@@ -10,7 +10,7 @@ Character::Character(string name)
 
     this->level = 1;
     this->setHealth(0);
-    this->setDefense(0);
+    this->setDefegit nse(0);
     this->setAttack(0);
     this->setIncrmnts(0, 0, 0);
     this->setMovable(true);
@@ -82,5 +82,7 @@ bool Character::checkMovable()
 
 void Character::takeDamage(int dmg)
 {
+    cout << getName() << " took " << dmg << " damage " << endl; 
     this->health -= dmg;
+
 }
