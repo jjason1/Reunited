@@ -1,4 +1,6 @@
 #include "gtest/gtest.h"
+#include <ctime>
+#include <cstdlib>
 #include "../src/Enemies/Goblin.cpp"
 
 TEST(GoblinClassSuite, testNewGoblin){
@@ -41,3 +43,23 @@ TEST(GoblinClassSuite, testLifeSwipe){
     EXPECT_EQ(c->getHealth(),90); //Character's hp decreases by 10.
     EXPECT_EQ(g->getHealth(),210); //Goblin's hp increases by 10.
 }
+
+TEST(GoblinClassSuite, testSelectSkill){
+    //Arrange.
+    Goblin *g=new Goblin("Jason",1);
+    //Act.
+    int chosenSkill=g->selectSkill();
+    //Assert.
+    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2));
+}
+
+TEST(GoblinClassSuite, testUseSkillOn){
+    //Arrange.
+    Goblin *g=new Goblin("Jason",1);
+    Character *c=new Character("Ryan");
+    c->setHealth(100);
+    int chosenSkill=g->selectSkill();
+    //Act + Assert.
+    EXPECT_NO_THROW(g->useSkillOn(chosenSkill,c));
+}
+

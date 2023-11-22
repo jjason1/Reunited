@@ -22,3 +22,31 @@ void Goblin::lifeSwipe(Character *c){
     //The stolen hp is added to the goblin's hp.
     this->setHealth(this->getHealth()+stolenHp);
 }
+
+//Only 2 skills are available: 
+//1. normal attack
+//2. life swipe.
+int Goblin::selectSkill(){
+    //Generate a random number between 1-2.
+    int randNum=rand()%2+1;
+    //Return the skill we randomly chose.
+    return randNum;
+}
+
+void Goblin::useSkillOn(int chosenSkill, Character *c){
+    //Use the randomly chosen skill on the character.
+    switch (chosenSkill){
+        //Skill 2 is chosen: life swipe.
+        case 2:{
+            cout<<this->getName()<<" chose life swipe."<<endl;
+            this->lifeSwipe(c);
+            break;
+        }
+        //Skill 1 is chosen: normal attack.
+        default:{
+            cout<<this->getName()<<" chose normal attack."<<endl;
+            this->normalAttack(c);
+            break;
+        }
+    }
+}

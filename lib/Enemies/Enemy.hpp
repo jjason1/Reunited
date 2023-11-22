@@ -9,7 +9,8 @@ class Enemy : public Character {
     public:
         Enemy(string, int);
         void normalAttack(Character *);
-        virtual void selectSkill();
+        virtual int selectSkill();
+        virtual void useSkillOn(int, Character *);
 };
 
 #endif /* ENEMY_HPP */

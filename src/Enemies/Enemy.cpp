@@ -13,6 +13,11 @@ void Enemy::normalAttack(Character *c){
     c->takeDamage(this->attack);
 }
 
-void Enemy::selectSkill(){
+int Enemy::selectSkill(){
     //Select one of your skills here. (Not implemented yet.)
+    return 1;
+}
+
+void Enemy::useSkillOn(int skill, Character *c){
+    //Use the given skill you've chosen on the given character. (Not implemented yet.)
 }
