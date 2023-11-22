@@ -13,13 +13,14 @@ class Player : public Character {
     private:
         int atkDstrbtn;
         vector<string> skills;
+        string currentSkill;
     public:
-        Player(string name);
+        Player(string name, int leavel);
         void listSkills(ostream &out);
         virtual void selectSkill(const string &skillName);
         void setAtkDstrbtn(int distribution);
-        int getAtkDstrbtn() const;
-        virtual void levelUp();
+        int getAtkDstrbtn();
+        void levelUp();
 
 };
 
