@@ -6,3 +6,9 @@ TEST(GolemClassSuite, testNewGolem){
     string name="Boyi";
     EXPECT_NO_THROW(new Golem(name, level));
 }
+
+TEST(GolemClassSuite, testNoNameGolem){
+    int level = 1;
+    string name="";
+    EXPECT_DEATH(new Golem(name, level), "Your name must not be empty!");
+}

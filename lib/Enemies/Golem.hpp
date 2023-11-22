@@ -10,13 +10,13 @@ using namespace std;
 class Golem : public Enemy {
 public:
 
-    Golem(string name);
+    Golem(string name, int level);
     void lazerBlaze(Character *target);
     void earthquake(vector<Character *> &targets);
     void shieldGen();
 
 
-    virtual void getStatus(ostream &out) override;
+    //virtual void getStatus(ostream &out) override;
 };
 
 #endif /* GOLEM_HPP */
