@@ -1,4 +1,3 @@
-
 #include "gtest/gtest.h"
 #include "../src/Characters/Player.cpp"
 #include <iostream>
