@@ -12,8 +12,7 @@ using namespace std;
 class Player : public Character {
     private:
         int atkDstrbtn;
-        vector<string> skills;
-        string currentSkill;
+    
     public:
         Player(string name, int leavel);
         void listSkills(ostream &out);

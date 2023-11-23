@@ -3,6 +3,7 @@
 #include "../src/Characters/Player.cpp"
 #include <iostream>
 #include <ostream>
+#include <fstream>
 
 TEST(TestPlayerClassSuite, TestNewPlayer){
     int level=1;
@@ -21,6 +22,14 @@ TEST(TestPlayerClassSuite, TestInvalidLevelPlayer){
     int level=-1;
     EXPECT_DEATH(new Player(name, level), "Your level must not be less than 0!");
 }
+
+/*
+TEST(TestPlayerClassSuite, TestLevelUp){
+    Player *P = new Player("Aamir", 1);
+    P->levelUp();
+   
+}
+*/
 
 /* Need a mock test
 TEST(TestPlayerClassSuite, TestPrintSkiils){
