@@ -14,6 +14,6 @@ public:
     void fireBall(Enemy *);
     void healing();
     void iceStorm(Enemy *);
-    void skillBoost();
     void thunderBlast(Enemy *);
+    void skillBoost();
 }
