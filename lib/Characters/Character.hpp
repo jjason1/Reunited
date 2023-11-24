@@ -34,7 +34,7 @@ public:
     void setMovable(bool);
     virtual void listSkills(ostream &);
     virtual int selectSkill();
-    void useSkillOn(int, Character *);
+    virtual void useSkillOn(int, Character *);
 };
 
 #endif

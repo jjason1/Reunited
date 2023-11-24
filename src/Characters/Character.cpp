@@ -80,7 +80,6 @@ bool Character::checkMovable()
     if (!isMovable)
     {
         cout << getName() << " can not move." << endl;
-        return false;
     }
     return this->isMovable;
 }
