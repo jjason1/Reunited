@@ -77,7 +77,8 @@ void Character::setMovable(bool status)
 
 bool Character::checkMovable()
 {
-    if(!isMovable){
+    if (!isMovable)
+    {
         cout << getName() << " can not move." << endl;
     }
     return this->isMovable;
@@ -85,7 +86,13 @@ bool Character::checkMovable()
 
 void Character::takeDamage(int dmg)
 {
-    cout << getName() << " took " << dmg << " damage." << endl; 
+    cout << getName() << " took " << dmg << " damage." << endl;
     this->health -= dmg;
-
 }
+
+void Character::listSkills(ostream &out) {}
+int Character::selectSkill()
+{
+    return 0;
+}
+void Character::useSkillOn(int skill, Character *c) {}
