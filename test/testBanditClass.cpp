@@ -42,4 +42,21 @@ TEST(BanditClassSuite, testStun){
     EXPECT_TRUE(c->checkMovable() == false);
 }
 
-//add tests for selectSkill & useSkillOn functions.
+TEST(BanditClassSuite, testSelectSkill){
+    //Arrange.
+    Bandit *b=new Bandit("Jason",1);
+    //Act.
+    int chosenSkill=b->selectSkill();
+    //Assert.
+    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2));
+}
+
+TEST(BanditClassSuite, testUseSkillOn){
+    //Arrange.
+    Bandit *b=new Bandit("Boyi",1);
+    Character *c=new Character("Aamir");
+    c->setHealth(100);
+    int chosenSkill=b->selectSkill();
+    //Act + Assert.
+    EXPECT_NO_THROW(b->useSkillOn(chosenSkill,c));
+}
