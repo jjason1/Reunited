@@ -15,7 +15,7 @@ protected:
         defIncrmnt,
         atkIncrmnt,
         level;
-        bool isMovable;
+    bool isMovable;
     string name;
 
 public:
@@ -32,6 +32,9 @@ public:
     void takeDamage(int);
     bool checkMovable();
     void setMovable(bool);
+    virtual void listSkills(ostream &);
+    virtual int selectSkill();
+    void useSkillOn(int, Character *);
 };
 
 #endif
