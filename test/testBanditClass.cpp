@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
+#include <ctime>
+#include <cstdlib>
 #include "../src/Enemies/Bandit.cpp"
-#include <sstream>
 
 TEST(BanditClassSuite, testNewBandit){
     int level=1;
@@ -40,3 +41,5 @@ TEST(BanditClassSuite, testStun){
     //Assert.
     EXPECT_TRUE(c->checkMovable() == false);
 }
+
+//add tests for selectSkill & useSkillOn functions.
