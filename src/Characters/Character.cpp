@@ -96,4 +96,4 @@ int Character::selectSkill()
 {
     return 0;
 }
-void useSkillOn(int skill, Character *c) {}
+void Character::useSkillOn(int skill, Character *c) {}
