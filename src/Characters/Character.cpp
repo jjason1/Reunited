@@ -14,7 +14,6 @@ Character::Character(string name)
     this->setAttack(0);
     this->setIncrmnts(0, 0, 0);
     this->setMovable(true);
-    this->atkDstrbtn = 0;
 }
 
 void Character::getStatus(ostream &out)
@@ -76,27 +75,24 @@ void Character::setMovable(bool status)
     this->isMovable = status;
 }
 
-int Character::getAtkDstrbtn()
-{
-    return this->atkDstrbtn;
-}
-
-void Character::setAtkDstrbtn(int num)
-{
-    this->atkDstrbtn = num;
-}
-
 bool Character::checkMovable()
 {
+    if (!isMovable)
+    {
+        cout << getName() << " can not move." << endl;
+    }
     return this->isMovable;
 }
 
 void Character::takeDamage(int dmg)
 {
+    cout << getName() << " took " << dmg << " damage." << endl;
     this->health -= dmg;
 }
 
-void Character::levelUp()
+void Character::listSkills(ostream &out) {}
+int Character::selectSkill()
 {
-    level += 1;
+    return 0;
 }
+void Character::useSkillOn(int skill, Character *c) {}
