@@ -90,6 +90,10 @@ void Character::takeDamage(int dmg)
     this->health -= dmg;
 }
 
+void Character::levelUp(){
+    this->level++;
+}
+
 void Character::listSkills(ostream &out) {}
 int Character::selectSkill()
 {
