@@ -2,16 +2,12 @@
 #define ENEMYTEAM_HPP
 
 #include "Enemy.hpp"
-#include "../Characters/Character.hpp"
-#include <vector>
+#include "../Characters/CharacterTeam.hpp"
 
-class EnemyTeam {
-    private:
-        vector<Enemy *> enemyList;
+class EnemyTeam : public CharacterTeam {
     public:
-        EnemyTeam(vector<Enemy *>);
-        int getSize();
-        Character * chooseTarget(vector<Character *>,int);
+        EnemyTeam(vector<Character *>);
+        Character * chooseTarget(vector<Character *>);
         void addEnemy(Enemy *);
 };
 
