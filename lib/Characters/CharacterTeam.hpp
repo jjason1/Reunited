@@ -7,6 +7,7 @@
 #include "Character.hpp"
 #include <fstream>
 
+
 class CharacterTeam{
     protected:
         vector<Character *> characters;
