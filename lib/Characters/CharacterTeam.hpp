@@ -14,7 +14,7 @@ class CharacterTeam{
     public:
         CharacterTeam(vector<Character *>, ostream &);
         void addCharacter(Character *);
-        Character *chooseTarget(vector<Character *>);
+        virtual Character *chooseTarget(vector<Character *>);
         int getSize();
         vector<Character *> getCharacters();    
 };
