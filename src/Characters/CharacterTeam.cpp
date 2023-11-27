@@ -1,6 +1,6 @@
-#include "../lib/Characters/CharacterTeam.hpp"
+#include "../../lib/Characters/CharacterTeam.hpp"
 
-CharacterTeam::CharacterTeam(vector<Character *> team){
+CharacterTeam::CharacterTeam(vector<Character *> team, ostream& outout, istream& inin):out(outout), in(inin){
     this->characters=team;
 }
 
@@ -10,5 +10,9 @@ int CharacterTeam::getSize(){
 
 void CharacterTeam::addCharacter(Character *c){
     this->characters.push_back(c);
-    cout<<c->getName()<<" has joined the team!"<<endl;
+    out<<c->getName()<<" has joined the team!"<<endl;
+}
+
+vector<Character *>* CharacterTeam::getCharacters() {
+    return &(this->characters);
 }
