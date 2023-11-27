@@ -3,14 +3,18 @@
 
 #include <vector>
 #include "Character.hpp"
+#include <fstream>
 
 class CharacterTeam{
     protected:
         vector<Character *> characters;
+        ostream &out;
     public:
-        CharacterTeam(vector<Character *>);
+        CharacterTeam(vector<Character *>, ostream &);
         void addCharacter(Character *);
-        int getSize();    
+        Character *chooseTarget(vector<Character *>);
+        int getSize();
+        vector<Character *> getCharacters();    
 };
 
 #endif /* CHARACTERTEAM_HPP */
