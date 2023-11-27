@@ -1,6 +1,6 @@
 #include "../../lib/Characters/CharacterTeam.hpp"
 
-CharacterTeam::CharacterTeam(vector<Character *> team, ostream& outout, istream& inin):out(outout), in(inin){
+CharacterTeam::CharacterTeam(vector<Character *> team, ostream& outout):out(outout){
     this->characters=team;
 }
 

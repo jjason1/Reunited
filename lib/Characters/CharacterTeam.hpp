@@ -11,9 +11,8 @@ class CharacterTeam{
     protected:
       vector<Character *> characters;
       ostream &out;
-      istream &in;
     public:
-        CharacterTeam(vector<Character *>, ostream&, istream&);
+        CharacterTeam(vector<Character *>, ostream&);
         void addCharacter(Character *);
         int getSize();
         vector<Character *>* getCharacters();
