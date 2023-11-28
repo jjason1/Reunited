@@ -5,18 +5,17 @@
 
 #include <iostream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
-class Player : public Character {
+virtual Player : public Character {
     private:
         int atkDstrbtn;
     
     public:
-        Player(string name, int leavel);
-        void listSkills(ostream &out);
-        virtual void selectSkill(const string &skillName);
+        Player(string name);
+        virtual void listSkills(ostream &out);
+        virtual int selectSkill(const string &skillName);
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
         void levelUp();

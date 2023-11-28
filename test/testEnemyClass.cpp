@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
-#include "../src/Enemies/Enemy.cpp"
+#include <ctime>
+#include <cstdlib>
 #include <sstream>
+#include "../src/Enemies/Enemy.cpp"
 
 TEST(EnemyClassSuite, testNewEnemy){
     int level=1;
@@ -127,6 +129,9 @@ TEST(EnemyClassSuite, testNormalAttack){
 
 int main(int argc, char **argv)
 {
+    //Set the random number seed.
+    srand(static_cast<unsigned int>(time(0)));
+
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

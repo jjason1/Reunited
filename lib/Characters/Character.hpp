@@ -32,6 +32,10 @@ public:
     void takeDamage(int);
     bool checkMovable();
     void setMovable(bool);
+    virtual void listSkills(ostream &);
+    virtual int selectSkill();
+    virtual void useSkillOn(int, Character *);
+    virtual void levelUp();
 };
 
 #endif
