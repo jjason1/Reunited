@@ -13,7 +13,7 @@ void Player::listSkills(ostream &out){
 }
 
 //Skill selection function for override
-int Player::selectSkill(const string &skillName) {
+int Player::selectSkill() {
     //Not being implemented yet.
     return 1;
 }

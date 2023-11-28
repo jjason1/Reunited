@@ -8,14 +8,14 @@
 
 using namespace std;
 
-virtual Player : public Character {
+class Player : public Character {
     private:
         int atkDstrbtn;
     
     public:
         Player(string name);
         virtual void listSkills(ostream &out);
-        virtual int selectSkill(const string &skillName);
+        virtual int selectSkill();
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
         void levelUp();
