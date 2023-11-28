@@ -1,3 +1,6 @@
+#ifndef MAGE_HPP
+#define MAGE_HPP
+
 #include "Character.hpp"
 #include "../Enemies/Enemy.hpp"
 
@@ -8,6 +11,7 @@ class Mage : public Character
 {
 private:
     int manaBar;
+    unsigned int boost;
 
 public:
     Mage(string);
@@ -16,4 +20,6 @@ public:
     void iceStorm(Enemy *);
     void thunderBlast(Enemy *);
     void skillBoost();
-}
+};
+
+#endif

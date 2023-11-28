@@ -5,6 +5,7 @@ using namespace std;
 
 Mage::Mage(string name) : Character::Character(name)
 {
+    this->boost = 0;
     int hpInc, defInc, atkInc, baseStat = 100;
 
     hpInc = atkInc = 10;
@@ -18,8 +19,17 @@ Mage::Mage(string name) : Character::Character(name)
 
 void Mage::fireBall(Enemy *e)
 {
+
+    int multiplier = 1;
+
+    if (this->boost > 0)
+    {
+        multiplier += 1;
+        boost--;
+    }
+
     cout << this->getName() << " used fire ball on " << e->getName() << "." << endl;
-    e->takeDamage(this->getAttack());
+    e->takeDamage(multiplier * this->getAttack());
 }
 
 void Mage::healing()
@@ -33,15 +43,31 @@ void Mage::healing()
 void Mage::iceStorm(Enemy *e)
 {
     double multiplier = 0.5;
+    if (this->boost > 0)
+    {
+        multiplier += 1;
+        boost--;
+    }
 
     cout << this->getName() << " used ice storm on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier *->getAttack());
+    e->takeDamage(multiplier * this->getAttack());
 }
 
 void Mage::thunderBlast(Enemy *e)
 {
     double multiplier = 1.5;
 
+    if (this->boost > 0)
+    {
+        multiplier += 1;
+        boost--;
+    }
+
     cout << this->getName() << " used thunder blast on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier *->getAttack());
+    e->takeDamage(multiplier * this->getAttack());
+}
+
+void Mage::skillBoost()
+{
+    boost++;
 }
