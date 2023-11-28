@@ -27,11 +27,13 @@ public:
     int getHealth();
     int getDefense();
     int getAttack();
+    int getLevel();
     string getName();
     void getStatus(ostream &);
     void takeDamage(int);
     bool checkMovable();
     void setMovable(bool);
+
     virtual void listSkills(ostream &);
     virtual int selectSkill();
     virtual void useSkillOn(int, Character *);
