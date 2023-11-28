@@ -6,9 +6,8 @@
 
 class EnemyTeam : public CharacterTeam {
     public:
-        EnemyTeam(vector<Character *>);
-        Character * chooseTarget(vector<Character *>);
-        void addEnemy(Enemy *);
+        EnemyTeam(vector<Character *>, ostream &);
+        Character *chooseTarget(vector<Character *>);
 };
 
 #endif /* ENEMYTEAM_HPP */
