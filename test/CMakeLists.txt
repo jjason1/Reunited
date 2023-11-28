@@ -9,6 +9,7 @@ add_executable(runAllTests
     testGolemClass.cpp
     testBanditClass.cpp
     testCharacterClass.cpp
+    testCharacterTeamClass.cpp
     testshowDevelopers.cpp
     testHelpClass.cpp
     testSamuraiClass.cpp
