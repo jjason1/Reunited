@@ -14,9 +14,9 @@ class Player : public Character {
         int atkDstrbtn;
     
     public:
-        Player(string name, int leavel);
-        void listSkills(ostream &out);
-        virtual void selectSkill(const string &skillName);
+        Player(string name);
+        virtual void listSkills(ostream &out);
+        virtual int selectSkill();
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
         void levelUp();
