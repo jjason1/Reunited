@@ -26,6 +26,3 @@ int Player::getAtkDstrbtn() {
     return atkDstrbtn;
 }
 
-void Player::levelUp() {
-    this->level++;
-}
