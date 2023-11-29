@@ -66,6 +66,14 @@ TEST(CharacterClassSuite, testGetHealth)
     EXPECT_EQ(hp, 0);
 }
 
+TEST(CharacterClassSuite, testGetLevel)
+{
+    string name = "Boyi";
+    Character *c = new Character(name);
+    int def = c->getLevel();
+    EXPECT_EQ(def, 1);
+}
+
 TEST(CharacterClassSuite, testGetDefense)
 {
     string name = "Boyi";
