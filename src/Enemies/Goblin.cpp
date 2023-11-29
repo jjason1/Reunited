@@ -3,12 +3,15 @@
 Goblin::Goblin(string name,int level) : Enemy::Enemy(name,level){
     //Setting our stat increments:
     int hpInc,defInc,atkInc;
+    int baseHp=200,
+        baseDef=90,
+        baseAtk=30;
     hpInc = defInc = atkInc = 5;
     this->setIncrmnts(hpInc,defInc,atkInc);
-    //Base stats (For a Goblin):
-    this->setHealth(200);
-    this->setDefense(90);
-    this->setAttack(30);
+    //Stats (For a Goblin):
+    this->setHealth(baseHp+(level-1)*hpIncrmnt); 
+    this->setDefense(baseDef+(level-1)*defIncrmnt);
+    this->setAttack(baseAtk+(level-1)*atkIncrmnt);
 }
 
 void Goblin::lifeSwipe(Character *c){
