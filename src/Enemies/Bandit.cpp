@@ -9,9 +9,9 @@ Bandit::Bandit(string name,int level) : Enemy::Enemy(name,level){
     hpInc = defInc = atkInc = 5;
     this->setIncrmnts(hpInc,defInc,atkInc);
     //Stats (For a Bandit):
-    this->setHealth(baseHp+(level-1)*hpInc); 
-    this->setDefense(baseDef+(level-1)*defInc);
-    this->setAttack(baseAtk+(level-1)*atkInc);
+    this->setHealth(baseHp+(level-1)*hpIncrmnt); 
+    this->setDefense(baseDef+(level-1)*defIncrmnt);
+    this->setAttack(baseAtk+(level-1)*atkIncrmnt);
 }
 
 void Bandit::stun(Character *c){
@@ -48,16 +48,5 @@ void Bandit::useSkillOn(int chosenSkill, Character *c){
     }
 }
 
-void Bandit::levelUp(){
-    //Base stats:
-    int baseHp=150,
-        baseDef=80,
-        baseAtk=25;
-    //Updating level + stats:
-    this->level++;
-    this->setHealth(baseHp+(level-1)*hpIncrmnt); 
-    this->setDefense(baseDef+(level-1)*defIncrmnt);
-    this->setAttack(baseAtk+(level-1)*atkIncrmnt);
-}
 
 

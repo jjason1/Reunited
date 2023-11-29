@@ -10,7 +10,6 @@ class Bandit : public Enemy {
         void stun(Character *);
         virtual int selectSkill();
         virtual void useSkillOn(int, Character *);
-        virtual void levelUp() override;
 };
 
 #endif /* BANDIT_HPP */
