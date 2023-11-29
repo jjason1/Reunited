@@ -19,7 +19,6 @@ class Player : public Character {
         virtual int selectSkill();
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
-        void levelUp();
 
 };
 

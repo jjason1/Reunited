@@ -25,17 +25,29 @@ TEST(TestPlayerClassSuite, TestInvalidLevelPlayer){
 
 /*
 TEST(TestPlayerClassSuite, TestLevelUp){
-    Player *P = new Player("Aamir", 1);
+    Player *P = new Player("Aamir");
     P->levelUp();
-   
+    EXPECT_EQ(P->getlevel(), 2);
 }
-*/
 
-/* Need a mock test
-TEST(TestPlayerClassSuite, TestPrintSkiils){
-    Player *P = new Player("Aamir", 1);
-    P->skills = {'Fireball', 'Icestorm'};
-    P->listSkills;
-    EXPECT_EQ();
+
+TEST(TestPlayerClassSuite, testGetStatus){
+    string name="Jason";
+    string status="\nJason's Status: \n"
+                  "--------------------------\n"
+                  "Level   = 1\n"
+                  "Health  = 0\n"
+                  "Defense = 0\n"
+                  "Attack  = 0\n\n";
+    Player *P = new Player(name);
+    stringstream ss;
+    P->getStatus(ss);
+    EXPECT_EQ(ss.str(), status); 
 }
-*/
+
+TEST(TestPlayerClassSuite, testSetAtkDstrbtn){
+    Player *P = new Player("Ryan");
+    int AtkDstrbtn = 2;
+    P->setAtkDstrbtn(AtkDstrbtn);
+    EXPECT_EQ(P->getAtkDstrbtn(), 2);
+}
