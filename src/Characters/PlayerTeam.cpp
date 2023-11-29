@@ -14,9 +14,10 @@ PlayerTeam::PlayerTeam(vector<Character *> team, ostream &outout, istream &inin)
 Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
   out << "Enemy list:" << endl;
   auto it = enemies.begin();
-  int count = 1; // for print options
+  int count = 1; // for print options and denote the size of enemies
   for (auto enemy : enemies) {
-    out << count << "- " << enemy->getName() << endl;
+    out << count << "- " << enemy->getName() << " Hp: " << enemy->getHealth()
+        << endl;
     count++;
   }
   out << "Please choose a target:" << endl;
@@ -26,14 +27,14 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
     throw runtime_error("Input failure.");
   }
   bool checkInputCorrect = false;
-  for (int i = 1; i < count; i++) {
+  for (int i = 1; i < count; i++) { //check the input is correct or not
     if (input == to_string(i)) {
       checkInputCorrect = true;
       return enemies.at(i - 1);
     }
   }
-  while (!checkInputCorrect) {
-    cout << "Please choose a target:" << endl;
+  while (!checkInputCorrect) { // wrong outpur will go in here and input again
+    out << "Please choose a target again:" << endl;
     getline(in, input);
     for (int i = 1; i < count; i++) {
       if (input == to_string(i)) {
@@ -45,4 +46,7 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
   return NULL;
 }
 
-PlayerTeam
+void PlayerTeam::addPlayer(Player *p) {
+  this->characters.push_back(p);
+  out << p->getName() << " has joined the team!" << endl;
+}

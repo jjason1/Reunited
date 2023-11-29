@@ -13,6 +13,7 @@ add_executable(runAllTests
     testHelpClass.cpp
     testSamuraiClass.cpp
     testPlayerClass.cpp
+    testPlayerTeam.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
