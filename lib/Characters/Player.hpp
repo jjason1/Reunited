@@ -6,19 +6,18 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 using namespace std;
 
 class Player : public Character {
-private:
-  int atkDstrbtn;
+  private:
+    int atkDstrbtn;
 
-public:
-  Player(string name);
-  virtual void listSkills(ostream &out);
-  virtual int selectSkill();
-  void setAtkDstrbtn(int distribution);
-  int getAtkDstrbtn();
+  public:
+    Player(string name);
+    virtual void listSkills(ostream &out);
+    virtual int selectSkill();
+    void setAtkDstrbtn(int distribution);
+    int getAtkDstrbtn();
 };
 
 #endif

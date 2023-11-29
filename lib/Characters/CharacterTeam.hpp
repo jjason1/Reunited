@@ -7,7 +7,6 @@
 #include "Character.hpp"
 #include <fstream>
 
-
 class CharacterTeam{
     protected:
         vector<Character *> characters;
@@ -17,7 +16,7 @@ class CharacterTeam{
         void addCharacter(Character *);
         virtual Character *chooseTarget(vector<Character *>);
         int getSize();
-        vector<Character *> getCharacters();  
+        vector<Character *> getCharacters();
 };
 
 #endif /* CHARACTERTEAM_HPP */

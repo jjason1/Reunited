@@ -22,7 +22,6 @@ TEST(TestPlayerClassSuite, TestLevelUp){
     EXPECT_EQ(P->getLevel(), 2);
 }
 
-
 TEST(TestPlayerClassSuite, testGetStatus){
     string name="Jason";
     string status="\nJason's Status: \n"
