@@ -21,6 +21,26 @@ TEST(BanditClassSuite, testInvalidLevelBandit){
     EXPECT_DEATH(new Bandit(name, level), "Your level must not be less than 0!");
 }
 
+TEST(BanditClassSuite, testLevelUp){
+    //Arrange.
+    Bandit *b=new Bandit("Aamir",1);
+    //Act.
+    b->levelUp();
+    //Assert.
+    EXPECT_EQ(b->getHealth(),155);
+    EXPECT_EQ(b->getDefense(),85);
+    EXPECT_EQ(b->getAttack(),30);
+}
+
+TEST(BanditClassSuite, testDifferentLevel){
+    //Arrange + Act.
+    Bandit *b=new Bandit("Aamir",3);
+    //Assert.
+    EXPECT_EQ(b->getHealth(),160);
+    EXPECT_EQ(b->getDefense(),90);
+    EXPECT_EQ(b->getAttack(),35);
+}
+
 TEST(BanditClassSuite, testNormalAttack){
     //Arrange.
     Bandit *b=new Bandit("Aamir",1);

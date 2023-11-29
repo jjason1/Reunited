@@ -8,11 +8,11 @@ add_executable(runAllTests
     testGoblinClass.cpp
     testBanditClass.cpp
     testCharacterClass.cpp
-    testshowDevelopers.cpp
-    testHelpClass.cpp
+    testCharacterTeamClass.cpp
     testSamuraiClass.cpp
     testPlayerClass.cpp
-
+    testshowDevelopers.cpp
+    testHelpClass.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
