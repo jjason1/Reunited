@@ -11,11 +11,11 @@ PlayerTeam::PlayerTeam(vector<Character *> team, ostream &outout, istream &inin)
   this->characters = team;
 }
 
-Character *PlayerTeam::chooseTarget(vector<Character *> *enemies) {
+Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
   out << "Enemy list:" << endl;
-  auto it = enemies->begin();
+  auto it = enemies.begin();
   int count = 1; // for print options
-  for (auto enemy : *enemies) {
+  for (auto enemy : enemies) {
     out << count << "- " << enemy->getName() << endl;
     count++;
   }
@@ -29,7 +29,7 @@ Character *PlayerTeam::chooseTarget(vector<Character *> *enemies) {
   for (int i = 1; i < count; i++) {
     if (input == to_string(i)) {
       checkInputCorrect = true;
-      return enemies->at(i - 1);
+      return enemies.at(i - 1);
     }
   }
   while (!checkInputCorrect) {
@@ -38,7 +38,7 @@ Character *PlayerTeam::chooseTarget(vector<Character *> *enemies) {
     for (int i = 1; i < count; i++) {
       if (input == to_string(i)) {
         checkInputCorrect = true;
-        return enemies->at(i - 1);
+        return enemies.at(i - 1);
       }
     }
   }
