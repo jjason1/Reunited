@@ -33,6 +33,10 @@ string Character::getName()
     return name;
 }
 
+int Character::getLevel(){
+    return this->level;
+}
+
 void Character::setAttack(int atk)
 {
     this->attack = atk;
@@ -88,6 +92,10 @@ void Character::takeDamage(int dmg)
 {
     cout << getName() << " took " << dmg << " damage." << endl;
     this->health -= dmg;
+}
+
+void Character::levelUp(){
+    this->level++;
 }
 
 void Character::listSkills(ostream &out) {}

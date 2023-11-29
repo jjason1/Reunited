@@ -1,11 +1,11 @@
 #ifndef WARRIOR_HPP
 #define WARRIOR_HPP
 
-#include "Character.hpp"
-#include "../Enemies/Enemy.hpp"
+#include "../Characters/Player.hpp"
 
 
-class Warrior : Character {
+
+class Warrior : public Player {
     private:
         int rageBar = 0;
     public:
