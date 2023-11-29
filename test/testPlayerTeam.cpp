@@ -119,3 +119,20 @@ TEST(TestPlayerTeamSuite, testGetCharacters){
     EXPECT_EQ(members[0]->getName(),"tester1");
     EXPECT_EQ(members[1]->getName(),"tester2");
 }
+
+TEST(TestPlayerTeamSuite, testNoTargetFound){
+    //Arrange.
+    stringstream outss;
+    stringstream inss;
+    Player * tester1 = new Player("tester1");
+    Player *tester2 = new Player("tester2");
+    vector<Character *> team{tester1,tester2};
+    PlayerTeam *testTeam = new PlayerTeam(team, outss, inss);
+    vector<Character *> targets; //Empty.
+    string errMsg="No targets are available.\n";
+    //Act.
+    Character *target=testTeam->chooseTarget(targets);
+    //Assert.
+    EXPECT_EQ(target,nullptr);
+    EXPECT_EQ(outss.str(),errMsg);
+}

@@ -12,6 +12,10 @@ PlayerTeam::PlayerTeam(vector<Character *> team, ostream &outout, istream &inin)
 }
 
 Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
+  if(enemies.size()==0){
+    out<<"No targets are available."<<endl;
+    return nullptr;
+  }
   out << "Enemy list:" << endl;
   auto it = enemies.begin();
   int count = 1; // for print options and denote the size of enemies
