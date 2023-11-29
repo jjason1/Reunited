@@ -7,22 +7,15 @@
 TEST(TestPlayerClassSuite, TestNewPlayer){
     int level=1;
     string name = "Boyi";
-    EXPECT_NO_THROW(new Player(name, level));
+    EXPECT_NO_THROW(new Player(name));
 }
 
 TEST(TestPlayerClassSuite, TestNoNamePlayer){
     int level=1;
     string name = "";
-    EXPECT_DEATH(new Player(name, level), "Your name must not be empty!");
+    EXPECT_DEATH(new Player(name), "Your name must not be empty!");
 }
 
-TEST(TestPlayerClassSuite, TestInvalidLevelPlayer){
-    string name = "Boyi";
-    int level=-1;
-    EXPECT_DEATH(new Player(name, level), "Your level must not be less than 0!");
-}
-
-/*
 TEST(TestPlayerClassSuite, TestLevelUp){
     Player *P = new Player("Aamir");
     P->levelUp();

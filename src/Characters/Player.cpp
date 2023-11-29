@@ -1,20 +1,21 @@
 #include "../../lib/Characters/Player.hpp"
 #include <iostream>
-
+#include <assert.h>
 using namespace std;
 
-Player::Player(string name, int level):Character(name),atkDstrbtn(0) {
+Player::Player(string name):Character(name),atkDstrbtn(0) {
     assert(level>=0 && "Your level must not be less than 0!");
 }
 
 //List all the skills
 void Player::listSkills(ostream &out){ 
-   
+   //Not being implemented yet.
 }
 
 //Skill selection function for override
-void Player::selectSkill(const string &skillName) {
-    
+int Player::selectSkill() {
+    //Not being implemented yet.
+    return 1;
 }
 
 void Player::setAtkDstrbtn(int distribution) {
@@ -24,4 +25,3 @@ void Player::setAtkDstrbtn(int distribution) {
 int Player::getAtkDstrbtn() {
     return atkDstrbtn;
 }
-

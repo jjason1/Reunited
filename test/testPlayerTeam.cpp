@@ -2,7 +2,7 @@
 #include <sstream>
 #include <vector>
 #include "../src/Characters/PlayerTeam.cpp"
-#include "../src/Characters/CharacterTeam.cpp"
+#include "../lib/Characters/CharacterTeam.hpp"
 #include "../lib/Enemies/Enemy.hpp"
 
 TEST(TestPlayerTeamSuite, testConstructer) {
