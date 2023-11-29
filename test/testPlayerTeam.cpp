@@ -33,7 +33,7 @@ TEST(TestPlayerTeamSuite, testAddPlayer){
     vector<Character *> team{tester1,tester2};
     PlayerTeam* testTeam = new PlayerTeam(team, ss, cin);
     //Act.
-    testTeam->addPlayer(new Player("Aamir"));
+    testTeam->addCharacter(new Player("Aamir"));
     //Assert.
     EXPECT_EQ(ss.str(),expOutput);
     EXPECT_EQ(testTeam->getSize(),3);

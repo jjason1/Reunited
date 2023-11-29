@@ -16,14 +16,17 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
     out<<"No targets are available."<<endl;
     return nullptr;
   }
+  // list enemy phase
   out << "Enemy list:" << endl;
   auto it = enemies.begin();
   int count = 1; // for print options and denote the size of enemies
-  for (auto enemy : enemies) {
+  for (auto enemy : enemies) { // list the enemy
     out << count << "- " << enemy->getName() << " Hp: " << enemy->getHealth()
         << endl;
     count++;
   }
+
+  // choose enemy phase
   out << "Please choose a target:" << endl;
   string input;
   getline(in, input);
@@ -37,7 +40,8 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
       return enemies.at(i - 1);
     }
   }
-  while (!checkInputCorrect) { // wrong outpur will go in here and input again
+
+  while (!checkInputCorrect) { // wrong output will go in here and input again
     out << "Please choose a target again:" << endl;
     getline(in, input);
     for (int i = 1; i < count; i++) {
@@ -50,7 +54,4 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
   return NULL;
 }
 
-void PlayerTeam::addPlayer(Player *p) {
-  this->characters.push_back(p);
-  out << p->getName() << " has joined the team!" << endl;
-}
+

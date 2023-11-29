@@ -10,7 +10,6 @@ private:
 public:
   PlayerTeam(vector<Character *>, ostream&, istream&);
   Character* chooseTarget(vector<Character *> enemies) override;
-  void addPlayer(Player * p);
 };
 
 #endif
