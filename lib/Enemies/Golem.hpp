@@ -1,8 +1,7 @@
 #ifndef GOLEM_HPP
 #define GOLEM_HPP
 
-#include <iostream>
-#include <fstream>
+
 #include <vector>
 #include "../../lib/Enemies/Enemy.hpp"
 using namespace std;
@@ -16,7 +15,6 @@ public:
     void shieldGen();
 
 
-    //virtual void getStatus(ostream &out) override;
 };
 
 #endif /* GOLEM_HPP */
