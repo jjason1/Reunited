@@ -15,7 +15,7 @@ void Golem::lazerBlaze(Character *target) {
     if(target == nullptr){
         cout << "Target cannot be null." <<endl;
     }
-    target->takeDamage(this->getAttack() * 2.5); 
+    target->takeDamage(this->getAttack() * 2); 
     cout<< this->getName() << " attacks " << target->getName() << " with lazer blaze!" <<endl;
 }
 

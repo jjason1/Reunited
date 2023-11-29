@@ -33,7 +33,7 @@ TEST(GolemClassSuite, testlazerBlaze){
     Character *c = new Character("Ryan");
     c->setHealth(300);
     g->lazerBlaze(c);
-    EXPECT_EQ(c->getHealth(), 175);
+    EXPECT_EQ(c->getHealth(), 200);
 }
 
 

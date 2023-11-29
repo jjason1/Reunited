@@ -8,11 +8,9 @@ using namespace std;
 
 class Golem : public Enemy {
 
-    private:
-        int CD = 0;
 
     public:
-
+        int CD = 0;
         Golem(string name, int level);
         void lazerBlaze(Character *target);
         void earthquake(vector<Character *> &targets);
