@@ -7,12 +7,16 @@
 using namespace std;
 
 class Golem : public Enemy {
-public:
 
-    Golem(string name, int level);
-    void lazerBlaze(Character *target);
-    void earthquake(vector<Character *> &targets);
-    void shieldGen();
+    private:
+        int CD = 0;
+
+    public:
+
+        Golem(string name, int level);
+        void lazerBlaze(Character *target);
+        void earthquake(vector<Character *> &targets);
+        void shieldGen();
 
 
 };

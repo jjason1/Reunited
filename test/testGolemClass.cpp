@@ -28,6 +28,15 @@ TEST(GolemClassSuite, testNormalAttack){
     EXPECT_EQ(c->getHealth(), 50);
 }
 
+TEST(GolemClassSuite, testlazerBlaze){
+    Golem *g = new Golem("Boyi" , 1);
+    Character *c = new Character("Ryan");
+    c->setHealth(300);
+    g->lazerBlaze(c);
+    EXPECT_EQ(c->getHealth(), 175);
+}
+
+
 TEST(GolemClassSuite, testShieldGen){
     Golem *g = new Golem("Boyi" , 1);
     g->shieldGen();

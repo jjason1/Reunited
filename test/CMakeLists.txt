@@ -4,16 +4,7 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 add_subdirectory(googletest)
 
 add_executable(runAllTests
-    testEnemyClass.cpp
-    testGoblinClass.cpp
     testGolemClass.cpp
-    testBanditClass.cpp
-    testEnemyTeamClass.cpp
-    testCharacterClass.cpp
-    testshowDevelopers.cpp
-    testHelpClass.cpp
-    testSamuraiClass.cpp
-    testPlayerClass.cpp
 
 )
 

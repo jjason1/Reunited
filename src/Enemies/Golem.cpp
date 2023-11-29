@@ -8,13 +8,14 @@ Golem::Golem(string name, int level) : Enemy::Enemy(name, level) {
     this->setHealth(3000);
     this->setAttack(50);
     this->setDefense(1000);
+    //CD = terms;
 }
 
 void Golem::lazerBlaze(Character *target) {
     if(target == nullptr){
         cout << "Target cannot be null." <<endl;
     }
-    target->takeDamage(this->getAttack()); 
+    target->takeDamage(this->getAttack() * 2.5); 
     cout<< this->getName() << " attacks " << target->getName() << " with lazer blaze!" <<endl;
 }
 
