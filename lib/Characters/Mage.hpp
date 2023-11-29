@@ -11,7 +11,7 @@ class Mage : public Character
 {
 private:
     int manaBar;
-    unsigned int boost;
+    unsigned int boostedTurns;
 
 public:
     Mage(string);

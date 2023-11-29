@@ -5,7 +5,7 @@ using namespace std;
 
 Mage::Mage(string name) : Character::Character(name)
 {
-    this->boost = 0;
+    this->boostedTurns = 0;
     int hpInc, defInc, atkInc, baseStat = 100;
 
     hpInc = atkInc = 10;
@@ -22,10 +22,10 @@ void Mage::fireBall(Enemy *e)
 
     int multiplier = 1;
 
-    if (this->boost > 0)
+    if (this->boostedTurns > 0)
     {
         multiplier += 1;
-        boost--;
+        boostedTurns--;
     }
 
     cout << this->getName() << " used fire ball on " << e->getName() << "." << endl;
@@ -35,18 +35,25 @@ void Mage::fireBall(Enemy *e)
 void Mage::healing()
 {
     int heal = 0.5 * this->getHealth();
+
+    if(this->boostedTurns > 0){
+        heal += 0.5 * this->getHealth();
+        boostedTurns--;
+    }
+    
     this->setHealth(heal + this->getHealth());
 
-    cout << this->getName() << " healed its self." << endl;
+    cout << this->getName() << " used healing." << endl;
+    cout << this->getName() << " healed " << heal << " hp." << endl;
 }
 
 void Mage::iceStorm(Enemy *e)
 {
     double multiplier = 0.5;
-    if (this->boost > 0)
+    if (this->boostedTurns > 0)
     {
         multiplier += 1;
-        boost--;
+        boostedTurns--;
     }
 
     cout << this->getName() << " used ice storm on " << e->getName() << "." << endl;
@@ -57,10 +64,10 @@ void Mage::thunderBlast(Enemy *e)
 {
     double multiplier = 1.5;
 
-    if (this->boost > 0)
+    if (this->boostedTurns > 0)
     {
         multiplier += 1;
-        boost--;
+        boostedTurns--;
     }
 
     cout << this->getName() << " used thunder blast on " << e->getName() << "." << endl;
@@ -69,5 +76,5 @@ void Mage::thunderBlast(Enemy *e)
 
 void Mage::skillBoost()
 {
-    boost++;
+    boostedTurns++;
 }

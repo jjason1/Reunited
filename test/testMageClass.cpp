@@ -29,12 +29,38 @@ TEST(MageClassSuite, testFireball)
     EXPECT_EQ(e->getHealth(), 100);
 }
 
+TEST(MageClassSuite, testSkillBoostFireball)
+{
+    // Arrange.
+    Mage *m = new Mage("Jason");
+    Enemy *e = new Enemy("John", 1);
+
+    e->setHealth(300);
+    // Act.
+    m->skillBoost();
+    m->fireBall(e);
+    // Assert.
+    EXPECT_EQ(e->getHealth(), 100);
+}
+
 TEST(MageClassSuite, testIceStorm)
 {
     Mage *m = new Mage("Jason");
     Enemy *e = new Enemy("Neal", 1);
 
     e->setHealth(100);
+    m->iceStorm(e);
+
+    EXPECT_EQ(e->getHealth(), 50);
+}
+
+TEST(MageClassSuite, testSkillBoostIceStorm)
+{
+    Mage *m = new Mage("Jason");
+    Enemy *e = new Enemy("Neal", 1);
+
+    e->setHealth(200);
+    m->skillBoost();
     m->iceStorm(e);
 
     EXPECT_EQ(e->getHealth(), 50);
@@ -50,6 +76,17 @@ TEST(MageClassSuite, testThunderBlast)
 
     EXPECT_EQ(e->getHealth(), 50);
 }
+TEST(MageClassSuite, testSkillBoostThunderBlast)
+{
+    Mage *m = new Mage("Jason");
+    Enemy *e = new Enemy("Neal", 1);
+
+    e->setHealth(300);
+    m->skillBoost();
+    m->thunderBlast(e);
+
+    EXPECT_EQ(e->getHealth(), 50);
+}
 
 TEST(MageClassSuite, testHealing)
 {
@@ -58,6 +95,16 @@ TEST(MageClassSuite, testHealing)
     m->healing();
 
     EXPECT_EQ(m->getHealth(), 150);
+}
+
+TEST(MageClassSuite, testSkillBoostHealing)
+{
+    Mage *m = new Mage("Jason");
+
+    m->skillBoost();
+    m->healing();
+
+    EXPECT_EQ(m->getHealth(), 200);
 }
 
 TEST(MageClassSuite, testSkillBoost)
@@ -70,5 +117,4 @@ TEST(MageClassSuite, testSkillBoost)
     m->thunderBlast(e);
 
     EXPECT_EQ(e->getHealth(), 50);
-    
 }
