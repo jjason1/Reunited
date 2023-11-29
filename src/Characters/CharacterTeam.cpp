@@ -1,4 +1,4 @@
-#include "../lib/Characters/CharacterTeam.hpp"
+#include "../../lib/Characters/CharacterTeam.hpp"
 
 CharacterTeam::CharacterTeam(vector<Character *> team, ostream &outObj) : out(outObj){
     this->characters=team;

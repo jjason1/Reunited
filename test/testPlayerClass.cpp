@@ -1,4 +1,3 @@
-
 #include "gtest/gtest.h"
 #include "../src/Characters/Player.cpp"
 #include <iostream>
@@ -22,7 +21,6 @@ TEST(TestPlayerClassSuite, TestLevelUp){
     P->levelUp();
     EXPECT_EQ(P->getLevel(), 2);
 }
-
 
 TEST(TestPlayerClassSuite, testGetStatus){
     string name="Jason";

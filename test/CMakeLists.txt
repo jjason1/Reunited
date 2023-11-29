@@ -12,6 +12,7 @@ add_executable(runAllTests
     testCharacterTeamClass.cpp
     testSamuraiClass.cpp
     testPlayerClass.cpp
+    testPlayerTeam.cpp
     testshowDevelopers.cpp
     testHelpClass.cpp
 )
