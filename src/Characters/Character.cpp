@@ -33,6 +33,10 @@ string Character::getName()
     return name;
 }
 
+int Character::getLevel(){
+    return this->level;
+}
+
 void Character::setAttack(int atk)
 {
     this->attack = atk;
