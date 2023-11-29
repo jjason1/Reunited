@@ -7,13 +7,11 @@
 #include <string>
 
 PlayerTeam::PlayerTeam(vector<Character *> team, ostream &outout, istream &inin)
-    : CharacterTeam(team, outout), in(inin) {
-  this->characters = team;
-}
+    : CharacterTeam(team, outout), in(inin) {}
 
 Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
-  if(enemies.size()==0){
-    out<<"No targets are available."<<endl;
+  if (enemies.size() == 0) {
+    out << "No targets are available." << endl;
     return nullptr;
   }
   // list enemy phase
@@ -34,7 +32,7 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
     throw runtime_error("Input failure.");
   }
   bool checkInputCorrect = false;
-  for (int i = 1; i < count; i++) { //check the input is correct or not
+  for (int i = 1; i < count; i++) { // check the input is correct or not
     if (input == to_string(i)) {
       checkInputCorrect = true;
       return enemies.at(i - 1);
@@ -53,5 +51,3 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
   }
   return NULL;
 }
-
-
