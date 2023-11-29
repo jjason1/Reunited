@@ -27,7 +27,7 @@ TEST(TestPlayerClassSuite, TestInvalidLevelPlayer){
 TEST(TestPlayerClassSuite, TestLevelUp){
     Player *P = new Player("Aamir");
     P->levelUp();
-    EXPECT_EQ(P->getlevel(), 2);
+    EXPECT_EQ(P->getLevel(), 2);
 }
 
 
