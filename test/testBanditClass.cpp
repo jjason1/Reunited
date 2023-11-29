@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
+#include <ctime>
+#include <cstdlib>
 #include "../src/Enemies/Bandit.cpp"
-#include <sstream>
 
 TEST(BanditClassSuite, testNewBandit){
     int level=1;
@@ -18,6 +19,26 @@ TEST(BanditClassSuite, testInvalidLevelBandit){
     int level=-1;
     string name="Ryan";
     EXPECT_DEATH(new Bandit(name, level), "Your level must not be less than 0!");
+}
+
+TEST(BanditClassSuite, testLevelUp){
+    //Arrange.
+    Bandit *b=new Bandit("Aamir",1);
+    //Act.
+    b->levelUp();
+    //Assert.
+    EXPECT_EQ(b->getHealth(),155);
+    EXPECT_EQ(b->getDefense(),85);
+    EXPECT_EQ(b->getAttack(),30);
+}
+
+TEST(BanditClassSuite, testDifferentLevel){
+    //Arrange + Act.
+    Bandit *b=new Bandit("Aamir",3);
+    //Assert.
+    EXPECT_EQ(b->getHealth(),160);
+    EXPECT_EQ(b->getDefense(),90);
+    EXPECT_EQ(b->getAttack(),35);
 }
 
 TEST(BanditClassSuite, testNormalAttack){
@@ -39,4 +60,23 @@ TEST(BanditClassSuite, testStun){
     b->stun(c);
     //Assert.
     EXPECT_TRUE(c->checkMovable() == false);
+}
+
+TEST(BanditClassSuite, testSelectSkill){
+    //Arrange.
+    Bandit *b=new Bandit("Jason",1);
+    //Act.
+    int chosenSkill=b->selectSkill();
+    //Assert.
+    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2));
+}
+
+TEST(BanditClassSuite, testUseSkillOn){
+    //Arrange.
+    Bandit *b=new Bandit("Boyi",1);
+    Character *c=new Character("Aamir");
+    c->setHealth(100);
+    int chosenSkill=b->selectSkill();
+    //Act + Assert.
+    EXPECT_NO_THROW(b->useSkillOn(chosenSkill,c));
 }
