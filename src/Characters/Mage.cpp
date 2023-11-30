@@ -97,16 +97,20 @@ void Mage::listSkills(ostream &out)
 int Mage::selectSkill()
 {
     int skill;
-    stringstream ss;
-    listSkills(ss);
-    cin >> skill;
+    ostream &out = cout;
+    istream &in = cin;
 
-    while (skill == 0 || skill >= 6)
+    listSkills(out);
+    in >> skill;
+
+    while (skill < 1 || skill > 5)
     {
-        listSkills(ss);
-        cin >> skill;
+        listSkills(out);
+        out << "Invalid input. Please enter a number between 1 and 5." << endl;
+        in.clear();                                         // Clear input stream to handle non-integer inputs
+        in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+        in >> skill;
     }
-
     return skill;
 }
 

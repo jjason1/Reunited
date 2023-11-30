@@ -23,7 +23,7 @@ public:
 
     virtual void listSkills(ostream &);
     virtual int selectSkill();
-    virtual void useSkillOn(int,  Enemy *);
+    virtual void useSkillOn(int, Enemy *);
 };
 
 #endif
