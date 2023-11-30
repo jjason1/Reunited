@@ -118,3 +118,41 @@ TEST(MageClassSuite, testSkillBoost)
 
     EXPECT_EQ(e->getHealth(), 50);
 }
+
+TEST(MageClassSuite, testListSkills)
+{
+    string name = "Jason";
+    string status = "\nSkills\n"
+                    "--------------------------\n"
+                    "1. Direct strike\n"
+                    "2. Sheath blade\n"
+                    "3. Wide range strike\n"
+                    "4. Shadow degeneration\n"
+                    "5. Smoke bomb\n"
+                    "Select the skill you would like to use: \n";
+
+    Mage *m = new Mage(name);
+    stringstream ss;
+    m->listSkills(ss);
+    EXPECT_EQ(ss.str(), status);
+}
+
+TEST(MageClassSuite, testSelectSkill)
+{
+    // Arrange.
+    Mage *m = new Mage("Jason");
+    // Act.
+    int chosenSkill = m->selectSkill();
+    // Assert.
+    EXPECT_TRUE((chosenSkill == 1) || (chosenSkill == 2) || (chosenSkill == 3) || (chosenSkill == 4) || (chosenSkill == 5));
+}
+
+TEST(MageClassSuite, testUseSkillOn){
+    //Arrange.
+    Mage *m=new Mage("Jason");
+    Enemy *e=new Enemy("Aamir", 1);
+    e->setHealth(200);
+    int chosenSkill=m->selectSkill();
+    //Act + Assert.
+    EXPECT_NO_THROW(m->useSkillOn(chosenSkill,e));
+}
