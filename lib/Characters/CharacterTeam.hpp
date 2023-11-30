@@ -1,6 +1,8 @@
 #ifndef CHARACTERTEAM_HPP
 #define CHARACTERTEAM_HPP
 
+#include <istream>
+#include <ostream>
 #include <vector>
 #include "Character.hpp"
 #include <fstream>
@@ -14,7 +16,7 @@ class CharacterTeam{
         void addCharacter(Character *);
         virtual Character *chooseTarget(vector<Character *>);
         int getSize();
-        vector<Character *> getCharacters();    
+        vector<Character *> getCharacters();
 };
 
 #endif /* CHARACTERTEAM_HPP */
