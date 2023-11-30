@@ -94,9 +94,13 @@ void Character::takeDamage(int dmg)
     this->health -= dmg;
 }
 
+void Character::levelUp(){
+    this->level++;
+}
+
 void Character::listSkills(ostream &out) {}
-int Character::selectSkill()
-{
-    return 0;
+
+int Character::selectSkill(){
+    return 1;
 }
 void Character::useSkillOn(int skill, Enemy *e) {}
