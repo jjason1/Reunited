@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <fstream>
+
+#include "../Enemies/Enemy.hpp"
+
 using namespace std;
 
 class Character
@@ -36,7 +39,7 @@ public:
 
     virtual void listSkills(ostream &);
     virtual int selectSkill();
-    virtual void useSkillOn(int, Character *);
+    virtual void useSkillOn(int, Enemy *);
 };
 
 #endif

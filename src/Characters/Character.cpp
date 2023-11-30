@@ -99,4 +99,4 @@ int Character::selectSkill()
 {
     return 0;
 }
-void Character::useSkillOn(int skill, Character *c) {}
+void Character::useSkillOn(int skill, Enemy *e) {}
