@@ -11,15 +11,15 @@ class Samurai : public Character
 {
 public:
     Samurai(string);
-    void directStrike(Enemy *);
-    void sheathBlade(Enemy *);
-    void wideRangeStrike(Enemy *);
-    void shadowDegeneration(Enemy *);
-    void smokeBomb(Enemy *);
-    
+    void directStrike(Character *);
+    void sheathBlade(Character *);
+    void wideRangeStrike(Character *);
+    void shadowDegeneration(Character *);
+    void smokeBomb(Character *);
+
     virtual void listSkills(ostream &);
     virtual int selectSkill();
-    virtual void useSkillOn(int,  Enemy *);
+    virtual void useSkillOn(int, Character *);
 };
 
 #endif
