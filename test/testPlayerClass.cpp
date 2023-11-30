@@ -52,3 +52,11 @@ TEST(TestPlayerClassSuite, testGetAtkDstrbtn){
     P->setAtkDstrbtn(AtkDstrbtn);
     EXPECT_EQ(P->getAtkDstrbtn(), 5);
 }
+
+TEST(TestPlayerClassSuite, testresetHealth){
+    Player *P = new Player("Boyi");
+    int HpInc = 15;
+    P->levelUp();
+    P->resetHealth(HpInc);
+    EXPECT_EQ(P->getHealth(), 115);
+}
