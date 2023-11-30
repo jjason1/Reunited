@@ -5,20 +5,20 @@
 
 #include <iostream>
 #include <string>
-
+#include <vector>
 using namespace std;
 
 class Player : public Character {
     private:
         int atkDstrbtn;
-    
     public:
         Player(string name);
         virtual void listSkills(ostream &out);
         virtual int selectSkill();
+        virtual void useSkillOn(int,Character *);
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
-
+        void resetHealth(); 
 };
 
 #endif

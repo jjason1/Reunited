@@ -99,8 +99,8 @@ void Character::levelUp(){
 }
 
 void Character::listSkills(ostream &out) {}
-int Character::selectSkill()
-{
-    return 0;
+
+int Character::selectSkill(){
+    return 1;
 }
 void Character::useSkillOn(int skill, Character *c) {}

@@ -3,7 +3,7 @@
 #include <assert.h>
 using namespace std;
 
-Player::Player(string name):Character(name),atkDstrbtn(0) {
+Player::Player(string name) : Character(name), atkDstrbtn(0) {
     assert(level>=0 && "Your level must not be less than 0!");
 }
 
@@ -24,5 +24,11 @@ void Player::setAtkDstrbtn(int distribution) {
 
 int Player::getAtkDstrbtn() {
     return atkDstrbtn;
+}
+
+
+void Player::resetHealth() {
+    int baseHealth = 100;
+    this->setHealth(baseHealth + (this->getLevel() - 1) * this->hpIncrmnt);
 }
 

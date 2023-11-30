@@ -8,6 +8,8 @@ class Bandit : public Enemy {
     public:
         Bandit(string,int);
         void stun(Character *);
+        virtual int selectSkill();
+        virtual void useSkillOn(int, Character *);
 };
 
 #endif /* BANDIT_HPP */
