@@ -25,3 +25,9 @@ void Player::setAtkDstrbtn(int distribution) {
 int Player::getAtkDstrbtn() {
     return atkDstrbtn;
 }
+
+
+void Player::resetHealth(int HpInc) {
+    this->setHealth(100 + (this->getLevel() - 1) * HpInc);
+}
+
