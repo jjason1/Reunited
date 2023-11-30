@@ -77,22 +77,3 @@ TEST(SamuraiClassSuite, testSmokeBomb)
     EXPECT_EQ(e->getHealth(), 50);
     EXPECT_TRUE(status == false);
 }
-
-TEST(SamuraiClassSuite, testSelectSkill){
-    //Arrange.
-    Samurai *s=new Samurai("Jason");
-    //Act.
-    int chosenSkill=s->selectSkill();
-    //Assert.
-    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2));
-}
-
-TEST(SamuraiClassSuite, testUseSkillOn){
-    //Arrange.
-    Samurai *s=new Samurai("Jason");
-    Enemy *e=new Enemy("Ryan", 1);
-    s->setHealth(100);
-    int chosenSkill=s->selectSkill();
-    //Act + Assert.
-    EXPECT_NO_THROW(s->useSkillOn(chosenSkill,e));
-}

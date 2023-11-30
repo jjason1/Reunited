@@ -55,12 +55,54 @@ void Samurai::smokeBomb(Enemy *e)
     e->setMovable(false);
 }
 
+void Samurai::listSkills(ostream &out)
+{
+    out << endl;
+    out << "Skills" << endl;
+    out << "--------------------------\n";
+    out << "1. Direct strike" << endl;
+    out << "2. Sheath blade" << endl;
+    out << "3. Wide range strike" << endl;
+    out << "4. Shadow degeneration" << endl;
+    out << "5. Smoke bomb" << endl;
+    out << "Select the skill you would like use" << endl;
+    out << endl;
+}
 int Samurai::selectSkill()
 {
-    // Select one of your skills here. (Not implemented yet.)
-    return 1;
+    int skill;
+    stringstream ss;
+    listSkills(ss);
+    cin >> skill;
+
+    return skill;
 }
 
-void Samurai::useSkillOn(int skill, Character *c) {}
-
-void Samurai::listSkills(ostream &) {}
+void Samurai::useSkillOn(int skill, Enemy *e)
+{
+    if (skill == 1)
+    {
+        cout << this->getName() << " chose direct strike." << endl;
+        this->directStrike(e);
+    }
+    else if (skill == 2)
+    {
+        cout << this->getName() << " chose sheath blade." << endl;
+        this->sheathBlade(e);
+    }
+    else if (skill == 3)
+    {
+        cout << this->getName() << " chose wide range strike." << endl;
+        this->wideRangeStrike(e);
+    }
+    else if (skill == 4)
+    {
+        cout << this->getName() << " chose shadow degeneration." << endl;
+        this->shadowDegeneration(e);
+    }
+    else
+    {
+        cout << this->getName() << " chose smoke bomb." << endl;
+        this->smokeBomb(e);
+    }
+}
