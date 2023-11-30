@@ -1,7 +1,7 @@
 #ifndef WARRIOR_HPP
 #define WARRIOR_HPP
 
-#include "../Characters/Player.hpp"
+#include "../final-project-akhan197-bli181-cchua042-jlin379/lib/Characters/Player.hpp"
 
 
 
@@ -9,7 +9,7 @@ class Warrior : public Player {
     private:
         int rageBar = 0;
     public:
-        Warrior(string name, int level);
+        Warrior(string);
         void strike(Enemy *);
         void heavyStrike(Enemy *);
         void warCry();
@@ -21,6 +21,11 @@ class Warrior : public Player {
         void unstoppableFury();
         void letTamBleed(Enemy *);
         void doomOfTheEnemy(Enemy *);
+
+        virtual void listSkills(ostream &);
+        virtual int selectSkill();
+        virtual void useSkillOn(int, Enemy *);
+
 
 };
 
