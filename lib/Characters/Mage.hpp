@@ -20,6 +20,10 @@ public:
     void iceStorm(Enemy *);
     void thunderBlast(Enemy *);
     void skillBoost();
+
+    virtual void listSkills(ostream &);
+    virtual int selectSkill();
+    virtual void useSkillOn(int,  Enemy *);
 };
 
 #endif

@@ -36,11 +36,12 @@ void Mage::healing()
 {
     int heal = 0.5 * this->getHealth();
 
-    if(this->boostedTurns > 0){
+    if (this->boostedTurns > 0)
+    {
         heal += 0.5 * this->getHealth();
         boostedTurns--;
     }
-    
+
     this->setHealth(heal + this->getHealth());
 
     cout << this->getName() << " used healing." << endl;
@@ -77,4 +78,57 @@ void Mage::thunderBlast(Enemy *e)
 void Mage::skillBoost()
 {
     boostedTurns++;
+}
+
+void Mage::listSkills(ostream &out)
+{
+    out << endl;
+    out << "Skills" << endl;
+    out << "--------------------------\n";
+    out << "1. Fireball" << endl;
+    out << "2. Heal" << endl;
+    out << "3. Ice storm" << endl;
+    out << "4. Thunder blast" << endl;
+    out << "5. Skill boost" << endl;
+    out << "Select the skill you would like use" << endl;
+    out << endl;
+}
+
+int Mage::selectSkill()
+{
+    int skill;
+    stringstream ss;
+    listSkills(ss);
+    cin >> skill;
+
+    return skill;
+}
+
+void Mage::useSkillOn(int skill, Enemy *e)
+{
+    if (skill == 1)
+    {
+        cout << this->getName() << " chose fireball." << endl;
+        this->fireBall(e);
+    }
+    else if (skill == 2)
+    {
+        cout << this->getName() << " chose heal." << endl;
+        this->healing();
+    }
+    else if (skill == 3)
+    {
+        cout << this->getName() << " chose ice storm." << endl;
+        this->iceStorm(e);
+    }
+    else if (skill == 4)
+    {
+        cout << this->getName() << " chose thunder blast." << endl;
+        this->thunderBlast(e);
+    }
+    else
+    {
+        cout << this->getName() << " chose skill boost." << endl;
+        this->skillBoost();
+    }
 }
