@@ -9,8 +9,10 @@
 class Combat {
 private:
   int turns;
+  PlayerTeam *OriginalPlayerTeam;
   PlayerTeam *playerTeam;
   PlayerTeam *outPlayerTeam; // store players that is already has hp<=0
+  EnemyTeam *OriginalEnemyTeam;
   EnemyTeam *enemyTeam;
   EnemyTeam *outEnemyTeam; // store enemies that is already has hp<=0
   ostream &out;
