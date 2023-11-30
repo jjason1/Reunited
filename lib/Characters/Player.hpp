@@ -15,10 +15,10 @@ class Player : public Character {
         Player(string name);
         virtual void listSkills(ostream &out);
         virtual int selectSkill();
+        virtual void useSkillOn(int,Character *);
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
-       void resetHealth(); 
-
+        void resetHealth(); 
 };
 
 #endif
