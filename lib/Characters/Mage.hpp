@@ -15,15 +15,15 @@ private:
 
 public:
     Mage(string);
-    void fireBall(Enemy *);
+    void fireBall(Character *);
     void healing();
-    void iceStorm(Enemy *);
-    void thunderBlast(Enemy *);
+    void iceStorm(Character *);
+    void thunderBlast(Character *);
     void skillBoost();
 
     virtual void listSkills(ostream &);
     virtual int selectSkill();
-    virtual void useSkillOn(int, Enemy *);
+    virtual void useSkillOn(int, Character *);
 };
 
 #endif

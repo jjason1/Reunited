@@ -7,7 +7,6 @@ add_executable(runAllTests
     testEnemyClass.cpp
     testGoblinClass.cpp
     testBanditClass.cpp
-<<<<<<< HEAD
     testEnemyTeamClass.cpp
     testCharacterClass.cpp
     testCharacterTeamClass.cpp
@@ -16,7 +15,7 @@ add_executable(runAllTests
     testPlayerTeam.cpp
     testshowDevelopers.cpp
     testHelpClass.cpp
-    testMageClass.cppj
+    testMageClass.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)

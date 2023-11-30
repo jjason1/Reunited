@@ -17,7 +17,7 @@ Mage::Mage(string name) : Character::Character(name)
     this->setHealth(baseStat);
 }
 
-void Mage::fireBall(Enemy *e)
+void Mage::fireBall(Character *c)
 {
 
     int multiplier = 1;
@@ -28,8 +28,8 @@ void Mage::fireBall(Enemy *e)
         boostedTurns--;
     }
 
-    cout << this->getName() << " used fire ball on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used fire ball on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
 void Mage::healing()
@@ -48,7 +48,7 @@ void Mage::healing()
     cout << this->getName() << " healed " << heal << " hp." << endl;
 }
 
-void Mage::iceStorm(Enemy *e)
+void Mage::iceStorm(Character *c)
 {
     double multiplier = 0.5;
     if (this->boostedTurns > 0)
@@ -57,11 +57,11 @@ void Mage::iceStorm(Enemy *e)
         boostedTurns--;
     }
 
-    cout << this->getName() << " used ice storm on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used ice storm on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
-void Mage::thunderBlast(Enemy *e)
+void Mage::thunderBlast(Character *c)
 {
     double multiplier = 1.5;
 
@@ -71,8 +71,8 @@ void Mage::thunderBlast(Enemy *e)
         boostedTurns--;
     }
 
-    cout << this->getName() << " used thunder blast on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used thunder blast on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
 void Mage::skillBoost()
@@ -97,29 +97,27 @@ void Mage::listSkills(ostream &out)
 int Mage::selectSkill()
 {
     int skill;
-    ostream &out = cout;
-    istream &in = cin;
 
-    listSkills(out);
-    in >> skill;
+    listSkills(cout);
+    cin >> skill;
 
     while (skill < 1 || skill > 5)
     {
-        listSkills(out);
-        out << "Invalid input. Please enter a number between 1 and 5." << endl;
-        in.clear();                                         // Clear input stream to handle non-integer inputs
-        in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
-        in >> skill;
+        listSkills(cout);
+        cout << "Invalid input. Please enter a number between 1 and 5." << endl;
+        cin.clear();                                         // Clear input stream to handle non-integer inputs
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+        cin >> skill;
     }
     return skill;
 }
 
-void Mage::useSkillOn(int skill, Enemy *e)
+void Mage::useSkillOn(int skill, Character *c)
 {
     if (skill == 1)
     {
         cout << this->getName() << " chose fireball." << endl;
-        this->fireBall(e);
+        this->fireBall(c);
     }
     else if (skill == 2)
     {
@@ -129,12 +127,12 @@ void Mage::useSkillOn(int skill, Enemy *e)
     else if (skill == 3)
     {
         cout << this->getName() << " chose ice storm." << endl;
-        this->iceStorm(e);
+        this->iceStorm(c);
     }
     else if (skill == 4)
     {
         cout << this->getName() << " chose thunder blast." << endl;
-        this->thunderBlast(e);
+        this->thunderBlast(c);
     }
     else
     {
