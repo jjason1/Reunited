@@ -1,4 +1,4 @@
-#include "../lib/Characters/Warrior.hpp"
+#include "../../lib/Characters/Warrior.hpp"
 using namespace std;
 #include<iostream>
 #include<string>
@@ -18,14 +18,19 @@ Warrior::Warrior(string name) : Player::Player(name){
     this->setAttack(baseStats);
 
     //Strike is normal attack.
-    void Warrior::strike(Enemy *e){
+    void Warrior::strike(Enemy *e) {
         cout << this->getName() << " used strikee on " << e->getName() << "." << endl;
         e->takeDamage(this->getAttack());
     }
 
-    void Warrior::heavyStrike(Enemy *e){
+    void Warrior::heavyStrike(Enemy *e) {
         double multiplier = 1.5;
         cout << this->getName() << " used heavyStrike on " << e->getName() << "." << endl;
         e->takeDamage(this->getAttack() * multiplier);
+    }
+
+    void Warrior::warCry() {
+        int warCry = 2;
+        this->setAttack(warCry * baseStats);
     }
 }
