@@ -26,6 +26,7 @@ int Player::getAtkDstrbtn() {
     return atkDstrbtn;
 }
 
-void Player::resetHealth(int HpInc) {
-    this->setHealth(100 + (this->getLevel() - 1) * HpInc);
+void Player::resetHealth() {
+    int baseHealth = 100;
+    this->setHealth(baseHealth + (this->getLevel() - 1) * this->hpIncrmnt);
 }
