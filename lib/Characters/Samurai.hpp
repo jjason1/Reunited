@@ -16,6 +16,10 @@ public:
     void wideRangeStrike(Enemy *);
     void shadowDegeneration(Enemy *);
     void smokeBomb(Enemy *);
+    
+    virtual void listSkills(ostream &);
+    virtual int selectSkill();
+    virtual void useSkillOn(int, Character *);
 };
 
 #endif

@@ -54,3 +54,13 @@ void Samurai::smokeBomb(Enemy *e)
     e->takeDamage(multiplier * this->getAttack());
     e->setMovable(false);
 }
+
+int Samurai::selectSkill()
+{
+    // Select one of your skills here. (Not implemented yet.)
+    return 1;
+}
+
+void Samurai::useSkillOn(int skill, Character *c) {}
+
+void Samurai::listSkills(ostream &) {}
