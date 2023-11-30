@@ -9,10 +9,10 @@
 class Combat {
 private:
   int turns;
-  PlayerTeam *OriginalPlayerTeam;
+  PlayerTeam *OriginalPlayerTeam; // store the original health and name of player
   PlayerTeam *playerTeam;
   PlayerTeam *outPlayerTeam; // store players that is already has hp<=0
-  EnemyTeam *OriginalEnemyTeam;
+  EnemyTeam *OriginalEnemyTeam; // store the original health and name of enemy
   EnemyTeam *enemyTeam;
   EnemyTeam *outEnemyTeam; // store enemies that is already has hp<=0
   ostream &out;
@@ -28,8 +28,10 @@ public:
                         // pretend winning or restart the fight
   PlayerTeam *getPlayerTeam();
   PlayerTeam *getOutPlayerTeam();
+  PlayerTeam *getOriginalPlayerTeam();
   EnemyTeam *getEnemyTeam();
   EnemyTeam *getOutEnemyTeam();
+  EnemyTeam *getOriginalEnemyTeam();
 };
 
 #endif
