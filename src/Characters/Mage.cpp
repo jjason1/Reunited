@@ -101,6 +101,12 @@ int Mage::selectSkill()
     listSkills(ss);
     cin >> skill;
 
+    while (skill == 0 || skill >= 6)
+    {
+        listSkills(ss);
+        cin >> skill;
+    }
+
     return skill;
 }
 
