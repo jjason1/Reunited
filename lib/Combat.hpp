@@ -24,7 +24,12 @@ public:
   int showCurrentTurn();
   bool checkBattleEnd(); // check if either team all have been eliminated
   void resetCombat(); // reset combat when restart the combat
-  void chooseRestart(); // activated after defeated, choose escape the fight and pretend winning or restart the fight
+  bool chooseRestart(); // activated after defeated, choose escape the fight and
+                        // pretend winning or restart the fight
+  PlayerTeam *getPlayerTeam();
+  PlayerTeam *getOutPlayerTeam();
+  EnemyTeam *getEnemyTeam();
+  EnemyTeam *getOutEnemyTeam();
 };
 
 #endif
