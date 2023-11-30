@@ -103,4 +103,4 @@ void Character::listSkills(ostream &out) {}
 int Character::selectSkill(){
     return 1;
 }
-void Character::useSkillOn(int skill, Character *c) {}
+void Character::useSkillOn(int skill, Enemy *e) {}
