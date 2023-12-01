@@ -4,9 +4,6 @@
 #include <iostream>
 #include <istream>
 #include <ostream>
-
-class Enemy;
-
 using namespace std;
 
 class Character{
