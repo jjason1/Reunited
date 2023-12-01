@@ -4,7 +4,7 @@
 #include <iostream>
 #include <fstream>
 
-#include "../Enemies/Enemy.hpp"
+class Enemy;
 
 using namespace std;
 
