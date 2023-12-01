@@ -16,16 +16,16 @@ Samurai::Samurai(string name) : Character::Character(name)
 void Samurai::directStrike(Character *c)
 {
 
-    cout << this->getName() << " used direct strike on " << e->getName() << "." << endl;
-    e->takeDamage(this->getAttack());
+    cout << this->getName() << " used direct strike on " << c->getName() << "." << endl;
+    c->takeDamage(this->getAttack());
 }
 
 void Samurai::sheathBlade(Character *c)
 {
     double multiplier = 1.5;
 
-    cout << this->getName() << " used sheath blade on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used sheath blade on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
 void Samurai::wideRangeStrike(Character *c)
@@ -33,16 +33,16 @@ void Samurai::wideRangeStrike(Character *c)
 
     double multiplier = 0.5;
 
-    cout << this->getName() << " used wide range strike on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used wide range strike on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
 void Samurai::shadowDegeneration(Character *c)
 {
     double multiplier = 0.2;
 
-    cout << this->getName() << " used shadow degeneration on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used shadow degeneration on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
 void Samurai::smokeBomb(Character *c)
@@ -50,9 +50,9 @@ void Samurai::smokeBomb(Character *c)
 
     double multiplier = 0.5;
 
-    cout << this->getName() << " used smoke bomb on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
-    e->setMovable(false);
+    cout << this->getName() << " used smoke bomb on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
+    c->setMovable(false);
 }
 
 int Samurai::selectSkill(istream &){
