@@ -183,7 +183,7 @@ void Combat::startBattle() {
         Character *target =
             playerTeam->chooseTarget(enemyTeam->getCharacters());
         player->listSkills(out);
-        player->useSkillOn(player->selectSkill(), target);
+        player->useSkillOn(player->selectSkill(in), target);
       }
       player->setMovable(true);
     }
@@ -194,7 +194,7 @@ void Combat::startBattle() {
               0) { // only character that is movable and not dead can attack
         Character *target =
             enemyTeam->chooseTarget(playerTeam->getCharacters());
-        enemy->useSkillOn(enemy->selectSkill(), target);
+        enemy->useSkillOn(enemy->selectSkill(in), target);
       }
       enemy->setMovable(true);
     }

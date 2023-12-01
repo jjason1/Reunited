@@ -102,4 +102,4 @@ void Character::listSkills(ostream &out) {}
 int Character::selectSkill(istream &in){
     return 1;
 }
-void Character::useSkillOn(int skill, Enemy *e) {}
+void Character::useSkillOn(int skill, Character *e) {}
