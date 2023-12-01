@@ -14,11 +14,10 @@ class Player : public Character {
     public:
         Player(string name);
         virtual void listSkills(ostream &out);
-        virtual int selectSkill();
-        virtual void useSkillOn(int,Character *);
+        virtual int selectSkill(istream &in);
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
-        void resetHealth(); 
+        void resetHealth();
 };
 
 #endif
