@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <fstream>
+
+#include "../Enemies/Enemy.hpp"
+
 using namespace std;
 
 class Character

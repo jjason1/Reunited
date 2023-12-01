@@ -5,7 +5,7 @@
 
 #include <iostream>
 #include <string>
-
+#include <vector>
 using namespace std;
 
 class Player : public Character {
@@ -18,7 +18,6 @@ class Player : public Character {
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
         void resetHealth();
-
 };
 
 #endif

@@ -21,6 +21,15 @@ TEST(GoblinClassSuite, testInvalidLevelGoblin){
     EXPECT_DEATH(new Goblin(name, level), "Your level must not be less than 0!");
 }
 
+TEST(GoblinClassSuite, testDifferentLevel){
+    //Arrange + Act.
+    Goblin *g=new Goblin("Aamir",3);
+    //Assert.
+    EXPECT_EQ(g->getHealth(),210);
+    EXPECT_EQ(g->getDefense(),100);
+    EXPECT_EQ(g->getAttack(),40);
+}
+
 TEST(GoblinClassSuite, testNormalAttack){
     //Arrange.
     Goblin *g=new Goblin("Jason",1);
