@@ -161,6 +161,15 @@ bool Combat::chooseRestart() {
   return false;
 }
 
+void Combat::showAllCharactersStatus() {
+  for (auto player : playerTeam->getCharacters()) {
+    player->getStatus(out);
+  }
+  for (auto enemy : enemyTeam->getCharacters()) {
+    enemy->getStatus(out);
+  }
+}
+
 void Combat::startBattle() {
   out << "Battle Start!" << endl;
   while (!checkBattleEnd()) {
@@ -200,3 +209,4 @@ void Combat::startBattle() {
   out << "You win the battle." << endl;
   out << "Battle End." << endl;
 }
+

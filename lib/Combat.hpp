@@ -26,6 +26,7 @@ public:
   void resetCombat(); // reset combat when restart the combat
   bool chooseRestart(); // activated after defeated, choose escape the fight and
                         // pretend winning or restart the fight
+  void showAllCharactersStatus();
   PlayerTeam *getPlayerTeam();
   PlayerTeam *getOutPlayerTeam();
   PlayerTeam *getOriginalPlayerTeam();
