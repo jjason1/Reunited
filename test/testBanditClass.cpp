@@ -55,7 +55,7 @@ TEST(BanditClassSuite, testSelectSkill){
     //Arrange.
     Bandit *b=new Bandit("Jason",1);
     //Act.
-    int chosenSkill=b->selectSkill();
+    int chosenSkill=b->selectSkill(cin);
     //Assert.
     EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2));
 }
@@ -65,7 +65,7 @@ TEST(BanditClassSuite, testUseSkillOn){
     Bandit *b=new Bandit("Boyi",1);
     Character *c=new Character("Aamir");
     c->setHealth(100);
-    int chosenSkill=b->selectSkill();
+    int chosenSkill=b->selectSkill(cin);
     //Act + Assert.
     EXPECT_NO_THROW(b->useSkillOn(chosenSkill,c));
 }
