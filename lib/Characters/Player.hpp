@@ -18,7 +18,6 @@ class Player : public Character {
         void setAtkDstrbtn(int distribution);
         int getAtkDstrbtn();
         void resetHealth();
-
 };
 
 #endif
