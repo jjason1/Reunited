@@ -13,7 +13,7 @@ void Enemy::normalAttack(Character *c){
     c->takeDamage(this->attack);
 }
 
-int Enemy::selectSkill(istream &){
+int Enemy::selectSkill(istream &in){
     //Select one of your skills here. (Not implemented yet.)
     return 1;
 }

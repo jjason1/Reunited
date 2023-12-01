@@ -55,7 +55,7 @@ void Samurai::smokeBomb(Character *c)
     c->setMovable(false);
 }
 
-int Samurai::selectSkill(istream &){
+int Samurai::selectSkill(istream &in){
     // Select one of your skills here. (Not implemented yet.)
     return 1;
 }

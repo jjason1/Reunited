@@ -23,7 +23,7 @@ void Bandit::stun(Character *c){
 //Only 2 skills are available: 
 //1. normal attack
 //2. stun
-int Bandit::selectSkill(istream &){
+int Bandit::selectSkill(istream &in){
     //Generate a random number between 1-2.
     int chosenSkill=rand()%2+1;
     //Return the skill we randomly chose.
