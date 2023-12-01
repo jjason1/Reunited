@@ -13,50 +13,49 @@ Samurai::Samurai(string name) : Character::Character(name)
     this->setAttack(baseStat);
 }
 
-void Samurai::directStrike(Enemy *e)
+void Samurai::directStrike(Character *c)
 {
 
-    cout << this->getName() << " used direct strike on " << e->getName() << "." << endl;
-    e->takeDamage(this->getAttack());
+    cout << this->getName() << " used direct strike on " << c->getName() << "." << endl;
+    c->takeDamage(this->getAttack());
 }
 
-void Samurai::sheathBlade(Enemy *e)
+void Samurai::sheathBlade(Character *c)
 {
     double multiplier = 1.5;
 
-    cout << this->getName() << " used sheath blade on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used sheath blade on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
-void Samurai::wideRangeStrike(Enemy *e)
+void Samurai::wideRangeStrike(Character *c)
 {
 
     double multiplier = 0.5;
 
-    cout << this->getName() << " used wide range strike on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used wide range strike on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
-void Samurai::shadowDegeneration(Enemy *e)
+void Samurai::shadowDegeneration(Character *c)
 {
     double multiplier = 0.2;
 
-    cout << this->getName() << " used shadow degeneration on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
+    cout << this->getName() << " used shadow degeneration on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
 }
 
-void Samurai::smokeBomb(Enemy *e)
+void Samurai::smokeBomb(Character *c)
 {
 
     double multiplier = 0.5;
 
-    cout << this->getName() << " used smoke bomb on " << e->getName() << "." << endl;
-    e->takeDamage(multiplier * this->getAttack());
-    e->setMovable(false);
+    cout << this->getName() << " used smoke bomb on " << c->getName() << "." << endl;
+    c->takeDamage(multiplier * this->getAttack());
+    c->setMovable(false);
 }
 
-int Samurai::selectSkill()
-{
+int Samurai::selectSkill(istream &in){
     // Select one of your skills here. (Not implemented yet.)
     return 1;
 }
