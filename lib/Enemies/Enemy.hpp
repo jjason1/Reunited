@@ -9,7 +9,7 @@ class Enemy : public Character {
     public:
         Enemy(string, int);
         void normalAttack(Character *);
-        virtual int selectSkill();
+        virtual int selectSkill(istream &);
         virtual void useSkillOn(int, Character *);
 };
 

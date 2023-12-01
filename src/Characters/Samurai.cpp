@@ -13,14 +13,14 @@ Samurai::Samurai(string name) : Character::Character(name)
     this->setAttack(baseStat);
 }
 
-void Samurai::directStrike(Enemy *e)
+void Samurai::directStrike(Character *c)
 {
 
     cout << this->getName() << " used direct strike on " << e->getName() << "." << endl;
     e->takeDamage(this->getAttack());
 }
 
-void Samurai::sheathBlade(Enemy *e)
+void Samurai::sheathBlade(Character *c)
 {
     double multiplier = 1.5;
 
@@ -28,7 +28,7 @@ void Samurai::sheathBlade(Enemy *e)
     e->takeDamage(multiplier * this->getAttack());
 }
 
-void Samurai::wideRangeStrike(Enemy *e)
+void Samurai::wideRangeStrike(Character *c)
 {
 
     double multiplier = 0.5;
@@ -37,7 +37,7 @@ void Samurai::wideRangeStrike(Enemy *e)
     e->takeDamage(multiplier * this->getAttack());
 }
 
-void Samurai::shadowDegeneration(Enemy *e)
+void Samurai::shadowDegeneration(Character *c)
 {
     double multiplier = 0.2;
 
@@ -45,7 +45,7 @@ void Samurai::shadowDegeneration(Enemy *e)
     e->takeDamage(multiplier * this->getAttack());
 }
 
-void Samurai::smokeBomb(Enemy *e)
+void Samurai::smokeBomb(Character *c)
 {
 
     double multiplier = 0.5;
@@ -55,8 +55,7 @@ void Samurai::smokeBomb(Enemy *e)
     e->setMovable(false);
 }
 
-int Samurai::selectSkill()
-{
+int Samurai::selectSkill(istream &){
     // Select one of your skills here. (Not implemented yet.)
     return 1;
 }

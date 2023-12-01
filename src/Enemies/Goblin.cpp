@@ -29,7 +29,7 @@ void Goblin::lifeSwipe(Character *c){
 //Only 2 skills are available: 
 //1. normal attack
 //2. life swipe.
-int Goblin::selectSkill(){
+int Goblin::selectSkill(istream &){
     //Generate a random number between 1-2.
     int chosenSkill=rand()%2+1;
     //Return the skill we randomly chose.

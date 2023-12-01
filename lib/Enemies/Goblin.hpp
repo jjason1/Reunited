@@ -8,7 +8,7 @@ class Goblin : public Enemy {
     public:
         Goblin(string,int);
         void lifeSwipe(Character *);
-        virtual int selectSkill();
+        virtual int selectSkill(istream &);
         virtual void useSkillOn(int, Character *);
 };
 
