@@ -7,7 +7,7 @@ Chapter::Chapter(Player *player, vector<SubChapter *> subChapters,
     name = "Chapter";
 }
 
-virtual void Chapter::runChapter() {}
+void Chapter::runChapter() {}
 
 void Chapter::setPlayer(Player *newPlayer) { player = newPlayer; }
 
