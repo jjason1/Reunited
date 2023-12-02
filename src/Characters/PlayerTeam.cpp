@@ -15,11 +15,11 @@ Character *PlayerTeam::chooseTarget(vector<Character *> enemies) {
     return nullptr;
   }
   // list enemy phase
-  out << "Enemy list:" << endl;
+  out << "\nEnemy list:" << endl;
   auto it = enemies.begin();
   int count = 1; // for print options and denote the size of enemies
   for (auto enemy : enemies) { // list the enemy
-    out << count << "- " << enemy->getName() << " Hp: " << enemy->getHealth()
+    out << count << "- " << enemy->getName() << " / Hp: " << enemy->getHealth()
         << endl;
     count++;
   }

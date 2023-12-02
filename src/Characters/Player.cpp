@@ -30,4 +30,3 @@ void Player::resetHealth() {
     int baseHealth = 100;
     this->setHealth(baseHealth + (this->getLevel() - 1) * this->hpIncrmnt);
 }
-
