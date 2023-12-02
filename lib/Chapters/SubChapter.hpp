@@ -6,18 +6,18 @@
 #include <string>
 
 class SubChapter {
-private:
-  ostream &out;
-  istream &in;
-  Player *player;
-  string input;
-  string name; // name of SubChapter
-public:
-  SubChapter(Player *, ostream &, istream &);
-  virtual void runSubChapter();
-  void setInput(string);
-  string getInput();
-  string getName();
+    private:
+      ostream &out;
+      istream &in;
+      Player *player;
+      string input;
+      string name; // name of SubChapter
+    public:
+      SubChapter(Player *, ostream &, istream &);
+      virtual void runSubChapter();
+      void setInput(string);
+      string getInput();
+      string getName();
 };
 
 #endif
