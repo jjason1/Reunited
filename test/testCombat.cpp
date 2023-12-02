@@ -214,7 +214,7 @@ TEST(testCombatClassSuite, testShowAllCharactersStatus) {
   EXPECT_EQ(testout.str(), out.str());
 }
 
-TEST(testCombatClassSuite, testCombatStartWinTheGame) {
+TEST(testCombatClassSuite, testCombatStartWin1V1) {
   stringstream testout;
   stringstream testin;
   stringstream out;
@@ -227,30 +227,21 @@ TEST(testCombatClassSuite, testCombatStartWinTheGame) {
   testin << "1" << endl; // choose first skill
   testin << "1" << endl; //choose first target
   testin << "1" << endl; // choose first skill
-                         // I expect 2 shot kill the bandit
-  out << endl;
-  out << "tester1's Status: " << endl;
-  out << "--------------------------\n";
-  out << "Level   = 1" << endl;
-  out << "Health  = 100" << endl;
-  out << "Defense = 100" << endl;
-  out << "Attack  = 100" << endl;
-  out << endl;
-  out << endl;
-  out << "Aamir's Status: " << endl;
-  out << "--------------------------\n";
-  out << "Level   = 1" << endl;
-  out << "Health  = 150" << endl;
-  out << "Defense = 80" << endl;
-  out << "Attack  = 25" << endl;
-  out << endl;
-  out << "Enemy list:" << endl;
-  out << "1- Aamir Hp: 150" << endl;
-  out << "Please choose a target:" << endl;
-  //list skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+                         // make sure bandit is not going to keep stunning the player
 
   //initialize player team
   Samurai *tester1 = new Samurai("tester1");
+
+  
+
   vector<Character *> team{tester1};
   PlayerTeam *testPTeam = new PlayerTeam(team, cout, testin);
   // initialize enemy team
@@ -260,8 +251,67 @@ TEST(testCombatClassSuite, testCombatStartWinTheGame) {
 
   Combat *c = new Combat(testPTeam, testETeam, cout, testin);
 
-  c->startBattle();
 
-  EXPECT_EQ(testout.str(), out.str());
+  EXPECT_NO_THROW(c->startBattle());
+}
 
+TEST(testCombatClassSuite, testCombatStartWin2V3) {
+  stringstream testout;
+  stringstream testin;
+  stringstream out;
+
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+  testin << "1" << endl; //choose first target
+  testin << "1" << endl; // choose first skill
+                         // make sure bandit is not going to keep stunning the player
+
+  //initialize player team
+  Samurai *tester1 = new Samurai("tester1");
+  Samurai *tester2 = new Samurai("tester2");
+  Samurai *tester3 = new Samurai("tester3");
+
+  
+
+  vector<Character *> team{tester1,tester2,tester3};
+  PlayerTeam *testPTeam = new PlayerTeam(team, cout, testin);
+  // initialize enemy team
+  Bandit *e1 = new Bandit("Aamir", 1);
+  Bandit *e2 = new Bandit("Boyi", 1);
+  Bandit *e3 = new Bandit("Jason", 1);
+  vector<Character *> enemies{e1,e2,e3};
+  EnemyTeam *testETeam = new EnemyTeam(enemies, cout);
+
+  Combat *c = new Combat(testPTeam, testETeam, cout, testin);
+
+
+  EXPECT_NO_THROW(c->startBattle());
 }

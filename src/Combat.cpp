@@ -176,7 +176,7 @@ void Combat::startBattle() {
   while (!BattleEnd) {
     // players' turn
     turns++;
-    out << "Turn:" << showCurrentTurn() << endl;
+    int turn = showCurrentTurn();
     showAllCharactersStatus();
     for (auto player : playerTeam->getCharacters()) {
       if (player->checkMovable() &&
@@ -200,6 +200,7 @@ void Combat::startBattle() {
       }
       enemy->setMovable(true);
     }
+    out << "Turn " << turn << " end." << endl;
     BattleEnd = checkBattleEnd();
   }
   if (playerTeam->getCharacters().empty()) {
