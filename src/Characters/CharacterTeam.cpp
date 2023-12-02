@@ -10,7 +10,6 @@ int CharacterTeam::getSize(){
 
 void CharacterTeam::addCharacter(Character *c){
     this->characters.push_back(c);
-    out<<c->getName()<<" has joined the team!"<<endl;
 }
 
 vector<Character *> CharacterTeam::getCharacters(){

@@ -26,16 +26,13 @@ TEST(TestPlayerTeamSuite, testGetSize){
 
 TEST(TestPlayerTeamSuite, testAddPlayer){
     //Arrange.
-    stringstream ss;
-    string expOutput="Aamir has joined the team!\n";
     Player * tester1 = new Player("tester1");
     Player *tester2 = new Player("tester2");
     vector<Character *> team{tester1,tester2};
-    PlayerTeam* testTeam = new PlayerTeam(team, ss, cin);
+    PlayerTeam* testTeam = new PlayerTeam(team, cout, cin);
     //Act.
     testTeam->addCharacter(new Player("Aamir"));
     //Assert.
-    EXPECT_EQ(ss.str(),expOutput);
     EXPECT_EQ(testTeam->getSize(),3);
 }
 
@@ -57,9 +54,9 @@ TEST(TestPlayerTeamSuite, testChooseTargetWithCorrectTyping){
     vector<Character *> enemyTeam{enemyTester1, enemyTester2};
 
     //set up expected output
-    expectedss << "Enemy list:" << endl;
-    expectedss << "1- enemyTest1 Hp: 0" << endl;
-    expectedss << "2- enemyTest2 Hp: 0" << endl;
+    expectedss << "\nEnemy list:" << endl;
+    expectedss << "1- enemyTest1 / Hp: 0" << endl;
+    expectedss << "2- enemyTest2 / Hp: 0" << endl;
     expectedss << "Please choose a target:" << endl;
     inss << "1" << endl;
     //Act.
@@ -89,9 +86,9 @@ TEST(TestPlayerTeamSuite, testChooseTargetWithWrongTyping){
     vector<Character *> enemyTeam{enemyTester1, enemyTester2};
 
     //set up expected output
-    expectedss << "Enemy list:" << endl;
-    expectedss << "1- enemyTest1 Hp: 0" << endl;
-    expectedss << "2- enemyTest2 Hp: 0" << endl;
+    expectedss << "\nEnemy list:" << endl;
+    expectedss << "1- enemyTest1 / Hp: 0" << endl;
+    expectedss << "2- enemyTest2 / Hp: 0" << endl;
     expectedss << "Please choose a target:" << endl;
     expectedss << "Please choose a target again:" << endl;
     inss << "5" << endl;

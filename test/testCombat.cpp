@@ -129,10 +129,10 @@ TEST(testCombatClassSuite, testChooseRestartWith1) {
   Combat *c = new Combat(testPTeam, testETeam, testout, testin);
 
   stringstream confirmOut;
-  confirmOut << "Combat End." << endl;
-  confirmOut << "Please choose a option:" << endl;
-  confirmOut << "1- escape and pretend you win" << endl;
-  confirmOut << "2- restart the battle" << endl;
+  confirmOut << "\nCombat Over..." << endl;
+  confirmOut << "Please choose an option: " << endl;
+  confirmOut << "1- Escape and Pretend You've Won." << endl;
+  confirmOut << "2- Restart The Battle." << endl;
 
   EXPECT_FALSE(c->chooseRestart());
   EXPECT_EQ(testout.str(), confirmOut.str());

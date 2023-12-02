@@ -5,28 +5,28 @@
 #include <type_traits>
 #include <vector>
 
-Combat::Combat(PlayerTeam *pTeam, EnemyTeam *eTeam, ostream &outout,
-               istream &inin)
-    : OriginalPlayerTeam(pTeam), OriginalEnemyTeam(eTeam), out(outout),
-      in(inin) {
-  playerTeam = new PlayerTeam(*OriginalPlayerTeam);
-  enemyTeam = new EnemyTeam(*OriginalEnemyTeam);
-
-  vector<Character *> NewOriginalPlayerCharacters{}, NewOriginalEnemyCharacters{}; // store original hp and name to Original team
+Combat::Combat(PlayerTeam *pTeam, EnemyTeam *eTeam, 
+               ostream &outout, istream &inin)
+    : OriginalPlayerTeam(pTeam), OriginalEnemyTeam(eTeam), 
+    out(outout), in(inin) {
+    playerTeam = new PlayerTeam(*OriginalPlayerTeam);
+    enemyTeam = new EnemyTeam(*OriginalEnemyTeam);
+  //store the status of our original players
+  vector<Character *> NewOriginalPlayerCharacters{}, NewOriginalEnemyCharacters{}; 
   for (auto player : OriginalPlayerTeam->getCharacters()) {
     Player *storedPlayerStatus = new Player(player->getName());
     storedPlayerStatus->setHealth(player->getHealth());
     NewOriginalPlayerCharacters.push_back(storedPlayerStatus);
   }
   OriginalPlayerTeam = new PlayerTeam(NewOriginalPlayerCharacters, out, in);
-
+  //store status for original enemies
   for (auto enemy : OriginalEnemyTeam->getCharacters()) {
     Enemy *storedEnemyStatus = new Enemy(enemy->getName(), enemy->getLevel());
     storedEnemyStatus->setHealth(enemy->getHealth());
     NewOriginalEnemyCharacters.push_back(storedEnemyStatus);
   }
   OriginalEnemyTeam = new EnemyTeam(NewOriginalEnemyCharacters,out);
-
+  //Setting out teams
   vector<Character *> cPTeam{}, cETeam{};
   outPlayerTeam = new PlayerTeam(cPTeam, out, in);
   outEnemyTeam = new EnemyTeam(cETeam, out);
@@ -44,7 +44,7 @@ EnemyTeam *Combat::getOriginalEnemyTeam() { return OriginalEnemyTeam; }
 
 
 int Combat::showCurrentTurn() {
-  out << "Current turn is: " << this->turns << endl;
+  out << "Current Turn: " << this->turns << endl;
   return this->turns;
 }
 
@@ -137,10 +137,10 @@ void Combat::resetCombat() {
 }
 
 bool Combat::chooseRestart() {
-  out << "Combat End." << endl;
-  out << "Please choose a option:" << endl;
-  out << "1- escape and pretend you win" << endl;
-  out << "2- restart the battle" << endl;
+  out << "\nCombat Over..." << endl;
+  out << "Please choose an option: " << endl;
+  out << "1- Escape and Pretend You've Won." << endl;
+  out << "2- Restart The Battle." << endl;
   string input;
   getline(in, input);
   if (input == "1") {
@@ -171,7 +171,7 @@ void Combat::showAllCharactersStatus() {
 }
 
 void Combat::startBattle() {
-  out << "Battle Start!" << endl;
+  out << "\nThe Battle Has Begun!" << endl;
   bool BattleEnd = checkBattleEnd();
   while (!BattleEnd) {
     // players' turn
@@ -200,7 +200,7 @@ void Combat::startBattle() {
       }
       enemy->setMovable(true);
     }
-    out << "Turn " << turn << " end." << endl;
+    out << "\nTurn " << turn << " is over." << endl;
     BattleEnd = checkBattleEnd();
   }
   if (playerTeam->getCharacters().empty()) {
@@ -210,7 +210,7 @@ void Combat::startBattle() {
       startBattle();
     }
   }
-  out << "You win the battle." << endl;
-  out << "Battle End." << endl;
+  out << "\nYou won the battle!" << endl;
+  out << "The battle is now over." << endl <<endl;
 }
 

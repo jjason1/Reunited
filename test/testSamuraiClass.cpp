@@ -88,7 +88,7 @@ TEST(SamuraiClassSuite, testListSkills)
                     "3. Wide range strike\n"
                     "4. Shadow degeneration\n"
                     "5. Smoke bomb\n"
-                    "Select the skill you would like to use: \n";
+                    "\nSelect the skill you would like to use: \n";
 
     Samurai *s = new Samurai(name);
     stringstream ss;
