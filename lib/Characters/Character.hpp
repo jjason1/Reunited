@@ -2,8 +2,11 @@
 #define CHARACTER_HPP
 
 #include <iostream>
+#include <fstream>
+#include "Character.hpp"
 #include <istream>
 #include <ostream>
+
 using namespace std;
 
 class Character{
