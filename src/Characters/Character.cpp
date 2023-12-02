@@ -103,3 +103,4 @@ int Character::selectSkill(istream &in){
     return 1;
 }
 void Character::useSkillOn(int skill, Character *c) {}
+

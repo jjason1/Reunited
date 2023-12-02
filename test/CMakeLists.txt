@@ -15,6 +15,7 @@ add_executable(runAllTests
     testPlayerTeam.cpp
     testshowDevelopers.cpp
     testHelpClass.cpp
+    testMageClass.cpp
     testSubChapter.cpp
     testChapter.cpp
 )
