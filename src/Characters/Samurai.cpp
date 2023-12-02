@@ -55,11 +55,61 @@ void Samurai::smokeBomb(Character *c)
     c->setMovable(false);
 }
 
-int Samurai::selectSkill(istream &in){
-    // Select one of your skills here. (Not implemented yet.)
-    return 1;
+void Samurai::listSkills(ostream &out)
+{
+    out << endl;
+    out << "Skills" << endl;
+    out << "--------------------------\n";
+    out << "1. Direct strike" << endl;
+    out << "2. Sheath blade" << endl;
+    out << "3. Wide range strike" << endl;
+    out << "4. Shadow degeneration" << endl;
+    out << "5. Smoke bomb" << endl;
+    out << "Select the skill you would like to use: " << endl;
+}
+int Samurai::selectSkill(istream &in)
+{
+    int skill = 0;
+
+    listSkills(cout);
+    in >> skill;
+
+    while (skill < 1 || skill > 5)
+    {
+        listSkills(cout);
+        cout << "Invalid input. Please enter a number between 1 and 5." << endl;
+        in.clear();                                         // Clear input stream to handle non-integer inputs
+        in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+        in >> skill;
+    }
+    return skill;
 }
 
-void Samurai::useSkillOn(int skill, Character *c) {}
-
-void Samurai::listSkills(ostream &) {}
+void Samurai::useSkillOn(int skill, Character *c)
+{
+    if (skill == 1)
+    {
+        cout << this->getName() << " chose direct strike." << endl;
+        this->directStrike(c);
+    }
+    else if (skill == 2)
+    {
+        cout << this->getName() << " chose sheath blade." << endl;
+        this->sheathBlade(c);
+    }
+    else if (skill == 3)
+    {
+        cout << this->getName() << " chose wide range strike." << endl;
+        this->wideRangeStrike(c);
+    }
+    else if (skill == 4)
+    {
+        cout << this->getName() << " chose shadow degeneration." << endl;
+        this->shadowDegeneration(c);
+    }
+    else
+    {
+        cout << this->getName() << " chose smoke bomb." << endl;
+        this->smokeBomb(c);
+    }
+}
