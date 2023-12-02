@@ -8,20 +8,19 @@
 #include <vector>
 
 class Chapter {
-private:
-  std::ostream &out;
-  std::istream &in;
-  Player *player;
-  string input;
-  string name;
-  vector<SubChapter *> subChapters;
-
-public:
-  Chapter(Player *, vector<SubChapter *>, ostream &, istream &);
-  virtual void runChapter();
-  //virtual void saveFile();  //additional feature
-  void setPlayer(Player *);
-  string getName();
+    private:
+      std::ostream &out;
+      std::istream &in;
+      Player *player;
+      string input;
+      string name;
+      vector<SubChapter *> subChapters;
+    
+    public:
+      Chapter(Player *, vector<SubChapter *>, ostream &, istream &);
+      virtual void runChapter();
+      void setPlayer(Player *);
+      string getName();
 
 };
 
