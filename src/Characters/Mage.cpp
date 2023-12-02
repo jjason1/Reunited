@@ -139,3 +139,16 @@ void Mage::useSkillOn(int skill, Character *c)
         this->skillBoost();
     }
 }
+
+void Mage::levelUp()
+{
+    // Base stats:
+    int baseHp = 100,
+        baseDef = 100,
+        baseAtk = 100;
+    // Updating level + stats:
+    this->level++;
+    this->setHealth(baseHp + (level - 1) * hpIncrmnt);
+    this->setDefense(baseDef + (level - 1) * defIncrmnt);
+    this->setAttack(baseAtk + (level - 1) * atkIncrmnt);
+}

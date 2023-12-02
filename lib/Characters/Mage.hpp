@@ -24,6 +24,7 @@ public:
     virtual void listSkills(ostream &);
     virtual int selectSkill(istream &);
     virtual void useSkillOn(int, Character *);
+    virtual void levelUp();
 };
 
 #endif

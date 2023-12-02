@@ -162,3 +162,13 @@ TEST(MageClassSuite, testUseSkillOn)
     EXPECT_NO_THROW(m->useSkillOn(chosenSkill, e));
     EXPECT_EQ(e->getHealth(), 50);
 }
+
+TEST(MageClassSuite, testLevelUp){
+    Mage *m = new Mage("Jason");
+    m->levelUp();
+
+    EXPECT_EQ(m->getHealth(), 110);
+    EXPECT_EQ(m->getAttack(), 110);
+    EXPECT_EQ(m->getDefense(), 105);
+    EXPECT_EQ(m->getLevel(), 2);
+}
