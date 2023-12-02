@@ -119,9 +119,21 @@ TEST(SamuraiClassSuite, testUseSkillOn)
 
     string simulatedInput = "3\n"; // Change this to test different inputs
     istringstream in(simulatedInput);
-    
+
     int chosenSkill = s->selectSkill(in);
     // Act + Assert.
     EXPECT_NO_THROW(s->useSkillOn(chosenSkill, e));
     EXPECT_EQ(e->getHealth(), 50);
+}
+
+TEST(SamuraiClassSuite, testLevelUp)
+{
+    Samurai *s = new Samurai("Jason");
+    s->levelUp();
+
+    EXPECT_EQ(s->getHealth(), 105);
+    EXPECT_EQ(s->getAttack(), 115);
+    EXPECT_EQ(s->getDefense(), 105);
+    EXPECT_EQ(s->getLevel(), 2);
+
 }
