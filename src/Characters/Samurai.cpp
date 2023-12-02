@@ -67,20 +67,20 @@ void Samurai::listSkills(ostream &out)
     out << "5. Smoke bomb" << endl;
     out << "Select the skill you would like to use: " << endl;
 }
-int Samurai::selectSkill()
+int Samurai::selectSkill(istream &in)
 {
     int skill = 0;
 
     listSkills(cout);
-    cin >> skill;
+    in >> skill;
 
     while (skill < 1 || skill > 5)
     {
         listSkills(cout);
         cout << "Invalid input. Please enter a number between 1 and 5." << endl;
-        cin.clear();                                         // Clear input stream to handle non-integer inputs
-        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
-        cin >> skill;
+        in.clear();                                         // Clear input stream to handle non-integer inputs
+        in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore invalid input
+        in >> skill;
     }
     return skill;
 }

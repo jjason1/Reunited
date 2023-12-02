@@ -18,7 +18,7 @@ public:
     void smokeBomb(Character *);
 
     virtual void listSkills(ostream &);
-    virtual int selectSkill();
+    virtual int selectSkill(istream &);
     virtual void useSkillOn(int, Character *);
 };
 

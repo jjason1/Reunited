@@ -101,17 +101,26 @@ TEST(SamuraiClassSuite, testSelectSkill)
     // Arrange.
     Samurai *s = new Samurai("Jason");
     // Act.
-    int chosenSkill = s->selectSkill();
+    string simulatedInput = "3\n"; // Change this to test different inputs
+    istringstream in(simulatedInput);
+
+    int chosenSkill = s->selectSkill(in);
+
     // Assert.
     EXPECT_TRUE((chosenSkill == 1) || (chosenSkill == 2) || (chosenSkill == 3) || (chosenSkill == 4) || (chosenSkill == 5));
 }
 
-TEST(SamuraiClassSuite, testUseSkillOn){
-    //Arrange.
-    Samurai *s=new Samurai("Jason");
-    Enemy *e=new Enemy("Aamir", 1);
+TEST(SamuraiClassSuite, testUseSkillOn)
+{
+    // Arrange.
+    Samurai *s = new Samurai("Jason");
+    Enemy *e = new Enemy("Aamir", 1);
     e->setHealth(200);
-    int chosenSkill=s->selectSkill();
-    //Act + Assert.
-    EXPECT_NO_THROW(s->useSkillOn(chosenSkill,e));
+
+    string simulatedInput = "3\n"; // Change this to test different inputs
+    istringstream in(simulatedInput);
+    
+    int chosenSkill = s->selectSkill(in);
+    // Act + Assert.
+    EXPECT_NO_THROW(s->useSkillOn(chosenSkill, e));
 }
