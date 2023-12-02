@@ -16,6 +16,7 @@ add_executable(runAllTests
     testshowDevelopers.cpp
     testHelpClass.cpp
     testCombat.cpp
+    testSubChapter.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
