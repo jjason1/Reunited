@@ -1,13 +1,13 @@
 #include "../lib/Chapters/Chapter.hpp"
 
-Chapter::Chapter(Player *player, vector<SubChapter *> subChapters, ostream &out,
-                 istream &in)
+Chapter::Chapter(Player *player, vector<SubChapter *> subChapters, 
+                 ostream &out, istream &in)
     : player(player), subChapters(subChapters), out(out), in(in) {
-  input = "";
-  name = "Chapter";
+    input = "";
+    name = "Chapter";
 }
 
-void Chapter::runChapter() {}
+virtual void Chapter::runChapter() {}
 
 void Chapter::setPlayer(Player *newPlayer) { player = newPlayer; }
 
