@@ -172,10 +172,12 @@ void Combat::showAllCharactersStatus() {
 
 void Combat::startBattle() {
   out << "Battle Start!" << endl;
-  while (!checkBattleEnd()) {
+  bool BattleEnd = checkBattleEnd();
+  while (!BattleEnd) {
     // players' turn
     turns++;
     out << "Turn:" << showCurrentTurn() << endl;
+    showAllCharactersStatus();
     for (auto player : playerTeam->getCharacters()) {
       if (player->checkMovable() &&
           player->getHealth() >
@@ -198,6 +200,7 @@ void Combat::startBattle() {
       }
       enemy->setMovable(true);
     }
+    BattleEnd = checkBattleEnd();
   }
   if (playerTeam->getCharacters().empty()) {
     bool restart = chooseRestart();
