@@ -41,7 +41,14 @@ EnemyTeam *Combat::getEnemyTeam() { return enemyTeam; }
 EnemyTeam *Combat::getOutEnemyTeam() { return outEnemyTeam; }
 EnemyTeam *Combat::getOriginalEnemyTeam() { return OriginalEnemyTeam; }
 
-
+Combat::~Combat() {
+  delete OriginalPlayerTeam;
+  delete playerTeam;
+  delete outPlayerTeam;
+  delete OriginalEnemyTeam;
+  delete enemyTeam;
+  delete outEnemyTeam;
+}
 
 int Combat::showCurrentTurn() {
   out << "Current Turn: " << this->turns << endl;

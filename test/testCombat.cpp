@@ -315,3 +315,20 @@ TEST(testCombatClassSuite, testCombatStartWin2V3) {
 
   EXPECT_NO_THROW(c->startBattle());
 }
+
+
+TEST(testCombatClassSuite, testDestructor) {
+  Player *tester1 = new Player("tester1");
+  Player *tester2 = new Player("tester2");
+  tester2->setHealth(100);
+  vector<Character *> team{tester1, tester2};
+  PlayerTeam *testPTeam = new PlayerTeam(team, cout, cin);
+  Enemy *e1 = new Enemy("Aamir", 1);
+  Enemy *e2 = new Enemy("Boyi", 1);
+  vector<Character *> enemies{e1, e2};
+  EnemyTeam *testETeam = new EnemyTeam(enemies, cout);
+
+  Combat *c = new Combat(testPTeam, testETeam, cout, cin);
+
+  EXPECT_NO_THROW(delete c);
+}

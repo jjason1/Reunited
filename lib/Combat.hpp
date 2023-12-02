@@ -20,6 +20,7 @@ class Combat {
 
     public:
       Combat(PlayerTeam *, EnemyTeam *, ostream &, istream &);
+      ~Combat();
       void startBattle();
       int showCurrentTurn();
       bool checkBattleEnd(); // check if either team all have been eliminated
