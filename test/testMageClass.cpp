@@ -121,20 +121,17 @@ TEST(MageClassSuite, testSkillBoost)
 
 TEST(MageClassSuite, testListSkills)
 {
-    string name = "Jason";
-    string status = "\nSkills\n"
-                    "--------------------------\n"
-                    "1. Direct strike\n"
-                    "2. Sheath blade\n"
-                    "3. Wide range strike\n"
-                    "4. Shadow degeneration\n"
-                    "5. Smoke bomb\n"
-                    "Select the skill you would like to use: \n";
+    // Arrange.
+    Mage *m = new Mage("Jason"); // Assuming Mage constructor does not require parameters
+    stringstream output;
 
-    Mage *m = new Mage(name);
-    stringstream ss;
-    m->listSkills(ss);
-    EXPECT_EQ(ss.str(), status);
+    // Act.
+    m->listSkills(output);
+    string outputStr = output.str();
+
+    // Assert.
+    string expectedOutput = "\nSkills\n--------------------------\n1. Fireball\n2. Heal\n3. Ice storm\n4. Thunder blast\n5. Skill boost\nSelect the skill you would like use: \n";
+    EXPECT_EQ(outputStr, expectedOutput);
 }
 
 TEST(MageClassSuite, testSelectSkill)
@@ -142,17 +139,25 @@ TEST(MageClassSuite, testSelectSkill)
     // Arrange.
     Mage *m = new Mage("Jason");
     // Act.
-    int chosenSkill = m->selectSkill();
+
+    string simulatedInput = "3\n"; // Change this to test different inputs
+    istringstream in(simulatedInput);
+
+    int chosenSkill = m->selectSkill(in);
     // Assert.
     EXPECT_TRUE((chosenSkill == 1) || (chosenSkill == 2) || (chosenSkill == 3) || (chosenSkill == 4) || (chosenSkill == 5));
 }
 
-TEST(MageClassSuite, testUseSkillOn){
-    //Arrange.
-    Mage *m=new Mage("Jason");
-    Enemy *e=new Enemy("Aamir", 1);
+TEST(MageClassSuite, testUseSkillOn)
+{
+    // Arrange.
+    Mage *m = new Mage("Jason");
+    Enemy *e = new Enemy("Aamir", 1);
     e->setHealth(200);
-    int chosenSkill=m->selectSkill();
-    //Act + Assert.
-    EXPECT_NO_THROW(m->useSkillOn(chosenSkill,e));
+
+    string simulatedInput = "3\n"; // Change this to test different inputs
+    istringstream in(simulatedInput);
+    int chosenSkill = m->selectSkill(in);
+    // Act + Assert.
+    EXPECT_NO_THROW(m->useSkillOn(chosenSkill, e));
 }

@@ -22,7 +22,7 @@ public:
     void skillBoost();
 
     virtual void listSkills(ostream &);
-    virtual int selectSkill();
+    virtual int selectSkill(istream &);
     virtual void useSkillOn(int, Character *);
 };
 
