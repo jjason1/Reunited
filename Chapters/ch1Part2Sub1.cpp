@@ -22,6 +22,7 @@ void Chapter1Part2::option1(){
         player->levelUp();
     }
     else out<<"\nSystem: You come off as arrogant and cause the townsfolk to worry more."<<endl;
+    out<<endl;
 }
 
 void Chapter1Part2::runChapter1Part2Sub1(){

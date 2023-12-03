@@ -6,7 +6,6 @@
 Chapter1Part2::Chapter1Part2(Character *player, ostream &outout, istream &inin)
     : SubChapter(player, outout, inin) {
     name = "Chapter1Part2";
-    playerHp = 0;
 }
 
 void Chapter1Part2::runSubChapter(){
