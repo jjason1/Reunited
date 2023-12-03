@@ -22,6 +22,7 @@ add_executable(runAllTests
     testSubChapter.cpp
     testChapter.cpp
     testCh1Part1.cpp
+    testCh1Part3.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)

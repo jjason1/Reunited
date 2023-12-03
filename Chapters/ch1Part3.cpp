@@ -276,6 +276,14 @@ void Chapter1Part3::runChapter1Part3Sub4() {
          "leave victorious!"
       << endl;
   out << "2. I\'ll see you all in Hell! It isn\'t my time just yet…" << endl;
+  getline(in, input);
+  checkInput(in);
+  while (input != "1" && input != "2") {
+    out << "Please input again" << endl;
+    getline(in, input);
+    checkInput(in);
+  }
+
   out << endl;
   out << "Bandit Leader: You don\'t seem to understand your current position. "
          "I "
@@ -317,7 +325,154 @@ void Chapter1Part3::runChapter1Part3Sub4() {
 }
 
 void Chapter1Part3::runChapter1Part3Sub5() {
-  
+  out << "Frightened Bandit: Our boss isn\'t breathing… Is he dead? We\'re no "
+         "match for them. Run!"
+      << endl;
+  out << endl;
+  out << "Bandit: I don\'t want to die." << endl;
+  out << endl;
+  out << "System: Some bandits start to run away. After some bandits flee, the "
+         "rest of the bandits follow in suit."
+      << endl;
+  out << endl;
+  out << "Rosaline: Seems like they\'ve all left. I am exhausted right now. We "
+         "should report back to the Mayor and get some rest."
+      << endl;
+  out << endl;
+  out << " You:" << endl;
+  out << "1. I could use some food; I\'m starving from all of this action."
+      << endl;
+  out << "2. I want to go back and make sure my sister is fine." << endl;
+  getline(in, input);
+  checkInput(in);
+  while (input != "1" && input != "2") {
+    out << "Please input again" << endl;
+    getline(in, input);
+    checkInput(in);
+  }
+  out << endl;
+  out << "Rosaline: Ok, let\'s go." << endl;
+  out << endl;
+  out << "System: You return back to Town Broco. The fight in town has also "
+         "come to an end. Everyone rushes to you and Rosaline."
+      << endl;
+  out << endl;
+  out << "Mayor: Hey Rosaline and “Your Name”, how\'d it go? The bandits "
+         "suddenly started fleeing after hearing about the death of their "
+         "leader. They\'re boss never showed up; did you defeat their leader?"
+      << endl;
+  out << endl;
+  out << "Rosaline: Yes, although we planned to attack their left flank, we "
+         "ended up encountering the bandit leader and fought against them. And "
+         "the rest is history!"
+      << endl;
+  out << endl;
+  out << "Mayor: How did you even manage to fight them off, despite being "
+         "outnumbered? You\'re both heroes of our town. We must celebrate your "
+         "victory and let this town fill with the shouts of our freedom! I’ll "
+         "share the wonderful news to the entire town. Head over to the bar to "
+         "get this celebration started."
+      << endl;
+  out << endl;
+  out << "Rosaline: Ok, see you." << endl;
+  out << endl;
+  out << "You:  See you later." << endl;
+  out << endl;
+  out << "System: You go to the inn and wait for all of the townsfolk to "
+         "arrive."
+      << endl;
+  out << endl;
+  out << "Enthusiastic Adventurer: If it isn\'t our heroes? You are stronger "
+         "than I could have imagined. Anyway, let\'s toast to OUR HEROES!"
+      << endl;
+  out << endl;
+  out << "System: The townsfolk all chug their drinks to show you their "
+         "respect and appreciation."
+      << endl;
+  out << endl;
+  out << "You:" << endl;
+  out << endl;
+  out << "1. It wasn\'t a big deal. Let\'s cut the talking and start the "
+         "celebration!"
+      << endl;
+  out << "2. You all did a great job in defending our town!" << endl;
+  getline(in, input);
+  checkInput(in);
+  while (input != "1" && input != "2") {
+    out << "Please input again" << endl;
+    getline(in, input);
+    checkInput(in);
+  }
+  out << endl;
+  out << "Annie: You came back. Are you hurt at all?  I was worried about you "
+         "the entire time, and I was praying for your victory. I didn\'t want "
+         "to lose you after already losing everything."
+      << endl;
+  out << endl;
+  out << "You: Thank you Annie for always watching over me. I\'m not hurt at "
+         "all, but we encountered more enemies than we could\'ve anticipated. "
+         "Keeping you all safe pushed me to fight my best."
+      << endl;
+  out << endl;
+  out << "Rosaline: “Your Name” fights pretty well. He is the true hero of "
+         "this town. I will forever be indebted to “Your Name” for keeping my "
+         "treasure, my hometown, safe."
+      << endl;
+  out << endl;
+  out << "Annie: You can always count on " << player->getName() << "." << endl;
+  out << "System: You celebrate your victory throughout the night, talking and "
+         "laughing with the townsfolk. Everything seems to be in order, or so "
+         "it seems. As dawn approaches, a worrying message comes your way."
+      << endl;
+  out << endl;
+  out << "Soldier?: Report! Our city, Dicving, needs your town\'s support. The "
+         "goblins surrounding our city are getting more aggressive, and we "
+         "cannot hold them back any longer. Most of our soldiers are wounded "
+         "or exhausted; our situation is looking dire."
+      << endl;
+  out << endl;
+  out << "Mayor: Oh no! We need to address this immediately. From what I\'ve "
+         "experienced, goblins are an atrocious species that only aims to "
+         "destroy and ravage human society. We have to help them, or the "
+         "goblins will only get stronger. If they destroy Dicving, our town "
+         "might be next… Thankfully, I think the bandits have been weakened "
+         "and are not going to attack our town for the time being. The people "
+         "of Dicving need your help, just as much as we do."
+      << endl;
+  out << endl;
+  out << "Rosaline: What do you think, " << player->getName() << "?" << endl;
+  out << endl;
+  out << "You: " << endl;
+  out << "1. I think we should help them. I don\'t want anyone to suffer from "
+         "wars anymore."
+      << endl;
+  getline(in, input);
+  checkInput(in);
+  while (input != "1" && input != "2") {
+    out << "Please input again" << endl;
+    getline(in, input);
+    checkInput(in);
+  }
+  out << endl;
+  out << "Annie: " << player->getName()
+      << " is this town\'s hero. And heroes always help those in need right?"
+      << endl;
+  out << endl;
+  out << "Rosaline: We\'ve made our decision. We are going to leave this town "
+         "tomorrow to save the city of Dicving."
+      << endl;
+  out << endl;
+  out << "Dicving Soldier: I sincerely thank you, heroes. I will lead you to "
+         "our city tomorrow. Take the rest of the day to prepare for our "
+         "journey."
+      << endl;
+  out << endl;
+  out << "Rosaline: Ok, we\'ll meet back with you tomorrow." << endl;
+  out << endl;
+  out << "You: Bye." << endl;
+  out << endl;
+  out << "System: Chapter 1 has concluded." << endl;
+  out << endl;
 }
 
 void Chapter1Part3::runSubChapter() {
