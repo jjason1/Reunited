@@ -8,7 +8,7 @@
 #include <vector>
 
 class Chapter {
-    private:
+    protected:
       std::ostream &out;
       std::istream &in;
       Character *player;

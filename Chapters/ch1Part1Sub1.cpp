@@ -4,7 +4,6 @@
 #include "../lib/Characters/Samurai.hpp"
 #include "../lib/Characters/Warrior.hpp"
 #include "../lib/checkInput.h"
-#include "../lib/checkInput.h"
 #include <iostream>
 #include <istream>
 #include <ostream>
