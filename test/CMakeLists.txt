@@ -19,6 +19,7 @@ add_executable(runAllTests
     testMageClass.cpp
     testSubChapter.cpp
     testChapter.cpp
+    testGiantClass.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
