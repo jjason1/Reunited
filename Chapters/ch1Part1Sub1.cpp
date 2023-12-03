@@ -50,20 +50,23 @@ void Chapter1Part1::chooseClass() {
     out << "Please input class again(w for Warrior, m for Mage, s for Samurai):";
     std::getline(in, input);
   }
-  if (input == "w") {
-    Warrior *w = new Warrior(name);
-    setMainCharacter(w);
+  if (input == "w") { // warrior not complete yet
+    //out << "You have choosed Warrior as your class." << endl;
+    //Warrior *w = new Warrior(name);
+    //player = w;
   } else if (input == "m") {
+    out << "You have choosed Mage as your class." << endl;
     Mage *m = new Mage(name);
-    setMainCharacter(m);
+    player = m;
   } else {
+    out << "You have choosed Samurai as your class." << endl;
     Samurai *s = new Samurai(name);
-    setMainCharacter(s);
+    player = s;
   }
 }
 
 void Chapter1Part1::runChapter1Part1Sub1() {
-  string name;
+  string typedName;
   string cls;
 
   out << "Game start!" << endl;
@@ -72,6 +75,8 @@ void Chapter1Part1::runChapter1Part1Sub1() {
       << endl;
   std::getline(in, name);
   checkInput(in);
+  
+
   chooseClass();
 
 }

@@ -5,7 +5,7 @@ add_subdirectory(googletest)
 
 add_executable(runAllTests
 
-  test_ch1_1_1.cpp
+  
     testEnemyClass.cpp
     testGoblinClass.cpp
     testBanditClass.cpp
@@ -21,6 +21,7 @@ add_executable(runAllTests
     testMageClass.cpp
     testSubChapter.cpp
     testChapter.cpp
+    testCh1Part1Sub1.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)

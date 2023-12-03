@@ -1,6 +1,6 @@
 #include "../lib/Chapters/Chapter.hpp"
 
-Chapter::Chapter(Player *player, vector<SubChapter *> subChapters, 
+Chapter::Chapter(Character *player, vector<SubChapter *> subChapters, 
                  ostream &out, istream &in)
     : player(player), subChapters(subChapters), out(out), in(in) {
     input = "";
