@@ -5,17 +5,13 @@ using namespace std;
 
 Warrior::Warrior(string name) : Player::Player(name){
     // Declare the increment
-    int hpInc,defInc,atkInc;
-    hpInc =  defInc = 10;
-    atkInc = 5;
-
-    // Declare the base stat(Hp, Def, Atk = 100 at LV1)
-    this->setIncrmnts(hpInc, defInc, atkInc);
-
+    
     int baseStats = 100;
     this->setHealth(baseStats);
     this->setDefense(baseStats);
     this->setAttack(baseStats);
+    // Declare the base stat(Hp, Def, Atk = 100 at LV1)
+    // this->setIncrmnts(hpInc, defInc, atkInc);
 }
 
     //Strike is normal attack.
@@ -94,12 +90,94 @@ void Warrior::doomOfTheEnemy(Enemy *e){
     }
 }
 
-void Warrior::listSkills(ostream &){}
+void Warrior::listSkills(ostream &out){
+    out << "Skills:\n";
+    out << "--------------------------\n";
+    out << "1: Strike\n";
+    out << "2: Heavy Strike\n";
+    out << "3: War Cry\n";
+    out << "4: Storm Strike\n";
+    out << "5: Heart of a Warrior\n";
+    out << "6: Unstoppable Fury\n";
+    out << "7: Let Them Bleed\n";
+    out << "8: Doom of the Enemy\n";
+    out << "\nSelect the skill you would like to use: " << endl;
+}
 
-int Warrior::selectSkill(){
-    return 1;
+int Warrior::selectSkill(istream &in){
+    int skill;
+    cout << "Select a skill number: ";
+
+    while (!(in >> skill)) {
+        cout << "Invalid input, please enter a valid skill number.\n";
+        in.clear(); // Clear the error state of the stream
+        in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the incorrect input
+        cout << "Select a skill number: ";
+    }
+
+    return skill; // Return the skill number if input is valid
 }
 
 void Warrior::useSkillOn(int skill, Enemy *e){
+    if (skill == 1)
+    {
+        cout << this->getName() << " chose strike." << endl;
+        this->strike(e);
+    }
+    else if (skill == 2)
+    {
+        cout << this->getName() << " chose heavyStrike." << endl;
+        this->heavyStrike(e);
+    }
+    else if (skill == 3)
+    {
+        cout << this->getName() << " chose war cry." << endl;
+        this->warCry();
+    }
+    else if (skill == 4)
+    {
+        cout << this->getName() << " chose storm strike." << endl;
+        this->stormStrike(e);
+    }
+    else if (skill == 5)
+    {
+        cout << this->getName() << " chose heart of a Warrior." << endl;
+        this->heartOfAWarrior();
+    }
+    else if (skill == 6)
+    {
+        cout << this->getName() << " chose unstoppable fury." << endl;
+        this->unstoppableFury();
+    }
+    else if (skill == 7)
+    {
+        cout << this->getName() << " chose let them bleed." << endl;
+        this->letTamBleed(e);
+    }
+    else if (skill == 8)
+    {
+        cout << this->getName() << " chose doom of the enemy." << endl;
+        this->doomOfTheEnemy(e);
+    }
+    else{
+        cout<< "Please select a valid skill."<< endl;
+    }
+}
 
+void Warrior::levelUp()
+{
+
+    int baseStats = 100;
+    this->setHealth(baseStats);
+    this->setDefense(baseStats);
+    this->setAttack(baseStats);
+
+    int hpInc,defInc,atkInc;
+    hpInc =  defInc = 10;
+    atkInc = 5;
+    
+    this->level++;
+    this->setHealth(baseStats + (level - 1) * hpInc);
+    this->setDefense(baseStats + (level - 1) * defInc);
+    this->setAttack(baseStats + (level - 1) * atkInc);
 }

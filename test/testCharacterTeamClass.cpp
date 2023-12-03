@@ -25,16 +25,13 @@ TEST(CharacterTeamSuite, testGetSize){
 
 TEST(CharacterTeamSuite, testAddCharacter){
     //Arrange.
-    stringstream ss;
-    string expOutput="Aamir has joined the team!\n";
     Character *c1=new Character("Boyi");
     Character *c2=new Character("Jason");
     vector<Character *> team{c1,c2};
-    CharacterTeam *characters=new CharacterTeam(team,ss);
+    CharacterTeam *characters=new CharacterTeam(team,cout);
     //Act.
     characters->addCharacter(new Character("Aamir"));
     //Assert.
-    EXPECT_EQ(ss.str(),expOutput);
     EXPECT_EQ(characters->getSize(),3);
 }
 

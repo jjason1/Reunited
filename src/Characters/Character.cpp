@@ -1,6 +1,5 @@
 #include "../../lib/Characters/Character.hpp"
 #include <assert.h>
-
 using namespace std;
 
 Character::Character(string name)
@@ -100,7 +99,8 @@ void Character::levelUp(){
 
 void Character::listSkills(ostream &out) {}
 
-int Character::selectSkill(){
+int Character::selectSkill(istream &in){
     return 1;
 }
 void Character::useSkillOn(int skill, Character *c) {}
+
