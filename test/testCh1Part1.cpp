@@ -15,7 +15,7 @@
 #include <string>
 using std::stringstream;
 
-TEST(TestCH1Part1Sub1Suite, TestConstructer) {
+TEST(TestCH1Part1Suite, TestConstructer) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -28,7 +28,7 @@ TEST(TestCH1Part1Sub1Suite, TestConstructer) {
   
 }
 
-TEST(TestCH1Part1Sub1Suite, TestjobDescription) // test if output are equal
+TEST(TestCH1Part1Suite, TestjobDescription) // test if output are equal
 {
   std::stringstream testout;
   std::stringstream testin;
@@ -64,7 +64,7 @@ TEST(TestCH1Part1Sub1Suite, TestjobDescription) // test if output are equal
   EXPECT_EQ( testout.str(), out.str());
 }
 
-TEST(TestCH1Part1Sub1Suite, testChooseClassMage) {
+TEST(TestCH1Part1Suite, testChooseClassMage) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -102,7 +102,7 @@ TEST(TestCH1Part1Sub1Suite, testChooseClassMage) {
   EXPECT_EQ( testout.str(), out.str());
 }
 
-TEST(TestCH1Part1Sub1Suite, testChooseClassSamurai) {
+TEST(TestCH1Part1Suite, testChooseClassSamurai) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -140,7 +140,7 @@ TEST(TestCH1Part1Sub1Suite, testChooseClassSamurai) {
   EXPECT_EQ( testout.str(), out.str());
 }
 
-TEST(TestCH1Part1Sub1Suite, testrunChapter1Part1Sub1ChooseMageClass) {
+TEST(TestCH1Part1Suite, testrunChapter1Part1Sub1ChooseMageClass) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -186,7 +186,7 @@ TEST(TestCH1Part1Sub1Suite, testrunChapter1Part1Sub1ChooseMageClass) {
 }
 
 
-TEST(TestCH1Part1Sub1Suite, testOption1) {
+TEST(TestCH1Part1Suite, testOption1) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -203,7 +203,7 @@ TEST(TestCH1Part1Sub1Suite, testOption1) {
   EXPECT_EQ( testout.str(), out.str()); 
 }
 
-TEST(TestCH1Part1Sub1Suite, testrunChapter1Part1Sub2){
+TEST(TestCH1Part1Suite, testrunChapter1Part1Sub2){
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -224,7 +224,7 @@ TEST(TestCH1Part1Sub1Suite, testrunChapter1Part1Sub2){
   EXPECT_NO_THROW(ch11->runChapter1Part1Sub2());
 }
 
-TEST(TestCH1Part1Sub1Suite, testrunChapterWithMage) {
+TEST(TestCH1Part1Suite, testrunChapterWithMage) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
