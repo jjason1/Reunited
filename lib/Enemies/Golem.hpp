@@ -16,6 +16,9 @@ class Golem : public Enemy {
         void earthquake(vector<Character *> &targets);
         void shieldGen();
 
+        virtual int selectSkill(istream &);
+        virtual void useSkillOn(int, vector<Character *> &targets);
+
 
 };
 

@@ -77,3 +77,63 @@ TEST(SamuraiClassSuite, testSmokeBomb)
     EXPECT_EQ(e->getHealth(), 50);
     EXPECT_TRUE(status == false);
 }
+
+TEST(SamuraiClassSuite, testListSkills)
+{
+    string name = "Jason";
+    string status = "\nSkills\n"
+                    "--------------------------\n"
+                    "1. Direct strike\n"
+                    "2. Sheath blade\n"
+                    "3. Wide range strike\n"
+                    "4. Shadow degeneration\n"
+                    "5. Smoke bomb\n"
+                    "\nSelect the skill you would like to use: \n";
+
+    Samurai *s = new Samurai(name);
+    stringstream ss;
+    s->listSkills(ss);
+    EXPECT_EQ(ss.str(), status);
+}
+
+TEST(SamuraiClassSuite, testSelectSkill)
+{
+    // Arrange.
+    Samurai *s = new Samurai("Jason");
+    // Act.
+    string simulatedInput = "3\n"; // Change this to test different inputs
+    istringstream in(simulatedInput);
+
+    int chosenSkill = s->selectSkill(in);
+
+    // Assert.
+    EXPECT_TRUE((chosenSkill == 3));
+}
+
+TEST(SamuraiClassSuite, testUseSkillOn)
+{
+    // Arrange.
+    Samurai *s = new Samurai("Jason");
+    Enemy *e = new Enemy("Aamir", 1);
+    e->setHealth(100);
+
+    string simulatedInput = "3\n"; // Change this to test different inputs
+    istringstream in(simulatedInput);
+
+    int chosenSkill = s->selectSkill(in);
+    // Act + Assert.
+    EXPECT_NO_THROW(s->useSkillOn(chosenSkill, e));
+    EXPECT_EQ(e->getHealth(), 50);
+}
+
+TEST(SamuraiClassSuite, testLevelUp)
+{
+    Samurai *s = new Samurai("Jason");
+    s->levelUp();
+
+    EXPECT_EQ(s->getHealth(), 105);
+    EXPECT_EQ(s->getAttack(), 115);
+    EXPECT_EQ(s->getDefense(), 105);
+    EXPECT_EQ(s->getLevel(), 2);
+
+}

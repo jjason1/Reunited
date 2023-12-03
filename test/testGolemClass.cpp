@@ -40,11 +40,24 @@ TEST(GolemClassSuite, testlazerBlaze){
 TEST(GolemClassSuite, testShieldGen){
     Golem *g = new Golem("Boyi" , 1);
     g->shieldGen();
-    EXPECT_EQ(g->getDefense(), 1500);
+    EXPECT_EQ(g->getHealth(), 3500);
 }
 
 TEST(GolemClassSuite, testSelectSkill){
     Golem *g = new Golem("Ryan" , 1);
-    int chosenSkill = g->selectSkill();
-    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2));
+    int chosenSkill = g->selectSkill(cin);
+    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2)||(chosenSkill==3)||(chosenSkill==4));
+}
+
+TEST(GolemClassSuite, testUseSkillOn){
+    Golem *g = new Golem("Ryan" , 1);
+    Character *c=new Character("Aamir");
+    c->setHealth(100);
+
+    int chosenSkill = g->selectSkill(cin);
+    
+    vector<Character *> team;
+
+    team.push_back(c);
+    EXPECT_NO_THROW(g->useSkillOn(chosenSkill,team));
 }

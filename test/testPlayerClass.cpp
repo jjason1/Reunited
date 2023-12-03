@@ -1,4 +1,3 @@
-
 #include "gtest/gtest.h"
 #include "../src/Characters/Player.cpp"
 #include <iostream>
@@ -23,7 +22,6 @@ TEST(TestPlayerClassSuite, TestLevelUp){
     EXPECT_EQ(P->getLevel(), 2);
 }
 
-
 TEST(TestPlayerClassSuite, testGetStatus){
     string name="Jason";
     string status="\nJason's Status: \n"
@@ -43,4 +41,14 @@ TEST(TestPlayerClassSuite, testSetAtkDstrbtn){
     int AtkDstrbtn = 2;
     P->setAtkDstrbtn(AtkDstrbtn);
     EXPECT_EQ(P->getAtkDstrbtn(), 2);
+}
+
+
+TEST(TestPlayerClassSuite, testresetHealth){
+    Player *P = new Player("Boyi");
+    P->setIncrmnts(15, 0, 0);
+    P->setHealth(100);
+    P->takeDamage(30);
+    P->resetHealth();
+    EXPECT_EQ(P->getHealth(), 100);
 }
