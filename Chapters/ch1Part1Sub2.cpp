@@ -21,7 +21,7 @@ void Chapter1Part1::option1Part1Sub1() {
 
   out << "[Select Option]" << endl;
   out << "1.  Stop right there, don\'t go anywhere near that girl!" << endl
-      << "(Silently approach the bandit.)"
+      << "    (Silently approach the bandit.)"
       << endl;
   getline(in, input);
   checkInput(in);
@@ -36,7 +36,7 @@ void Chapter1Part1::option1Part1Sub1() {
 
 
 void Chapter1Part1::runChapter1Part1Sub2() {
-  out << "Chapter1.1" << endl;
+  out << "\nChapter 1.1:" << endl;
   out << endl;
   out << "System: Our journey begins in a land ravaged by the cruel hands of "
          "war. You and your sister, Annie, are currently escaping from the "
@@ -60,9 +60,6 @@ void Chapter1Part1::runChapter1Part1Sub2() {
   out << "System: As you begin making your way towards the direction of the "
          "shouting, you\'re stopped in your tracks by a blurry figure. "
          "(Preventing you from going any further.)"
-      << endl;
-  out << "No one is going to help you hehe! (The bandit lick his blade and no "
-         "one knows what he is going to do next)"
       << endl;
   out << endl;
   out << "Bandit: No one is going to help you this deep into the forest! Your "

@@ -21,7 +21,7 @@ add_executable(runAllTests
     testMageClass.cpp
     testSubChapter.cpp
     testChapter.cpp
-    testCh1Part1Sub1.cpp
+    testCh1Part1.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
