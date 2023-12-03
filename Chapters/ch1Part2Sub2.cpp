@@ -87,16 +87,16 @@ void Chapter1Part2::runChapter1Part2Sub2(){
     "head over to the inn to get some rest. With nightfall coming, you need to rest to "
     "build up your strength before we put our plan into action.\n"<<endl;
 
-    out<<"Rosaline: I will show them the way to the inn. Goodbye, Mayor. We\’ll meet again soon.\n"<<endl;
+    out<<"Rosaline: I will show them the way to the inn. Goodbye, Mayor. We\'ll meet again soon.\n"<<endl;
 
-    out<<"System: You all leave the Mayor\’s house and start walking towards the "
+    out<<"System: You all leave the Mayor\'s house and start walking towards the "
     "inn. With every step you all take, the sky gets darker and your paths darken.\n"<<endl;
 
     option2();
 
     out<<"System: You all reach the inn before midnight.\n"<<endl;
 
-    out<<"Rosaline: Here is our town\’s only inn. Although it's "
+    out<<"Rosaline: Here is our town\'s only inn. Although it's "
     "shabby and on its last leg, the food and people are great, especially "
     "the soup here. Come on in!\n"<<endl;
 
@@ -121,19 +121,19 @@ void Chapter1Part2::runChapter1Part2Sub2(){
 
     out<<"Rosaline: I knew you would like it. It fills you with energy immediately.\n"<<endl;
 
-    out<<"Boss: If you\’d like more, let me know! There\’s more where that came from.\n"<<endl;
+    out<<"Boss: If you\'d like more, let me know! There\'s more where that came from.\n"<<endl;
 
     out<<"System: You keep eating until you become full, and now it is time to get some rest.\n"<<endl;
 
     out<<"Boss: The mayor already paid me your fee and rent to live here. "
     "Your room is just up the stairs.\n"<<endl;
 
-    out<<"Rosaline: Alright, it\’s been a pleasure guiding you both around town. "
-    "I have to go home now to prepare for tomorrow. I can’t thank you both enough "
-    "for all that you\’ve done for me. Now\’s the time to rest, but we\’ll meet again tomorrow.\n"<<endl;
+    out<<"Rosaline: Alright, it\'s been a pleasure guiding you both around town. "
+    "I have to go home now to prepare for tomorrow. I can\'t thank you both enough "
+    "for all that you\'ve done for me. Now\'s the time to rest, but we\'ll meet again tomorrow.\n"<<endl;
 
     out<<"System: Rosaline leaves the inn. Feeling exhausted from your trip, you "
-    "and Annie also decide it\’s time to get some sleep.\n"<<endl;
+    "and Annie also decide it\'s time to get some sleep.\n"<<endl;
 
 
     option6();
