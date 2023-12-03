@@ -18,6 +18,7 @@ public:
   void runChapter1Part3Sub1();
   void runChapter1Part3Sub2();
   void runChapter1Part3Sub3();
-  
+  void runChapter1Part3Sub4();
+  void runChapter1Part3Sub5();
 };
 #endif

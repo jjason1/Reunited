@@ -127,7 +127,7 @@ void Chapter1Part3::runChapter1Part3Sub2() {
       << endl;
   out << endl;
   out << "Rosaline:  Our defense seems to be ready now. Annie, stay here in "
-         "the town and “Your Name”, come with me."
+         "the town and " << player->getName() << ", come with me."
       << endl;
   out << endl;
   out << "You: 1. I\'m ready." << endl;
@@ -176,7 +176,7 @@ void Chapter1Part3::runChapter1Part3Sub2() {
 
   playerHp = player->getHealth(); //  record the hp before fight
   Mage *rosaline = new Mage("Rosaline");
-  for (int i = 0; i < player->getLevel(); i++) {
+  for (int i = 0; i < player->getLevel(); i++) { // sync rosaline's level to player
     rosaline->levelUp();
   }
 
@@ -186,7 +186,7 @@ void Chapter1Part3::runChapter1Part3Sub2() {
   Bandit *banditA = new Bandit("Bandit A", player->getLevel());
   Bandit *banditB = new Bandit("Bandit B", player->getLevel());
   Bandit *banditC = new Bandit("Bandit C", player->getLevel());
-  Bandit *banditD = new Bandit("Bandit C", player->getLevel());
+  Bandit *banditD = new Bandit("Bandit D", player->getLevel());
   vector<Character *> enemies{banditA, banditB, banditC, banditD};
   EnemyTeam * enemyTeam = new EnemyTeam(enemies, out);
 
@@ -202,13 +202,129 @@ void Chapter1Part3::runChapter1Part3Sub2() {
 }
 
 void Chapter1Part3::runChapter1Part3Sub3() {
-  out << "Rosaline: … We finally won! It wouldn’t have been as easy if we "
-         "didn’t plan ahead to ambush them. "
+  out << "Rosaline: … We finally won! It wouldn\'t have been as easy if we "
+         "didn\'t plan ahead to ambush them. "
       << endl;
+  out << endl;
   out << "You:" << endl;
-  out << "1. They weren’t much of a challenge. This couldn’t have been their "
+  out << "1. They weren\'t much of a challenge. This couldn\'t have been their "
          "main attack unit…"
       << endl;
   out << "2. I think we should retreat and report back to the Mayor." << endl;
+  getline(in, input);
+  checkInput(in);
+  while (input != "1" && input != "2") {
+    out << "Please input again" << endl;
+    getline(in, input);
+    checkInput(in);
+  }
+  out << endl;
+  out << "Bandit Captain: Where do you think you\'re going? This is just the "
+         "beginning. Attack!"
+      << endl;
+  out << endl;
+  out << "System: You turn around. In front of you lies another wave of "
+         "bandits. You encounter a second wave of bandits."
+      << endl;
+  out << endl;
+
+
+  playerHp = player->getHealth(); //  record the hp before fight
+  Mage *rosaline = new Mage("Rosaline");
+  for (int i = 0; i < player->getLevel(); i++) { // sync rosaline's level to player
+    rosaline->levelUp();
+  }
+
+  vector<Character *> team{player, rosaline};
+  PlayerTeam * playerTeam = new PlayerTeam(team, out, in);
+
+  Bandit *banditA = new Bandit("Bandit A", player->getLevel());
+  Bandit *banditB = new Bandit("Bandit B", player->getLevel());
+  Bandit *banditC = new Bandit("Bandit C", player->getLevel());
+  Bandit *banditD = new Bandit("Bandit D", player->getLevel());
+  vector<Character *> enemies{banditA, banditB, banditC, banditD};
+  EnemyTeam * enemyTeam = new EnemyTeam(enemies, out);
+
+
+  Combat *c = new Combat(playerTeam, enemyTeam, out, in);
+  c->startBattle();
+
+  player->setHealth(playerHp); // restore health after fight
+
+  for (int i = 0; i< 4; i++) { // level up four times
+    player->levelUp();
+  }
+}
+
+void Chapter1Part3::runChapter1Part3Sub4() {
+  out << "System: You taste victory. However, the sounds of your fighting "
+         "attracted more unwanted attention. You find yourself completely "
+         "surrounded by bandits."
+      << endl;
+  out << endl;
+  out << "Bandit Leader: Put down your weapon, and I\'ll consider giving you a "
+         "painless death."
+      << endl;
+  out << endl;
+  out << "Rosaline: We aren\'t going to give up that easily. Victory belongs "
+         "to "
+         "the last man standing, and that will be "
+      << player->getName() << ". " << endl;
+  out << endl;
+  out << "You: " << endl;
+  out << "1. Come at me! No matter how many bandits I face, we will still "
+         "leave victorious!"
+      << endl;
+  out << "2. I\'ll see you all in Hell! It isn\'t my time just yet…" << endl;
+  out << endl;
+  out << "Bandit Leader: You don\'t seem to understand your current position. "
+         "I "
+         "am going to torture you until you surrender. You will wish you had "
+         "begged me for a painless death earlier."
+      << endl;
+  out << endl;
+  out << "System: You encounter a third group of bandits, led by a Bandit "
+         "leader."
+      << endl;
+  out << endl;
+
   
+  playerHp = player->getHealth(); //  record the hp before fight
+  Mage *rosaline = new Mage("Rosaline");
+  for (int i = 0; i < player->getLevel(); i++) { // sync rosaline's level to player
+    rosaline->levelUp();
+  }
+
+  vector<Character *> team{player, rosaline};
+  PlayerTeam * playerTeam = new PlayerTeam(team, out, in);
+
+  Bandit *banditA = new Bandit("Bandit A", player->getLevel());
+  Bandit *banditB = new Bandit("Bandit B", player->getLevel());
+  Bandit *banditC = new Bandit("Bandit C", player->getLevel());
+  Bandit *banditD = new Bandit("Bandit Boss", player->getLevel());
+  vector<Character *> enemies{banditA, banditB, banditC, banditD};
+  EnemyTeam * enemyTeam = new EnemyTeam(enemies, out);
+
+
+  Combat *c = new Combat(playerTeam, enemyTeam, out, in);
+  c->startBattle();
+
+  player->setHealth(playerHp); // restore health after fight
+
+  for (int i = 0; i< 4; i++) { // level up four times
+    player->levelUp();
+  }
+}
+
+void Chapter1Part3::runChapter1Part3Sub5() {
+  
+}
+
+void Chapter1Part3::runSubChapter() {
+  runChapter1Part3Sub1();
+  runChapter1Part3Sub2();
+  runChapter1Part3Sub3();
+  runChapter1Part3Sub4();
+  runChapter1Part3Sub5();
+      
 }
