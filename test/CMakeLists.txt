@@ -22,6 +22,7 @@ add_executable(runAllTests
     testSubChapter.cpp
     testChapter.cpp
     testCh1Part1.cpp
+    testCh1Part2.cpp
     testCh1Part3.cpp
 )
 
