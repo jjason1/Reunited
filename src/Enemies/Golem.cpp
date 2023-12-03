@@ -11,15 +11,15 @@ Golem::Golem(string name, int level) : Enemy::Enemy(name, level) {
     //CD = terms;
 }
 
-void Golem::lazerBlaze(Character *target) {
-    target->takeDamage(this->getAttack() * 2); 
-    cout<< this->getName() << " attacks " << target->getName() << " with lazer blaze!" <<endl;
+void Golem::lazerBlaze(Character *chracter) {
+    chracter->takeDamage(this->getAttack() * 2); 
+    cout<< this->getName() << " attacks " << chracter->getName() << " with lazer blaze!" <<endl;
 }
 
-void Golem::earthquake(vector<Character *> &targets) {
-     for (Character *target : targets) {
-        target->takeDamage(this->getAttack());
-        cout<< this->getName() << " attacks " << target->getName() << " with earthquake!" <<endl;
+void Golem::earthquake(vector<Character *> &chracters) {
+     for (Character *chracter : chracters) {
+        chracter->takeDamage(this->getAttack());
+        cout<< this->getName() << " attacks " << chracter->getName() << " with earthquake!" <<endl;
      }
 }
 
@@ -35,7 +35,7 @@ int Golem::selectSkill(istream &in){
     return chosenSkill;
 }
 
-void Golem::useSkillOn(int chosenSkill, vector<Character *> &targets){
+void Golem::useSkillOn(int chosenSkill, vector<Character *> &chracters){
     //Use the randomly chosen skill on the character.
     switch (chosenSkill){
         //Skill 4 is shieldGen
@@ -47,23 +47,23 @@ void Golem::useSkillOn(int chosenSkill, vector<Character *> &targets){
         //Skill 3 is earthquake.
          case 3:{
             cout<<this->getName()<<" chose earthquake."<<endl;
-            this->earthquake(targets);
+            this->earthquake(chracters);
             break;
         }
         //Skill 2 is lazerBlaze.
          case 2:{
             cout<<this->getName()<<" chose lazer blaze."<<endl;
-            int randomIndex = rand() % targets.size(); // Random index
-            Character* target = targets[randomIndex]; // Get target at random index
-            this->lazerBlaze(target);
+            int randomIndex = rand() % chracters.size(); // Random index
+            Character* chracter = chracters[randomIndex]; // Get chracter at random index
+            this->lazerBlaze(chracter);
             break;
         }
         //Skill 1 is normal attack.
          case 1:{
             cout<<this->getName()<<" chose lazer blaze."<<endl;
-            int randomIndex = rand() % targets.size(); // Random index
-            Character* target = targets[randomIndex]; // Get target at random index
-            this->normalAttack(target);
+            int randomIndex = rand() % chracters.size(); // Random index
+            Character* chracter = chracters[randomIndex]; // Get chracter at random index
+            this->normalAttack(chracter);
             break;
         }
     }
