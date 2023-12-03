@@ -5,6 +5,7 @@
 #include "../Enemies/Enemy.hpp"
 
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 class Mage : public Character

@@ -7,6 +7,7 @@
 class EnemyTeam : public CharacterTeam {
     public:
         EnemyTeam(vector<Character *>, ostream &);
+        ~EnemyTeam(){};
         Character *chooseTarget(vector<Character *>);
 };
 

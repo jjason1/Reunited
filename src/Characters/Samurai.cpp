@@ -1,4 +1,5 @@
 #include "../../lib/Characters/Samurai.hpp"
+#include <sstream>
 using namespace std;
 
 Samurai::Samurai(string name) : Character::Character(name)

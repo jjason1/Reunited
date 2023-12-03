@@ -4,6 +4,11 @@ CharacterTeam::CharacterTeam(vector<Character *> team, ostream &outObj) : out(ou
     this->characters=team;
 }
 
+CharacterTeam::~CharacterTeam(){
+    for(auto character:this->characters)
+        delete character;
+}
+
 int CharacterTeam::getSize(){
     return this->characters.size();
 }

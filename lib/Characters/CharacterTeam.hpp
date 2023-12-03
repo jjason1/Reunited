@@ -13,6 +13,7 @@ class CharacterTeam{
         ostream &out;
     public:
         CharacterTeam(vector<Character *>, ostream &);
+        ~CharacterTeam();
         void addCharacter(Character *);
         virtual Character *chooseTarget(vector<Character *>);
         int getSize();

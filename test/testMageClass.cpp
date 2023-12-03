@@ -130,7 +130,7 @@ TEST(MageClassSuite, testListSkills)
     string outputStr = output.str();
 
     // Assert.
-    string expectedOutput = "\nSkills\n--------------------------\n1. Fireball\n2. Heal\n3. Ice storm\n4. Thunder blast\n5. Skill boost\nSelect the skill you would like use: \n";
+    string expectedOutput = "\nSkills\n--------------------------\n1. Fireball\n2. Heal\n3. Ice storm\n4. Thunder blast\n5. Skill boost\n\nSelect the skill you would like use: \n";
     EXPECT_EQ(outputStr, expectedOutput);
 }
 
