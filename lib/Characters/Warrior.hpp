@@ -1,7 +1,8 @@
 #ifndef WARRIOR_HPP
 #define WARRIOR_HPP
 
-#include "../final-project-akhan197-bli181-cchua042-jlin379/lib/Characters/Player.hpp"
+#include "Player.hpp"
+#include "../Enemies/Enemy.hpp"
 
 
 
@@ -29,4 +30,4 @@ class Warrior : public Player {
 
 };
 
-#endif / * WARRIOR_HPP * /
+#endif 

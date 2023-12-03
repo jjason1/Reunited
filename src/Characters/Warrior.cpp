@@ -48,6 +48,7 @@ void Warrior::bloodDraining() {
     double drain = 0.2;
     //in next 6 turns(Not implemented):
     this->setHealth(this->getHealth() + drain * this->getAttack());
+    cout << this->getName() << " used bloodDraining, you gained  health from your attack." << endl;
 }
 
 void Warrior::rageBurst() {
@@ -55,14 +56,50 @@ void Warrior::rageBurst() {
 
 }
 
-void Warrior::taunt() {
+void Warrior::taunt(Enemy *e) {
     //Not implemented yet.
 }
 
 void Warrior::heartOfAWarrior() {
     //in 5 turns:
-    this->setHealth(1.2 * (baseStats + this->getlevel() * hpIncrmnt))
+    this->setHealth(1.2 * (this->getHealth() + this->getLevel() * hpIncrmnt));
+    cout << this->getName() << " used heart of a warrior, increase 20% hp limit and regenerate 5% of hp in battle for 5 turns." << endl;
     
 }
 
-    
+void Warrior::unstoppableFury() {
+    //in 5 turns:
+    if(this->getHealth() <= 0){
+        this->setHealth(1);
+    }
+    rageBar = 100;
+    cout << this->getName() << " used unstoppable fury, you won't die in next 5 rounds and your rage bar is full." << endl;
+}
+
+void Warrior::letTamBleed(Enemy *e){
+    //in 10 turns:
+    double bleed = 0.3;
+    e->takeDamage(this->getAttack() * bleed);
+    cout << this->getName() << " used let them bleed, you will gain health from your attack." << endl;
+}
+
+void Warrior::doomOfTheEnemy(Enemy *e){
+    int doom = 4;
+    if(rageBar >= 99){
+        e->takeDamage(this->getAttack() * doom);
+        cout << this->getName() << " used let them doom of enemy on " << e->getName() << endl;
+    }
+    else{
+        cout << "Don't have enough rage bar to use the skill." << endl;
+    }
+}
+
+void Warrior::listSkills(ostream &){}
+
+int Warrior::selectSkill(){
+    return 1;
+}
+
+void Warrior::useSkillOn(int skill, Enemy *e){
+
+}

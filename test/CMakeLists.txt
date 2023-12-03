@@ -6,7 +6,6 @@ add_subdirectory(googletest)
 add_executable(runAllTests
     testEnemyClass.cpp
     testGoblinClass.cpp
-    testGolemClass.cpp
     testBanditClass.cpp
     testEnemyTeamClass.cpp
     testCharacterClass.cpp
@@ -16,6 +15,7 @@ add_executable(runAllTests
     testPlayerTeam.cpp
     testshowDevelopers.cpp
     testHelpClass.cpp
+    testWarriorClass.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
