@@ -1,7 +1,7 @@
 #include "../lib/Chapters/SubChapter.hpp"
 #include <string>
 
-SubChapter::SubChapter(Player *player, ostream &out, istream &in)
+SubChapter::SubChapter(Character *player, ostream &out, istream &in)
     : player(player), out(out), in(in) {
   input = "";
   name = "SubChapter";
