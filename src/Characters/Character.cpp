@@ -1,6 +1,5 @@
 #include "../../lib/Characters/Character.hpp"
 #include <assert.h>
-
 using namespace std;
 
 Character::Character(string name)
@@ -14,7 +13,6 @@ Character::Character(string name)
     this->setAttack(0);
     this->setIncrmnts(0, 0, 0);
     this->setMovable(true);
-    this->atkDstrbtn = 0;
 }
 
 void Character::getStatus(ostream &out)
@@ -32,6 +30,10 @@ void Character::getStatus(ostream &out)
 string Character::getName()
 {
     return name;
+}
+
+int Character::getLevel(){
+    return this->level;
 }
 
 void Character::setAttack(int atk)
@@ -76,27 +78,29 @@ void Character::setMovable(bool status)
     this->isMovable = status;
 }
 
-int Character::getAtkDstrbtn()
-{
-    return this->atkDstrbtn;
-}
-
-void Character::setAtkDstrbtn(int num)
-{
-    this->atkDstrbtn = num;
-}
-
 bool Character::checkMovable()
 {
+    if (!isMovable)
+    {
+        cout << getName() << " can not move." << endl;
+    }
     return this->isMovable;
 }
 
 void Character::takeDamage(int dmg)
 {
+    cout << getName() << " took " << dmg << " damage." << endl;
     this->health -= dmg;
 }
 
-void Character::levelUp()
-{
-    level += 1;
+void Character::levelUp(){
+    this->level++;
 }
+
+void Character::listSkills(ostream &out) {}
+
+int Character::selectSkill(istream &in){
+    return 1;
+}
+void Character::useSkillOn(int skill, Character *c) {}
+

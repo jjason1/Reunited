@@ -1,17 +1,26 @@
-#ifndef SAMURAI_H
-#define SAMURAI_H
-#include <string>
+#ifndef SAMURAI_HPP
+#define SAMURAI_HPP
+
 #include "Character.hpp"
-using std::string;
+#include "../Enemies/Enemy.hpp"
 
-class Samurai: public Character
+#include <iostream>
+using namespace std;
+
+class Samurai : public Character
 {
-private:
-    
-
 public:
-    Samurai(const string& name);
-    ~Samurai();
+    Samurai(string);
+    void directStrike(Character *);
+    void sheathBlade(Character *);
+    void wideRangeStrike(Character *);
+    void shadowDegeneration(Character *);
+    void smokeBomb(Character *);
+
+    virtual void listSkills(ostream &);
+    virtual int selectSkill(istream &);
+    virtual void useSkillOn(int, Character *);
+    virtual void levelUp();
 };
 
 #endif
