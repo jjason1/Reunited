@@ -3,7 +3,7 @@ using namespace std;
 #include<iostream>
 #include<string>
 
-Warrior::Warrior(string name) : Player::Player(name){
+Warrior::Warrior(string name) : Character::Character(name){
     // Declare the increment
     
     int baseStats = 100;
@@ -97,19 +97,38 @@ void Warrior::listSkills(ostream &out){
     out << "\nSelect the skill you would like to use: " << endl;
 }
 
-int Warrior::selectSkill(istream &in){
-    int skill;
-    cout << "Select a skill number: ";
+int Warrior::selectSkill(istream &in)
+{
+    string skill="";
+    stringstream ss;
+    int numSkill=0;
+    getline(in,skill);
 
-    while (!(in >> skill)) {
-        cout << "Invalid input, please enter a valid skill number.\n";
-        in.clear(); // Clear the error state of the stream
-        in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore the rest of the incorrect input
-        cout << "Select a skill number: ";
+    bool checkInputCorrect = false;
+    for (int i = 1; i <= 8; i++) { // check the input is correct or not
+        if (skill == to_string(i)) {
+        checkInputCorrect = true;
+        ss << skill;
+        ss >> numSkill;
+        return numSkill;
+        }
     }
 
-    return skill; // Return the skill number if input is valid
+    while (!checkInputCorrect) { // wrong output will go in here and input again
+        cout << "Please choose a target again:" << endl;
+        getline(in, skill);
+        for (int i = 1; i <= 8; i++) {
+            if (skill == to_string(i)) {
+                checkInputCorrect = true;
+                ss << skill;
+                ss >> numSkill;
+                return numSkill;
+            }
+        }
+    }
+    return numSkill;
 }
+
 
 void Warrior::useSkillOn(int skill, Enemy *e){
     if (skill == 1)

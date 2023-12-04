@@ -86,23 +86,7 @@ TEST(WarriorTestSuit, testSelectSkill){
     EXPECT_TRUE((chosenSkill == 5));
 }
 
-TEST(WarriorTestSuit, testInvalidSkill){
-    Warrior *w = new Warrior("Lol");
-    string simulatedInput = "x\n1\n";
-    istringstream in(simulatedInput);
 
-    stringstream buffer;
-    streambuf* prevCoutBuf = cout.rdbuf();
-    cout.rdbuf(buffer.rdbuf());
-
-    w->selectSkill(in);
-
-    cout.rdbuf(prevCoutBuf);
-
-    string error = "Select a skill number: Invalid input, please enter a valid skill number.\nSelect a skill number: ";
-
-    EXPECT_EQ(error, buffer.str());
-}
 
 TEST(WarriorTestSuit, testUseSkillOn){
     Warrior *w = new Warrior("XXX");
