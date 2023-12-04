@@ -7,14 +7,14 @@ TEST(testChapterSuite, testConstructor) {
   SubChapter *sc = new SubChapter(player, cout, cin);
   vector<SubChapter *> subChapters{sc};
 
-  EXPECT_NO_THROW(new Chapter(player, subChapters, cout, cin));
+  EXPECT_NO_THROW(new Chapter(player, cout, cin));
 }
 
 TEST(testChapterSuite, testRunChapter) {
   Player *player = new Player("tester");
   SubChapter *sc = new SubChapter(player, cout, cin);
   vector<SubChapter *> subChapters{sc};
-  Chapter *c = new Chapter(player, subChapters, cout, cin);
+  Chapter *c = new Chapter(player, cout, cin);
 
   EXPECT_NO_THROW(c->runChapter());
 }
@@ -25,7 +25,7 @@ TEST(testChapterSuite, testSetPlayer) {
   Player *player2 = new Player("tester2");
   SubChapter *sc = new SubChapter(player1, cout, cin);
   vector<SubChapter *> subChapters{sc};
-  Chapter *c = new Chapter(player1, subChapters, cout, cin);
+  Chapter *c = new Chapter(player1, cout, cin);
 
   EXPECT_NO_THROW(c->setPlayer(player2));
 }
@@ -34,7 +34,7 @@ TEST(testChapterSuite, testGetName) {
   Player *player = new Player("tester");
   SubChapter *sc = new SubChapter(player, cout, cin);
   vector<SubChapter *> subChapters{sc};
-  Chapter *c = new Chapter(player, subChapters, cout, cin);
+  Chapter *c = new Chapter(player, cout, cin);
 
   EXPECT_EQ(c->getName(), "Chapter");
 }
