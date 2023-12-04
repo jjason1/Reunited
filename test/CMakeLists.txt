@@ -8,12 +8,15 @@ add_executable(runAllTests
   
     testEnemyClass.cpp
     testGoblinClass.cpp
-    testGolemClass.cpp
     testBanditClass.cpp
+    testEnemyTeamClass.cpp
     testCharacterClass.cpp
+    testCharacterTeamClass.cpp
+    testSamuraiClass.cpp
+    testPlayerClass.cpp
+    testPlayerTeam.cpp
     testshowDevelopers.cpp
     testHelpClass.cpp
-    testSamuraiClass.cpp
     testCombat.cpp
     testMageClass.cpp
     testSubChapter.cpp
