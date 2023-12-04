@@ -1,4 +1,5 @@
 #include "../Chapters/SubChapter.cpp"
+#include "../lib/Characters/Player.hpp"
 #include "gtest/gtest.h"
 
 TEST(testSubChapterSuite, testConstructor) {

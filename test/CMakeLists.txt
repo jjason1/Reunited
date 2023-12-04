@@ -4,6 +4,8 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 add_subdirectory(googletest)
 
 add_executable(runAllTests
+
+  
     testEnemyClass.cpp
     testGoblinClass.cpp
     testBanditClass.cpp
@@ -20,6 +22,10 @@ add_executable(runAllTests
     testSubChapter.cpp
     testChapter.cpp
     testGiantClass.cpp
+    testCh1Part1.cpp
+    testCh1Part2.cpp
+    testCh1Part3.cpp
+    testChapter1.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
