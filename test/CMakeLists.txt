@@ -26,7 +26,7 @@ add_executable(runAllTests
     testCh1Part2.cpp
     testCh1Part3.cpp
     testChapter1.cpp
-    
+    testStartNewGame.cpp 
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
