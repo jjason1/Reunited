@@ -11,9 +11,7 @@ using namespace std;
 class Giant : public Enemy {
     public:
     Giant(string, int);
-    void WarCry();
     void RainOfHammers(Character *);
-    void GoblinSummon();
     void heavyBlow(Character *);
 
     virtual int selectSkill(istream &);
