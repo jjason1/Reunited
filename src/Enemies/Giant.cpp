@@ -31,7 +31,7 @@ void Giant::useSkillOn(int chosenSkill, Character *target){
             this->heavyBlow(target);
             break;
         }
-        //Skill 2 is chosen: rain ff hammers.
+        //Skill 2 is chosen: rain of hammers.
         case 2:{
             cout<<this->getName()<<" chose Rain Of Hammers."<<endl;
             this->RainOfHammers(target);
