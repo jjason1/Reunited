@@ -6,18 +6,18 @@
 using namespace std;
 
 #include "Enemy.hpp"
-#include "../Characters/Player.hpp"
+#include "../Characters/Character.hpp"
 
 class Giant : public Enemy {
     public:
     Giant(string, int);
     void WarCry();
-    void RainOfHammers(vector<Player *> &);
+    void RainOfHammers(Character *);
     void GoblinSummon();
-    void heavyBlow(vector<Player *> &);
+    void heavyBlow(Character *);
 
     virtual int selectSkill(istream &);
-    virtual void useSkillOn(int, vector<Player *> &);
+    virtual void useSkillOn(int, Character *);
 };
 
 #endif /* GIANT_HPP */

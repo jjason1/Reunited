@@ -24,7 +24,7 @@ TEST(GiantClassSuite, testNormalAttack){
     string name="Boyi";
     Giant *g = new Giant(name, level);
 
-    Player *p = new Player("Jason");
+    Character *p = new Character("Jason");
     p->setHealth(100);
 
     g->normalAttack(p);
@@ -37,18 +37,13 @@ TEST(GiantClassSuite, testRainOfHammers){
     string name="Ryan";
     Giant *g = new Giant(name, level);
 
-    Player *p1 = new Player("Jason");
-    Player *p2 = new Player("Aamir");
+    Character *p1 = new Character("Jason");
+    Character *p2 = new Character("Aamir");
     p1->setHealth(100);
     p2->setHealth(100);
 
-    vector<Player*> team;
-    team.push_back(p1);
-    team.push_back(p2);
-
-    g->RainOfHammers(team);
+    g->RainOfHammers(p2);
     
-    EXPECT_EQ(p1->getHealth(),50);
     EXPECT_EQ(p2->getHealth(),50);
 }
 
@@ -57,15 +52,13 @@ TEST(GiantClassSuite, testHeavyBlow){
     string name="Ryan";
     Giant *g = new Giant(name, level);
 
-    Player *p1 = new Player("Jason");
+    Character *p1 = new Character("Jason");
     
     p1->setHealth(100);
     
 
-    vector<Player*> team;
-    team.push_back(p1);
     
-    g->heavyBlow(team);
+    g->heavyBlow(p1);
     
     EXPECT_EQ(p1->getHealth(), 50);
     EXPECT_EQ(p1->checkMovable(), false);
@@ -81,16 +74,13 @@ TEST(GiantClassSuite, testSelectSkill){
 
 TEST(GiantClassSuite, testUseSkillOn){
     Giant *g=new Giant("Jason",1);
-    Player *p1 = new Player("Jason");
-    Player *p2 = new Player("Aamir");
+    Character *p1 = new Character("Jason");
+    Character *p2 = new Character("Aamir");
     p1->setHealth(100);
     p2->setHealth(100);
 
-    vector<Player*> team;
-    team.push_back(p1);
-    team.push_back(p2);
 
     int chosenSkill=g->selectSkill(cin);
     
-    EXPECT_NO_THROW(g->useSkillOn(chosenSkill, team));
+    EXPECT_NO_THROW(g->useSkillOn(chosenSkill, p1));
 }

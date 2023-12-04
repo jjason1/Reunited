@@ -10,25 +10,19 @@ void Giant::WarCry(){
     //buff: next 3 turns double damage
 }
 
-void Giant::RainOfHammers(vector<Player *> &targets){
-    cout << "Giant uses Rain of Hammers on all enemies!" << endl;
-    for (Player* target : targets) {
-        if (target != nullptr) { // Check if the pointer is not null
-            // Assuming there is a takeDamage method in Character class
-            target->takeDamage(this->getAttack()); // damageAmount is the damage dealt by this skill
-            cout << "Caused " << this->getAttack() << " damge to each member" << endl;
-        }
-    }
+void Giant::RainOfHammers(Character *target){
+    cout << "Giant uses Rain of Hammers on all enemies!" << endl;     
+    target->takeDamage(this->getAttack()); // damageAmount is the damage dealt by this skill
+    cout << "Caused " << this->getAttack() << " damge to each member" << endl;
 }
+    
+
 
 void Giant::GoblinSummon(){
     //Enemy teams +2 Goblin
 }
 
-void Giant::heavyBlow(vector<Player *> &targets){
-    int randomIndex = rand() % targets.size(); 
-    Player* target = targets[randomIndex];
-
+void Giant::heavyBlow(Character *target){
     target->takeDamage(this->getAttack());
     target->setMovable(false);
     cout<<this->getName()<<"Heavy blow and stunned "<<target->getName()<<"."<<endl;
@@ -40,12 +34,12 @@ int Giant::selectSkill(istream &in){
     return chosenSkill;
 }
 
-void Giant::useSkillOn(int chosenSkill, vector<Player *> &targets){
+void Giant::useSkillOn(int chosenSkill, Character *target){
     switch (chosenSkill){
         //Skill 5 is chosen: heavy blow.
         case 5:{
             cout<<this->getName()<<" chose  heavy blow."<<endl;
-            this->heavyBlow(targets);
+            this->heavyBlow(target);
             break;
         }
         //Skill 4 is chosen: goblin summon.
@@ -57,7 +51,7 @@ void Giant::useSkillOn(int chosenSkill, vector<Player *> &targets){
         //Skill 3 is chosen: rain Of hammers.
         case 3:{
             cout<<this->getName()<<" rain Of hammers."<<endl;
-            this->RainOfHammers(targets);
+            this->RainOfHammers(target);
             break;
         }
         //Skill 2 is chosen: war cry.
@@ -69,10 +63,6 @@ void Giant::useSkillOn(int chosenSkill, vector<Player *> &targets){
         //Skill 1 is chosen: normal attack.
         case 1:{
             cout<<this->getName()<<" normal attack."<<endl;
-
-            int randomIndex = rand() % targets.size(); 
-            Player* target = targets[randomIndex];
-
             this->normalAttack(target);
             break;
         }
