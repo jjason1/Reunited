@@ -10,10 +10,8 @@ private:
     int rageBar;
 
 public:
-    Warrior(const string& name);
+    Warrior(string name);
     ~Warrior();
 };
-
-
 
 #endif
