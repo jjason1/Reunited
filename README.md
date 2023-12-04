@@ -2,13 +2,6 @@
 
  Authors: [Jason Lin](https://github.com/jjason1), [Cheng-Shun Chuang](https://github.com/ulrixon), [Aamir Khan](https://github.com/Akhan521), [Boyi Li](https://github.com/Bli181)
 
- > ## Expectations
- > * The backend of your project should be implemented in C++. If you wish to choose anoher programming language (e.g. Java, Python), please discuss with your lab TA to obtain permission.
- > * You can incorporate additional technologies/tools but they must be approved (in writing) by the instructor or the TA.
- > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
- > * **Each member of the group must actively participate in the Github Project board, writing unit tests, and reviewing commited code.**
-> * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
-
 ## Project Description
 * This project is interesting to our team because it provides us with a more flexible creative space. Projects such as chess or library systems have very specific and strict rules, which would limit our creative implementations. It would leave us with little to no freedom to introduce new features into our game, so we found the idea of a text-based RPG intriguing as it is the exact opposite. RPGs can turn into any project you desire because there is an endless number of possiblities you can bring to the table. We are able to customize our story in any way we want, which is why we decided to do a text-based RPG.
 * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
@@ -69,28 +62,17 @@ This graphic illustrates the screen layouts of each of the screens that users wi
 
 ## Class Diagram
 ![Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
-We've presented two core classes, namely the "Character" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. For example, we've added the LoadFile and SaveFile classes to manage save files within our game. We've also added the Combat class to handle the combat present throughout our game. As the graphic above illustrates, we've included the CharacterTeam and EnemyTeam classes to implement team-based gameplay. These are a few examples of the classes we've designed for our game. Refer to the graphic above for more information regarding each class.
+We've presented two core classes, namely the "Player" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. For example, we've added the LoadFile and SaveFile classes to manage save files within our game. We've also added the Combat class to handle the combat present throughout our game. As the graphic above illustrates, we've included the PlayerTeam and EnemyTeam classes to implement team-based gameplay. These are a few examples of the classes we've designed for our game. Refer to the graphic above for more information regarding each class.
  
  > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on Zoom and should be conducted by Wednesday of week 8.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
 
+Considering the Single Responsibility Principle, we introduced a Chapter Class that would break our story down across multiple chapters, as opposed to having a single Story Class handling our entire story at once. Similarly, we introduced a SubChapter Class to further break our chapters down. This allows us to handle tasks within chapters more efficiently and effectively. It primarily separates responsibilities between chapters and subchapters, making it easier to organize and complete our tasks. 
+
+When considering the Open-Closed Principle, we decided to create interfaces for our chapters and subchapters. For example, we designed an interface for our chapters, so that all derived chapters could implement the same interface with the same functions, albeit different definitions. This allows us to write code that is “open for extension and closed for modification”. Given the common interface, all of our derived classes can implement the same functions, and future extension of our storyline will be easier to accommodate.
+
+After considering the Liskov-Substitution Principle, we chose to design interfaces for our chapters and subchapters. Our project makes use of these interfaces in our functions, so that any instances of their subtypes may be used, without altering the correctness of our project. This allows us to write code that is more flexible and correct, as it ensures the correctness of our program regardless of whether we use base class or subtype instances.
+
+Considering the Interface-Segregation Principle, we wanted our design to not force the user to depend on methods or interfaces they wouldn’t need to use. To solve this consideration, we designed a Character Interface that our Player and Enemy classes would derive from. From there, our Player class would implement its own functionality, while the Enemy class would implement its specific functionality. Players would now be distinct from enemies, and each could rely on its own specific functionality. This allows us to only implement what is necessary and remove unrequired implementations. Through this change, our code is now more clear and efficient.
  
  > ## Final deliverable
  > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 

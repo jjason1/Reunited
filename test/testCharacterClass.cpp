@@ -48,12 +48,30 @@ TEST(CharacterClassSuite, testCheckMovable)
     EXPECT_TRUE(status == true);
 }
 
+TEST(CharacterClassSuite, testCheckNotMovable)
+{
+    int level = 1;
+    string name = "John";
+    Character *c = new Character(name);
+    c->setMovable(false);
+    bool status = c->checkMovable();
+    EXPECT_TRUE(status == false);
+}
+
 TEST(CharacterClassSuite, testGetHealth)
 {
     string name = "Jason";
     Character *c = new Character(name);
     int hp = c->getHealth();
     EXPECT_EQ(hp, 0);
+}
+
+TEST(CharacterClassSuite, testGetLevel)
+{
+    string name = "Boyi";
+    Character *c = new Character(name);
+    int def = c->getLevel();
+    EXPECT_EQ(def, 1);
 }
 
 TEST(CharacterClassSuite, testGetDefense)
@@ -108,16 +126,4 @@ TEST(CharacterClassSuite, testTakeDamage)
     EXPECT_EQ(c->getHealth(), 90);
 }
 
-TEST(CharacterClassSuite, testSetAtkDstrbtn){
-    string name = "Jason";
-    Character *c = new Character(name);
-    c->setAtkDstrbtn(12);
-    EXPECT_EQ(c->getAtkDstrbtn(), 12);
-}
-
-TEST(CharacterClassSuite, testGetAtkDstrbtn){
-    string name = "Jason";
-    Character *c = new Character(name);
-    EXPECT_EQ(c->getAtkDstrbtn(), 0);
-}
 

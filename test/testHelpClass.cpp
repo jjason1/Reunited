@@ -4,7 +4,7 @@
 #include <sstream>
 #include <string>
 
-TEST(testHelpClassSuit, testSaveFileInstruction) {
+TEST(testHelpClassSuite, testSaveFileInstruction) {
   std::stringstream testout;
   std::stringstream testin("1");
   std::stringstream out;
@@ -40,7 +40,7 @@ TEST(testHelpClassSuit, testSaveFileInstruction) {
   EXPECT_TRUE(testout.str() == out.str());
 }
 
-TEST(testHelpClassSuit, testLoadFileInstruction) {
+TEST(testHelpClassSuite, testLoadFileInstruction) {
   std::stringstream testout;
   std::stringstream testin("2");
   std::stringstream out;
@@ -77,7 +77,7 @@ TEST(testHelpClassSuit, testLoadFileInstruction) {
   EXPECT_TRUE(testout.str() == out.str());
 }
 
-TEST(testHelpClassSuit, testCombatInstruction) {
+TEST(testHelpClassSuite, testCombatInstruction) {
   std::stringstream testout;
   std::stringstream testin("3");
   std::stringstream out;
@@ -116,7 +116,7 @@ TEST(testHelpClassSuit, testCombatInstruction) {
   EXPECT_TRUE(testout.str() == out.str());
 }
 
-TEST(testHelpClassSuit, testQuit) {
+TEST(testHelpClassSuite, testQuit) {
   std::stringstream testout;
   std::stringstream testin("4");
   std::stringstream out;
@@ -148,7 +148,7 @@ TEST(testHelpClassSuit, testQuit) {
 }
 
 
-TEST(testHelpClassSuit, testTypeWrongInputNumber) {
+TEST(testHelpClassSuite, testTypeWrongInputNumber) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -187,7 +187,7 @@ TEST(testHelpClassSuit, testTypeWrongInputNumber) {
   EXPECT_TRUE(testout.str() == out.str());
 }
 
-TEST(testHelpClassSuit, testTypeWrongInputAlphabet) {
+TEST(testHelpClassSuite, testTypeWrongInputAlphabet) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
@@ -226,7 +226,7 @@ TEST(testHelpClassSuit, testTypeWrongInputAlphabet) {
   EXPECT_TRUE(testout.str() == out.str());
 }
 
-TEST(testHelpClassSuit, testInputFail) {
+TEST(testHelpClassSuite, testInputFail) {
   std::stringstream testout;
   std::stringstream testin;
   std::stringstream out;
