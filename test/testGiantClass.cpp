@@ -38,13 +38,12 @@ TEST(GiantClassSuite, testRainOfHammers){
     Giant *g = new Giant(name, level);
 
     Character *p1 = new Character("Jason");
-    Character *p2 = new Character("Aamir");
-    p1->setHealth(100);
-    p2->setHealth(100);
-
-    g->RainOfHammers(p2);
     
-    EXPECT_EQ(p2->getHealth(),50);
+    p1->setHealth(100);
+
+    g->RainOfHammers(p1);
+    
+    EXPECT_EQ(p1->getHealth(),50);
 }
 
 TEST(GiantClassSuite, testHeavyBlow){
@@ -55,8 +54,6 @@ TEST(GiantClassSuite, testHeavyBlow){
     Character *p1 = new Character("Jason");
     
     p1->setHealth(100);
-    
-
     
     g->heavyBlow(p1);
     
@@ -69,16 +66,14 @@ TEST(GiantClassSuite, testSelectSkill){
     
     int chosenSkill=g->selectSkill(cin);
     
-    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2)||(chosenSkill==3)||(chosenSkill==4)||(chosenSkill==5));
+    EXPECT_TRUE((chosenSkill==1)||(chosenSkill==2)||(chosenSkill==3));
 }
 
 TEST(GiantClassSuite, testUseSkillOn){
     Giant *g=new Giant("Jason",1);
     Character *p1 = new Character("Jason");
-    Character *p2 = new Character("Aamir");
+    
     p1->setHealth(100);
-    p2->setHealth(100);
-
 
     int chosenSkill=g->selectSkill(cin);
     
