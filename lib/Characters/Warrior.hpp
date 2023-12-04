@@ -16,8 +16,6 @@ class Warrior : public Player {
         void warCry();
         void stormStrike(Enemy *);
         void bloodDraining();
-        void rageBurst();
-        void taunt(Enemy *);
         void heartOfAWarrior();
         void unstoppableFury();
         void letTamBleed(Enemy *);

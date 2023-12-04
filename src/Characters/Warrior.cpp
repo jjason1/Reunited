@@ -47,14 +47,7 @@ void Warrior::bloodDraining() {
     cout << this->getName() << " used bloodDraining, you gained  health from your attack." << endl;
 }
 
-void Warrior::rageBurst() {
-    //Only can when rage bar is half or above and cosume half of rage bar after using skill(Not implemented)
 
-}
-
-void Warrior::taunt(Enemy *e) {
-    //Not implemented yet.
-}
 
 void Warrior::heartOfAWarrior() {
     //in 5 turns:
