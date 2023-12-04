@@ -15,8 +15,3 @@ void SubChapter::setInput(string input) { this->input = input; }
 string SubChapter::getInput() { return input; }
 
 string SubChapter::getName() { return name; }
-
-
-void SubChapter::setPlayer(Character *newPlayer) { player = newPlayer; }
-
-Character *SubChapter::getPlayer() { return player; }

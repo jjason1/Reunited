@@ -17,12 +17,10 @@ class Chapter {
       vector<SubChapter *> subChapters;
     
     public:
-      Chapter(Character *, ostream &, istream &);
+      Chapter(Character *, vector<SubChapter *>, ostream &, istream &);
       virtual void runChapter();
       void setPlayer(Player *);
       string getName();
-      void setPlayer(Character *);
-      Character * getPlayer();
 
 };
 
