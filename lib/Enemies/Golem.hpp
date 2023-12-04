@@ -9,9 +9,7 @@ using namespace std;
 
 class Golem : public Enemy {
 
-
     public:
-        int CD = 0;
         Golem(string name, int level);
         void lazerBlaze(Character *);
         void earthquake(Character *);
