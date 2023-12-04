@@ -19,6 +19,8 @@ class SubChapter {
       void setInput(string);
       string getInput();
       string getName();
+      void setPlayer(Character *);
+      Character * getPlayer();
 };
 
 #endif
