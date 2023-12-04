@@ -69,26 +69,31 @@ void Samurai::listSkills(ostream &out)
 }
 int Samurai::selectSkill(istream &in)
 {
-    string skill="";
+    string skill = "";
     stringstream ss;
-    int numSkill=0;
-    getline(in,skill);
+    int numSkill = 0;
+    getline(in, skill);
 
     bool checkInputCorrect = false;
-    for (int i = 1; i <= 5; i++) { // check the input is correct or not
-        if (skill == to_string(i)) {
-        checkInputCorrect = true;
-        ss << skill;
-        ss >> numSkill;
-        return numSkill;
+    for (int i = 1; i <= 5; i++)
+    { // check the input is correct or not
+        if (skill == to_string(i))
+        {
+            checkInputCorrect = true;
+            ss << skill;
+            ss >> numSkill;
+            return numSkill;
         }
     }
 
-    while (!checkInputCorrect) { // wrong output will go in here and input again
+    while (!checkInputCorrect)
+    { // wrong output will go in here and input again
         cout << "Please choose a target again:" << endl;
         getline(in, skill);
-        for (int i = 1; i <= 5; i++) {
-            if (skill == to_string(i)) {
+        for (int i = 1; i <= 5; i++)
+        {
+            if (skill == to_string(i))
+            {
                 checkInputCorrect = true;
                 ss << skill;
                 ss >> numSkill;
