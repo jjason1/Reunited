@@ -14,11 +14,11 @@ class Golem : public Enemy {
         int CD = 0;
         Golem(string name, int level);
         void lazerBlaze(Character *);
-        void earthquake(vector<Character *> &);
+        void earthquake(Character *);
         void shieldGen();
 
         virtual int selectSkill(istream &);
-        virtual void useSkillOn(int, vector<Character *> &);
+        virtual void useSkillOn(int, Character *);
 
 
 };

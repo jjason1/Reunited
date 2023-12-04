@@ -56,8 +56,5 @@ TEST(GolemClassSuite, testUseSkillOn){
 
     int chosenSkill = g->selectSkill(cin);
     
-    vector<Character *> team;
-
-    team.push_back(c);
-    EXPECT_NO_THROW(g->useSkillOn(chosenSkill,team));
+    EXPECT_NO_THROW(g->useSkillOn(chosenSkill,c));
 }
