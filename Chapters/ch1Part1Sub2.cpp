@@ -45,10 +45,12 @@ void Chapter1Part1::runChapter1Part1Sub2() {
       << endl;
   out << endl;
   out << "Annie: Where are we going? Is there any town or city nearby?" << endl;
-  out << "You: Hopefully we can find a safer place for us to rest. There "
+  out << "\nYou: Hopefully we can find a safer place for us to rest. There "
          "should be a town not too far away."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+  getline(in,input);
   out << "System: Suddenly, you hear a strange voice calling out for help, "
          "deeper into the forest. The shouting gets louder..."
       << endl;
@@ -67,6 +69,9 @@ void Chapter1Part1::runChapter1Part1Sub2() {
          "considers his next move.)"
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+  getline(in,input);
+  in.clear();
   out << "System: Just beyond the bandit, you make out the figure of a bruised "
          "girl in need of help."
       << endl;
@@ -99,5 +104,7 @@ void Chapter1Part1::runChapter1Part1Sub2() {
   for (int i = 0; i< 4; i++) { // level up four times to level 5
     player->levelUp();
   }
-  
+  out<<"Press any key to continue...\n\n";
+  getline(in,input);
+  in.clear();
 }

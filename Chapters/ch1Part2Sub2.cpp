@@ -89,6 +89,10 @@ void Chapter1Part2::runChapter1Part2Sub2(){
 
     out<<"Rosaline: I will show them the way to the inn. Goodbye, Mayor. We\'ll meet again soon.\n"<<endl;
 
+    out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
+
     out<<"System: You all leave the Mayor\'s house and start walking towards the "
     "inn. With every step you all take, the sky gets darker and your paths darken.\n"<<endl;
 
@@ -132,10 +136,17 @@ void Chapter1Part2::runChapter1Part2Sub2(){
     "I have to go home now to prepare for tomorrow. I can\'t thank you both enough "
     "for all that you\'ve done for me. Now\'s the time to rest, but we\'ll meet again tomorrow.\n"<<endl;
 
+    out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
+
     out<<"System: Rosaline leaves the inn. Feeling exhausted from your trip, you "
     "and Annie also decide it\'s time to get some sleep.\n"<<endl;
 
-
     option6();
+
+    out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
 
 }

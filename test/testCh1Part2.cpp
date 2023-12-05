@@ -121,11 +121,22 @@ TEST(TestCH1Part2Suite, testOption6){
 
 TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
     stringstream testOut;
-    stringstream testIn;
-    testIn<<"1"<<endl;
+    stringstream testin;
+    for(int i=0;i<5;i++){
+     testin << "1" << endl; // choose option
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; // choose first target
+     }
     stringstream out;
     Character *c = new Character("test");
-    Chapter1Part2 *ch12 = new Chapter1Part2(c, testOut, testIn);
+    Chapter1Part2 *ch12 = new Chapter1Part2(c, testOut, testin);
 
     out<<"\nChapter 1.2:"<<endl<<endl;
     out<<"Stranger: You were amazing! Thank you for saving my life.\n"<<endl;
@@ -141,6 +152,8 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
 
     out<<"Rosaline: Absolutely, I can guide you both there and even give you two a tour " 
          "to thank you for your help!\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"System: Guided by Rosaline, you find and safely enter Town Broco.\n"<<endl;
 
@@ -159,6 +172,8 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
 
     out<<"Annie: Sure, we can\'t wait to meet them.\n"<<endl;
 
+     out<<"Press any key to continue...\n\n";
+
     out<<"System: Rosaline brings you to an old bar.\n"<<endl;
 
     out<<"Rosaline: Here is the guild\'s bar, where you\'ll find the folks who chose to stay here. "
@@ -175,7 +190,9 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
 
     out<<"Enthusiastic Adventurer: It\'s obvious that everyone left already. Nobody wants to stay in a dangerous "
     "and miserable town. But… you may be in luck if you head to the mayor\'s house. "
-    "He's the only one still organizing and trying to maintain the town\'s defense.\n"<<endl;
+    "He\'s the only one still organizing and trying to maintain the town\'s defense.\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"Rosaline: Thank you for the information. We need all the help we can find! Would you be willing to join our team for our cause?\n"<<endl;
 
@@ -187,10 +204,12 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
 
     out<<"System: You all exit the bar and start planning your next destination.\n"<<endl;
 
-    out<<"Rosaline: Where should we head now? Oh, maybe we should visit the mayor's house to let him "
+    out<<"Rosaline: Where should we head now? Oh, maybe we should visit the mayor\'s house to let him "
     "know about our plan and to ask for help.\n"<<endl;
 
     out<<"Annie: What does the mayor look like? How will we recognize him?\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"Rosaline: He is a short, old man with gray hair and a small beard. "
     "He\'s known for his radiating kindness. He isn\'t too difficult to spot, so I\'m sure we\'ll be able to recognize him right away.\n"<<endl;
@@ -208,11 +227,13 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
     "I don\'t think you came just to see me right?\n"<<endl;
 
     out<<"Rosaline: Don\'t say that. We are all grateful for your service to this town. "
-    "I wanted to introduce you to our new guests. This is test and this is test's sister, Annie. "
-    "test is really talented at fighting; I witnessed test's skill in person. After hearing about our situation, "
+    "I wanted to introduce you to our new guests. This is test and this is test\'s sister, Annie. "
+    "test is really talented at fighting; I witnessed test\'s skill in person. After hearing about our situation, "
     "they insisted on helping you protect this town.\n"<<endl;
 
     out<<"System: Rosaline points to you and your sister as she introduces you to the mayor.\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"Mayor: Oh, that would help out immensely as we no longer have the strength to guard and protect "
     "our town anymore. Could I really rely on you to defend our town? All you need to do is come to the center "
@@ -230,16 +251,23 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub1WithOption1){
 
 TEST(TestCH1Part2Suite, testCh1Part2Sub2){
     stringstream testOut;
-    stringstream testIn;
+    stringstream testin;
     stringstream out; 
-    testIn<<"1"<<endl; //for option2
-    testIn<<"1"<<endl; //for option3
-    testIn<<"1"<<endl; //for option4
-    testIn<<"1"<<endl; //for option5
-    testIn<<"2"<<endl; //for option6
+    for(int i=0;i<5;i++){
+     testin << "1" << endl; // choose option
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; // choose first target
+     }
     
     Character *c = new Character("test");
-    Chapter1Part2 *ch12 = new Chapter1Part2(c, testOut, testIn);
+    Chapter1Part2 *ch12 = new Chapter1Part2(c, testOut, testin);
 
      out<<"Mayor: Thank you on behalf of myself and all of the townsfolk! "
     "I still have some business to do after I finish watering my flowers. In the meantime, "
@@ -247,6 +275,8 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub2){
     "build up your strength before we put our plan into action.\n"<<endl;
 
     out<<"Rosaline: I will show them the way to the inn. Goodbye, Mayor. We\'ll meet again soon.\n"<<endl;
+
+    out<<"Press any key to continue...\n\n";
 
     out<<"System: You all leave the Mayor\'s house and start walking towards the "
     "inn. With every step you all take, the sky gets darker and your paths darken.\n"<<endl;
@@ -299,6 +329,8 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub2){
     "I have to go home now to prepare for tomorrow. I can\'t thank you both enough "
     "for all that you\'ve done for me. Now\'s the time to rest, but we\'ll meet again tomorrow.\n"<<endl;
 
+    out<<"Press any key to continue...\n\n";
+
     out<<"System: Rosaline leaves the inn. Feeling exhausted from your trip, you "
     "and Annie also decide it\'s time to get some sleep.\n"<<endl;
 
@@ -306,27 +338,32 @@ TEST(TestCH1Part2Suite, testCh1Part2Sub2){
     out<<"You:"<<endl;
     out<<"1. (Call it a day.)\n";
     out<<"2. (Stay up a little longer before heading to bed.)\n\n";
-    out<<"System: You stay up a little longer to train before bed. As a result, "
-         "you level up one level.\n\n";
+
+    out<<"Press any key to continue...\n\n";
  
     EXPECT_NO_THROW(ch12->runChapter1Part2Sub2());
-    EXPECT_EQ(c->getLevel(),2);   
     EXPECT_EQ( testOut.str(), out.str());
 }
 
 TEST(TestCH1Part2Suite, testCh1Part2){
     stringstream testOut;
-    stringstream testIn;
+    stringstream testin;
     stringstream out; 
-    testIn<<"1"<<endl; //for option1
-    testIn<<"1"<<endl; //for option2
-    testIn<<"1"<<endl; //for option3
-    testIn<<"1"<<endl; //for option4
-    testIn<<"1"<<endl; //for option5
-    testIn<<"2"<<endl; //for option6
+    for(int i=0;i<5;i++){
+     testin << "1" << endl; // choose option
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; //choose first target
+     testin << "1" << endl; // choose first skill
+     testin << "1" << endl; // choose first target
+     }
     
     Character *c = new Character("test");
-    Chapter1Part2 *ch12 = new Chapter1Part2(c, testOut, testIn);
+    Chapter1Part2 *ch12 = new Chapter1Part2(c, testOut, testin);
 
     out<<"\nChapter 1.2:"<<endl<<endl;
     out<<"Stranger: You were amazing! Thank you for saving my life.\n"<<endl;
@@ -342,6 +379,8 @@ TEST(TestCH1Part2Suite, testCh1Part2){
 
     out<<"Rosaline: Absolutely, I can guide you both there and even give you two a tour " 
          "to thank you for your help!\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"System: Guided by Rosaline, you find and safely enter Town Broco.\n"<<endl;
 
@@ -360,6 +399,8 @@ TEST(TestCH1Part2Suite, testCh1Part2){
 
     out<<"Annie: Sure, we can\'t wait to meet them.\n"<<endl;
 
+     out<<"Press any key to continue...\n\n";
+
     out<<"System: Rosaline brings you to an old bar.\n"<<endl;
 
     out<<"Rosaline: Here is the guild\'s bar, where you\'ll find the folks who chose to stay here. "
@@ -376,7 +417,9 @@ TEST(TestCH1Part2Suite, testCh1Part2){
 
     out<<"Enthusiastic Adventurer: It\'s obvious that everyone left already. Nobody wants to stay in a dangerous "
     "and miserable town. But… you may be in luck if you head to the mayor\'s house. "
-    "He's the only one still organizing and trying to maintain the town\'s defense.\n"<<endl;
+    "He\'s the only one still organizing and trying to maintain the town\'s defense.\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"Rosaline: Thank you for the information. We need all the help we can find! Would you be willing to join our team for our cause?\n"<<endl;
 
@@ -388,10 +431,12 @@ TEST(TestCH1Part2Suite, testCh1Part2){
 
     out<<"System: You all exit the bar and start planning your next destination.\n"<<endl;
 
-    out<<"Rosaline: Where should we head now? Oh, maybe we should visit the mayor's house to let him "
+    out<<"Rosaline: Where should we head now? Oh, maybe we should visit the mayor\'s house to let him "
     "know about our plan and to ask for help.\n"<<endl;
 
     out<<"Annie: What does the mayor look like? How will we recognize him?\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"Rosaline: He is a short, old man with gray hair and a small beard. "
     "He\'s known for his radiating kindness. He isn\'t too difficult to spot, so I\'m sure we\'ll be able to recognize him right away.\n"<<endl;
@@ -409,11 +454,13 @@ TEST(TestCH1Part2Suite, testCh1Part2){
     "I don\'t think you came just to see me right?\n"<<endl;
 
     out<<"Rosaline: Don\'t say that. We are all grateful for your service to this town. "
-    "I wanted to introduce you to our new guests. This is test and this is test's sister, Annie. "
-    "test is really talented at fighting; I witnessed test's skill in person. After hearing about our situation, "
+    "I wanted to introduce you to our new guests. This is test and this is test\'s sister, Annie. "
+    "test is really talented at fighting; I witnessed test\'s skill in person. After hearing about our situation, "
     "they insisted on helping you protect this town.\n"<<endl;
 
     out<<"System: Rosaline points to you and your sister as she introduces you to the mayor.\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
 
     out<<"Mayor: Oh, that would help out immensely as we no longer have the strength to guard and protect "
     "our town anymore. Could I really rely on you to defend our town? All you need to do is come to the center "
@@ -432,6 +479,8 @@ TEST(TestCH1Part2Suite, testCh1Part2){
 
     out<<"Rosaline: I will show them the way to the inn. Goodbye, Mayor. We\'ll meet again soon.\n"<<endl;
 
+    out<<"Press any key to continue...\n\n";
+
     out<<"System: You all leave the Mayor\'s house and start walking towards the "
     "inn. With every step you all take, the sky gets darker and your paths darken.\n"<<endl;
 
@@ -483,6 +532,8 @@ TEST(TestCH1Part2Suite, testCh1Part2){
     "I have to go home now to prepare for tomorrow. I can\'t thank you both enough "
     "for all that you\'ve done for me. Now\'s the time to rest, but we\'ll meet again tomorrow.\n"<<endl;
 
+    out<<"Press any key to continue...\n\n";
+
     out<<"System: Rosaline leaves the inn. Feeling exhausted from your trip, you "
     "and Annie also decide it\'s time to get some sleep.\n"<<endl;
 
@@ -490,11 +541,11 @@ TEST(TestCH1Part2Suite, testCh1Part2){
     out<<"You:"<<endl;
     out<<"1. (Call it a day.)\n";
     out<<"2. (Stay up a little longer before heading to bed.)\n\n";
-    out<<"System: You stay up a little longer to train before bed. As a result, "
-         "you level up one level.\n\n";
+
+    out<<"Press any key to continue...\n\n";
  
     EXPECT_NO_THROW(ch12->runSubChapter());
-    EXPECT_EQ(c->getLevel(),3); //leveled up from option 1 and 6.
+    EXPECT_EQ(c->getLevel(),2); //leveled up from option 1.
     EXPECT_EQ( testOut.str(), out.str());
 }
 

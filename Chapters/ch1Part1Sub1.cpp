@@ -75,7 +75,6 @@ void Chapter1Part1::runChapter1Part1Sub1() {
       << endl;
   std::getline(in, name);
   checkInput(in);
-  
 
   chooseClass();
 
