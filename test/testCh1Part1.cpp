@@ -212,17 +212,18 @@ TEST(TestCH1Part1Suite, testrunChapter1Part1Sub2){
   std::stringstream out;
   Character * mage = new Mage("test");
   Chapter1Part1 *ch11 = new Chapter1Part1(mage, cout, testin);
-
-  testin << "1" << endl; // choose option
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; // choose first target
+  for(int i=0;i<5;i++){
+    testin << "1" << endl; // choose option
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; // choose first target
+  }
 
   EXPECT_NO_THROW(ch11->runChapter1Part1Sub2());
 }
@@ -237,16 +238,18 @@ TEST(TestCH1Part1Suite, testrunChapterWithMage) {
   testin << "tester"<< endl;
   testin << "m" << endl;
 
-  testin << "1" << endl; // choose option
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; //choose first target
-  testin << "1" << endl; // choose first skill
-  testin << "1" << endl; // choose first target
+  for(int i=0;i<5;i++){
+    testin << "1" << endl; // choose option
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; //choose first target
+    testin << "1" << endl; // choose first skill
+    testin << "1" << endl; // choose first target
+  }
 
   EXPECT_NO_THROW(ch11->runSubChapter());
 }

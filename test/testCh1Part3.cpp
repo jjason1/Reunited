@@ -63,22 +63,23 @@ TEST(testChapter1Part3Suite, testrunChapter1Part3Sub2) {
     c->levelUp();
   }
   Chapter1Part3 *ch13 = new Chapter1Part3(c, cout, testin);
-
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
-  testin << "1" << endl;
+  for(int i=0;i<5;i++){
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+    testin << "1" << endl;
+  }
 
   EXPECT_NO_THROW(ch13->runChapter1Part3Sub2());
 }
