@@ -23,6 +23,7 @@ Chapter1Part3::Chapter1Part3(Character *player, std::ostream &outout,
 }
 
 void Chapter1Part3::runChapter1Part3Sub1() {
+  out<<"\nChapter 1.3:"<<endl<<endl;
   out << "System: The town\'s alarm bell rings. It only rings when enemies "
          "approach. You see Rosaline run towards you."
       << endl;
@@ -34,10 +35,9 @@ void Chapter1Part3::runChapter1Part3Sub1() {
   out << endl;
   out << "Annie: Sure! My brother will definitely help you." << endl;
   out << endl;
-  out << "You: 1. You can count on me. " << endl;
+  out << "You:\n1. You can count on me. " << endl;
   out << "2.There seems to be no choice.We are surrounded by bandits right now."
       << endl;
-  out << endl;
   getline(in, input);
   checkInput(in);
   while (input != "1" && input != "2") {
@@ -130,8 +130,8 @@ void Chapter1Part3::runChapter1Part3Sub2() {
          "the town and " << player->getName() << ", come with me."
       << endl;
   out << endl;
-  out << "You: 1. I\'m ready." << endl;
-  out << "You: 2. I\'m not ready yet…" << endl;
+  out << "You:\n1. I\'m ready." << endl;
+  out << "2. I\'m not ready yet…" << endl;
   getline(in, input);
   checkInput(in);
   while (input != "1" && input != "2") {
@@ -339,7 +339,7 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "should report back to the Mayor and get some rest."
       << endl;
   out << endl;
-  out << " You:" << endl;
+  out << "You:" << endl;
   out << "1. I could use some food; I\'m starving from all of this action."
       << endl;
   out << "2. I want to go back and make sure my sister is fine." << endl;
@@ -391,7 +391,6 @@ void Chapter1Part3::runChapter1Part3Sub5() {
       << endl;
   out << endl;
   out << "You:" << endl;
-  out << endl;
   out << "1. It wasn\'t a big deal. Let\'s cut the talking and start the "
          "celebration!"
       << endl;
