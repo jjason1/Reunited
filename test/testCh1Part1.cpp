@@ -96,6 +96,7 @@ TEST(TestCH1Part1Suite, testChooseClassMage) {
       "Your offensive nature makes you a formidable force on the battlefield,\n"
        "and your precision ensures that your strikes find their mark."
       << endl;
+  out<<"\nInput here: "<<endl;
   out << "\nYou have chosen Mage as your class." << endl;
 
   EXPECT_NO_THROW(ch11->chooseClass());
@@ -134,6 +135,7 @@ TEST(TestCH1Part1Suite, testChooseClassSamurai) {
       "Your offensive nature makes you a formidable force on the battlefield,\n"
        "and your precision ensures that your strikes find their mark."
       << endl;
+  out<<"\nInput here: "<<endl;
   out << "\nYou have chosen Samurai as your class." << endl;
 
   EXPECT_NO_THROW(ch11->chooseClass());
@@ -177,6 +179,7 @@ TEST(TestCH1Part1Suite, testrunChapter1Part1Sub1ChooseMageClass) {
       "Your offensive nature makes you a formidable force on the battlefield,\n"
        "and your precision ensures that your strikes find their mark."
       << endl;
+  out<<"\nInput here: "<<endl;
   out << "\nYou have chosen Mage as your class." << endl;
 
   EXPECT_NO_THROW(ch11->runChapter1Part1Sub1());
