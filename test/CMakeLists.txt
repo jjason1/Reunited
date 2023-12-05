@@ -22,7 +22,8 @@ add_executable(runAllTests
     testCh1Part1.cpp
     testCh1Part2.cpp
     testCh1Part3.cpp
-    testChapter1.cpp   
+    testChapter1.cpp
+    testStartNewGame.cpp 
     testshowDevelopers.cpp
     testHelpClass.cpp
 )
