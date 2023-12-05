@@ -9,8 +9,8 @@ class Chapter4: public Chapter{
 private:
 
 public:
-  Chapter4(std::ostream& out, std::istream& in, Character *);
-  Character* runChapter();
+  Chapter4(Character *, std::ostream& out, std::istream& in);
+  Character *runChapter();
 };
 
 #endif

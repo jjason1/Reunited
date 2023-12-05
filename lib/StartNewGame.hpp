@@ -7,16 +7,14 @@
 #include "../lib/Chapters/Chapter.hpp"
 
 class StartNewGame {
-private:
-  std::ostream& out;
-  std::istream &in;
-  vector<Chapter *> chapters;
+  private:
+    std::ostream& out;
+    std::istream &in;
+    vector<Chapter *> chapters;
 
-public:
-  StartNewGame(std::ostream&, std::istream& in);
-
-  void start();
-
+  public:
+    StartNewGame(std::ostream&, std::istream& in);
+    void start();
 };
 
 #endif
