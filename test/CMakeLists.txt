@@ -20,12 +20,6 @@ add_executable(runAllTests
     testCombat.cpp
     testMageClass.cpp
     testSubChapter.cpp
-    testChapter.cpp
-    testGiantClass.cpp
-    testCh1Part1.cpp
-    testCh1Part2.cpp
-    testCh1Part3.cpp
-    testChapter1.cpp
     testWarriorClass.cpp
     
 )

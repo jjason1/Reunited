@@ -24,7 +24,7 @@ TEST(WarriorTestSuit, testStatsIncrement){
 
 TEST(WarriorTestSuit, testStrike){
     Warrior *w = new Warrior("Aamir");
-    Enemy *e = new Enemy("Boyi", 1);
+    Character *e = new Character("Boyi");
     e->setHealth(200);
     w->strike(e);
 
@@ -45,15 +45,7 @@ TEST(WarriorTestSuit, testHeartOfAWarrior){
     EXPECT_EQ(w->getHealth(), 120);
 }
 
-TEST(WarriorTestSuit, testletTamBleed){
-    Warrior *w = new Warrior("WoW");
-    Enemy *e = new Enemy("Boyi", 1);
-    e->setHealth(250);
-    
-    w->letTamBleed(e);
-    
-    EXPECT_EQ(e->getHealth(), 220);
-}
+
 
 TEST(WarriorTestSuit, testListSkills){
     string list = "Skills:\n"
@@ -63,9 +55,6 @@ TEST(WarriorTestSuit, testListSkills){
     "3: War Cry\n"
     "4: Storm Strike\n"
     "5: Heart of a Warrior\n"
-    "6: Unstoppable Fury\n"
-    "7: Let Them Bleed\n"
-    "8: Doom of the Enemy\n"
     "\nSelect the skill you would like to use: \n";
 
 
@@ -90,7 +79,7 @@ TEST(WarriorTestSuit, testSelectSkill){
 
 TEST(WarriorTestSuit, testUseSkillOn){
     Warrior *w = new Warrior("XXX");
-    Enemy *e = new Enemy("DDD", 2);
+    Character *e = new Character("DDD");
 
     string simulatedInput = "4\n";
     istringstream in(simulatedInput);

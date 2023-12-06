@@ -41,6 +41,10 @@ void Chapter1Part2::runChapter1Part2Sub1(){
     out<<"Rosaline: Absolutely, I can guide you both there and even give you two a tour " 
          "to thank you for your help!\n"<<endl;
 
+     out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
+
     out<<"System: Guided by Rosaline, you find and safely enter Town Broco.\n"<<endl;
 
     out<<"Annie: Why does the town look so dead? What happened here?\n"<<endl;
@@ -57,6 +61,10 @@ void Chapter1Part2::runChapter1Part2Sub1(){
     "Maybe we could work together to figure out a plan to save my hometown.\n"<<endl;
 
     out<<"Annie: Sure, we can\'t wait to meet them.\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
 
     out<<"System: Rosaline brings you to an old bar.\n"<<endl;
 
@@ -76,6 +84,10 @@ void Chapter1Part2::runChapter1Part2Sub1(){
     "and miserable town. But… you may be in luck if you head to the mayor\'s house. "
     "He\'s the only one still organizing and trying to maintain the town\'s defense.\n"<<endl;
 
+     out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
+
     out<<"Rosaline: Thank you for the information. We need all the help we can find! Would you be willing to join our team for our cause?\n"<<endl;
 
     out<<"Enthusiastic Adventurer: I\'d take you up on your invitation, but my knee was injured "
@@ -90,6 +102,10 @@ void Chapter1Part2::runChapter1Part2Sub1(){
     "know about our plan and to ask for help.\n"<<endl;
 
     out<<"Annie: What does the mayor look like? How will we recognize him?\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
 
     out<<"Rosaline: He is a short, old man with gray hair and a small beard. "
     "He\'s known for his radiating kindness. He isn\'t too difficult to spot, so I\'m sure we\'ll be able to recognize him right away.\n"<<endl;
@@ -112,6 +128,10 @@ void Chapter1Part2::runChapter1Part2Sub1(){
     "they insisted on helping you protect this town.\n"<<endl;
 
     out<<"System: Rosaline points to you and your sister as she introduces you to the mayor.\n"<<endl;
+
+     out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
 
     out<<"Mayor: Oh, that would help out immensely as we no longer have the strength to guard and protect "
     "our town anymore. Could I really rely on you to defend our town? All you need to do is come to the center "

@@ -4,7 +4,7 @@
 #include "Character.hpp"
 #include "../Enemies/Enemy.hpp"
 #include <iostream>
-
+#include "../checkInput.h"
 using namespace std;
 
 class Warrior : public Character {
@@ -12,21 +12,21 @@ class Warrior : public Character {
         int rageBar = 0;
     public:
         Warrior(string);
-        void strike(Enemy *);
-        void heavyStrike(Enemy *);
+        void strike(Character *);
+        void heavyStrike(Character *);
         void warCry();
-        void stormStrike(Enemy *);
+        void stormStrike(Character *);
         void bloodDraining();
         void rageBurst();
-        void taunt(Enemy *);
+        void taunt(Character *);
         void heartOfAWarrior();
         void unstoppableFury();
-        void letTamBleed(Enemy *);
-        void doomOfTheEnemy(Enemy *);
+        void letTamBleed(Character *);
+        void doomOfTheEnemy(Character *);
 
         virtual void listSkills(ostream &);
         virtual int selectSkill(istream &);
-        virtual void useSkillOn(int, Enemy *);
+        virtual void useSkillOn(int, Character *);
         virtual void levelUp();
 
 };

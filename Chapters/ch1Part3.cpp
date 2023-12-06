@@ -23,6 +23,7 @@ Chapter1Part3::Chapter1Part3(Character *player, std::ostream &outout,
 }
 
 void Chapter1Part3::runChapter1Part3Sub1() {
+  out<<"\nChapter 1.3:"<<endl<<endl;
   out << "System: The town\'s alarm bell rings. It only rings when enemies "
          "approach. You see Rosaline run towards you."
       << endl;
@@ -32,12 +33,14 @@ void Chapter1Part3::runChapter1Part3Sub1() {
          "you help me and our town again? "
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+  getline(in,input);
+  in.clear();
   out << "Annie: Sure! My brother will definitely help you." << endl;
   out << endl;
-  out << "You: 1. You can count on me. " << endl;
-  out << "2.There seems to be no choice.We are surrounded by bandits right now."
+  out << "You:\n1. You can count on me. " << endl;
+  out << "2.There seems to be no choice. We are surrounded by bandits right now."
       << endl;
-  out << endl;
   getline(in, input);
   checkInput(in);
   while (input != "1" && input != "2") {
@@ -56,6 +59,9 @@ void Chapter1Part3::runChapter1Part3Sub1() {
   out << "Arrogant Bandit: Now, you\'ve ruined my mood! Let this be your last "
          "lesson! Kill them, brothers."
       << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
 
   playerHp = player->getHealth(); //  record the hp before fight
   Mage *rosaline = new Mage("Rosaline");
@@ -97,6 +103,9 @@ void Chapter1Part3::runChapter1Part3Sub2() {
          "unit is on their way to our town as we speak."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Annie: What should we do right now?" << endl;
   out << "Town Mayor: We should first improve our town\'s defense and gather "
          "our fighters to prepare for the incoming battle. Can we ask you for "
@@ -117,6 +126,9 @@ void Chapter1Part3::runChapter1Part3Sub2() {
   out << endl;
   out << "You: Understood." << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Rosaline: Sounds great. This is my hometown, and I don\'t want to "
          "lose it. Let\'s get moving, everyone! We have no time to waste."
       << endl;
@@ -130,8 +142,8 @@ void Chapter1Part3::runChapter1Part3Sub2() {
          "the town and " << player->getName() << ", come with me."
       << endl;
   out << endl;
-  out << "You: 1. I\'m ready." << endl;
-  out << "You: 2. I\'m not ready yet…" << endl;
+  out << "You:\n1. I\'m ready." << endl;
+  out << "2. I\'m not ready yet…" << endl;
   getline(in, input);
   checkInput(in);
   while (input != "1" && input != "2") {
@@ -155,10 +167,13 @@ void Chapter1Part3::runChapter1Part3Sub2() {
       << endl;
   out << endl;
   out << "Bandit C: I\'m down! Let\'s lay this town to waste!" << endl;
-  out << "Bandit D: Silence! This is war… we must move on and take this "
+  out << "\nBandit D: Silence! This is war… we must move on and take this "
          "seriously."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Rosaline: (Whispering) That must be their main attack unit. They\'re "
          "in for a surprise..."
       << endl;
@@ -173,6 +188,9 @@ void Chapter1Part3::runChapter1Part3Sub2() {
   out << endl;
   out << "System: You encounter a group of bandits." << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
 
   playerHp = player->getHealth(); //  record the hp before fight
   Mage *rosaline = new Mage("Rosaline");
@@ -202,6 +220,9 @@ void Chapter1Part3::runChapter1Part3Sub2() {
 }
 
 void Chapter1Part3::runChapter1Part3Sub3() {
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Rosaline: … We finally won! It wouldn\'t have been as easy if we "
          "didn\'t plan ahead to ambush them. "
       << endl;
@@ -219,6 +240,9 @@ void Chapter1Part3::runChapter1Part3Sub3() {
     checkInput(in);
   }
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Bandit Captain: Where do you think you\'re going? This is just the "
          "beginning. Attack!"
       << endl;
@@ -257,6 +281,9 @@ void Chapter1Part3::runChapter1Part3Sub3() {
 }
 
 void Chapter1Part3::runChapter1Part3Sub4() {
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "System: You taste victory. However, the sounds of your fighting "
          "attracted more unwanted attention. You find yourself completely "
          "surrounded by bandits."
@@ -296,7 +323,9 @@ void Chapter1Part3::runChapter1Part3Sub4() {
       << endl;
   out << endl;
 
-  
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   playerHp = player->getHealth(); //  record the hp before fight
   Mage *rosaline = new Mage("Rosaline");
   for (int i = 0; i < player->getLevel(); i++) { // sync rosaline's level to player
@@ -325,6 +354,9 @@ void Chapter1Part3::runChapter1Part3Sub4() {
 }
 
 void Chapter1Part3::runChapter1Part3Sub5() {
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Frightened Bandit: Our boss isn\'t breathing… Is he dead? We\'re no "
          "match for them. Run!"
       << endl;
@@ -335,11 +367,14 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "rest of the bandits follow in suit."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Rosaline: Seems like they\'ve all left. I am exhausted right now. We "
          "should report back to the Mayor and get some rest."
       << endl;
   out << endl;
-  out << " You:" << endl;
+  out << "You:" << endl;
   out << "1. I could use some food; I\'m starving from all of this action."
       << endl;
   out << "2. I want to go back and make sure my sister is fine." << endl;
@@ -357,6 +392,9 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "come to an end. Everyone rushes to you and Rosaline."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Mayor: Hey Rosaline and “Your Name”, how\'d it go? The bandits "
          "suddenly started fleeing after hearing about the death of their "
          "leader. They\'re boss never showed up; did you defeat their leader?"
@@ -374,6 +412,9 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "get this celebration started."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Rosaline: Ok, see you." << endl;
   out << endl;
   out << "You:  See you later." << endl;
@@ -386,12 +427,14 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "than I could have imagined. Anyway, let\'s toast to OUR HEROES!"
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "System: The townsfolk all chug their drinks to show you their "
          "respect and appreciation."
       << endl;
   out << endl;
   out << "You:" << endl;
-  out << endl;
   out << "1. It wasn\'t a big deal. Let\'s cut the talking and start the "
          "celebration!"
       << endl;
@@ -409,12 +452,15 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "to lose you after already losing everything."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "You: Thank you Annie for always watching over me. I\'m not hurt at "
          "all, but we encountered more enemies than we could\'ve anticipated. "
          "Keeping you all safe pushed me to fight my best."
       << endl;
   out << endl;
-  out << "Rosaline: “Your Name” fights pretty well. He is the true hero of "
+  out << "Rosaline: "<<player->getName()<<" fights pretty well. He is the true hero of "
          "this town. I will forever be indebted to “Your Name” for keeping my "
          "treasure, my hometown, safe."
       << endl;
@@ -425,6 +471,9 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "it seems. As dawn approaches, a worrying message comes your way."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Soldier?: Report! Our city, Dicving, needs your town\'s support. The "
          "goblins surrounding our city are getting more aggressive, and we "
          "cannot hold them back any longer. Most of our soldiers are wounded "
@@ -440,6 +489,9 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "of Dicving need your help, just as much as we do."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Rosaline: What do you think, " << player->getName() << "?" << endl;
   out << endl;
   out << "You: " << endl;
@@ -462,6 +514,9 @@ void Chapter1Part3::runChapter1Part3Sub5() {
          "tomorrow to save the city of Dicving."
       << endl;
   out << endl;
+  out<<"Press any key to continue...\n\n";
+     getline(in,input);
+     in.clear();
   out << "Dicving Soldier: I sincerely thank you, heroes. I will lead you to "
          "our city tomorrow. Take the rest of the day to prepare for our "
          "journey."
