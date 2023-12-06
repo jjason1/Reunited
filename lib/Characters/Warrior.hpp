@@ -16,13 +16,7 @@ class Warrior : public Character {
         void heavyStrike(Character *);
         void warCry();
         void stormStrike(Character *);
-        void bloodDraining();
-        void rageBurst();
-        void taunt(Character *);
         void heartOfAWarrior();
-        void unstoppableFury();
-        void letTamBleed(Character *);
-        void doomOfTheEnemy(Character *);
 
         virtual void listSkills(ostream &);
         virtual int selectSkill(istream &);
