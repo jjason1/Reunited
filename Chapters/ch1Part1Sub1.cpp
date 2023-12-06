@@ -50,10 +50,10 @@ void Chapter1Part1::chooseClass() {
     out << "Please input class again (w for Warrior, m for Mage, s for Samurai): ";
     std::getline(in, input);
   }
-  if (input == "w") { // warrior not complete yet
-    //out << "\nYou have chosen Warrior as your class." << endl;
-    //Warrior *w = new Warrior(name);
-    //player = w;
+  if (input == "w") { 
+    out << "\nYou have chosen Warrior as your class." << endl;
+    Warrior *w = new Warrior(name);
+    player = w;
   } else if (input == "m") {
     out << "\nYou have chosen Mage as your class." << endl;
     Mage *m = new Mage(name);

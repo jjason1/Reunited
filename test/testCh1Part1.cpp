@@ -3,6 +3,7 @@
 #include "../lib/Characters/Mage.hpp"
 #include "../lib/Characters/Samurai.hpp"
 #include "../lib/Characters/Warrior.hpp"
+#include "../src/Characters/Warrior.cpp"
 #include "../Chapters/ch1Part1Sub1.cpp"
 #include "../Chapters/ch1Part1Sub2.cpp"
 #include "../Chapters/ch1Part1.cpp"

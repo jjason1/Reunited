@@ -143,7 +143,7 @@ TEST(testHelpClassSuite, testQuit) {
   out << "2- Load file instruction" << endl;
   out << "3- Combat instruction" << endl;
   out << "4- Quit" << endl;
-  out << "Quitting the menu." <<endl;
+  out << "Quitting the help menu." <<endl;
   EXPECT_TRUE(testout.str() == out.str());
 }
 
