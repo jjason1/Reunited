@@ -4,21 +4,19 @@ using namespace std;
 #include<string>
 
 Warrior::Warrior(string name) : Character::Character(name){
-    // Declare the increment
-    
+    // Declare the base stat(Hp, Def, Atk = 100 at LV1)
     int baseStats = 100;
     this->setHealth(baseStats);
     this->setDefense(baseStats);
     this->setAttack(baseStats);
-    // Declare the base stat(Hp, Def, Atk = 100 at LV1)
-
+    
     int hpInc,defInc,atkInc;
     hpInc =  defInc = 10;
     atkInc = 5;
     this->setIncrmnts(hpInc, defInc, atkInc);
 }
 
-    //Strike is normal attack.
+//Strike is normal attack.
 void Warrior::strike(Character *c) {
     cout << this->getName() << " used strike on " << c->getName() << "." << endl;
     c->takeDamage(this->getAttack());
@@ -34,34 +32,21 @@ void Warrior::heavyStrike(Character *c) {
 void Warrior::warCry() {
     int warCry = 2;
     this->setAttack(warCry * this->getAttack());
-    cout << this->getName() << " used war cry, you gained double attack in next three terms." << endl;
+    cout << this->getName() << " used war cry, dealing double damage!" << endl;
 }
 
 void Warrior::stormStrike(Character *c) {
-  
     int bonus = 2;
     cout << this->getName() << " used storm strike on " << c->getName() << "." << endl;
     c->takeDamage(this->getAttack() * bonus);
 }
 
-void Warrior::bloodDraining() {
-    double drain = 0.2;
-
-    this->setHealth(this->getHealth() + drain * this->getAttack());
-    cout<< this->getName() << " used blood draining, healing some hp."<<endl;
-}
-
-
-
 void Warrior::heartOfAWarrior() {
-    //in 5 turns:
     int baseHp=100;
     this->setHealth(1.2 * (baseHp + (this->getLevel()-1) * hpIncrmnt));
     cout << this->getName() << " used heart of a warrior, resulting in all hp being restored in addition to a 20% increase." << endl;
     
 }
-
-
 
 void Warrior::listSkills(ostream &out){
     out << "Skills:\n";
@@ -82,7 +67,7 @@ int Warrior::selectSkill(istream &in)
     getline(in,skill);
 
     bool checkInputCorrect = false;
-    for (int i = 1; i <= 8; i++) { // check the input is correct or not
+    for (int i = 1; i <= 5; i++) { // check the input is correct or not
         if (skill == to_string(i)) {
         checkInputCorrect = true;
         ss << skill;
@@ -94,7 +79,7 @@ int Warrior::selectSkill(istream &in)
     while (!checkInputCorrect) { // wrong output will go in here and input again
         cout << "Please choose a target again:" << endl;
         getline(in, skill);
-        for (int i = 1; i <= 8; i++) {
+        for (int i = 1; i <= 5; i++) {
             if (skill == to_string(i)) {
                 checkInputCorrect = true;
                 ss << skill;
@@ -130,7 +115,7 @@ void Warrior::useSkillOn(int skill, Character *c){
     }
     else if (skill == 5)
     {
-        cout << this->getName() << " chose heart of a Warrior." << endl;
+        cout << this->getName() << " chose heart of a warrior." << endl;
         this->heartOfAWarrior();
     }
     else{
