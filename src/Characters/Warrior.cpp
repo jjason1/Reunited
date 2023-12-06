@@ -1,7 +1,8 @@
 #include "../../lib/Characters/Warrior.hpp"
-using namespace std;
 #include<iostream>
 #include<string>
+#include <sstream>
+using namespace std;
 
 Warrior::Warrior(string name) : Character::Character(name){
     // Declare the base stat(Hp, Def, Atk = 100 at LV1)

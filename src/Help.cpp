@@ -70,6 +70,6 @@ void Help::display() {
         << endl;
   }
   else if (std::strcmp(input.c_str(), "4") == 0) { // back to menu will be implement in menu fuction call menu display again
-    out << "Quitting the menu." <<endl;
+    out << "Quitting the help menu." <<endl;
   }
 }
