@@ -1,17 +1,28 @@
-#ifndef WARRIOR_H
-#define WARRIOR_H
-#include <string>
+#ifndef WARRIOR_HPP
+#define WARRIOR_HPP
+
 #include "Character.hpp"
-using std::string;
+#include "../Enemies/Enemy.hpp"
+#include <iostream>
+#include "../checkInput.h"
+using namespace std;
 
-class Warrior: public Character
-{
-private:
-    int rageBar;
+class Warrior : public Character {
+    private:
+        int rageBar = 0;
+    public:
+        Warrior(string);
+        void strike(Character *);
+        void heavyStrike(Character *);
+        void warCry();
+        void stormStrike(Character *);
+        void heartOfAWarrior();
 
-public:
-    Warrior(string name);
-    ~Warrior();
+        virtual void listSkills(ostream &);
+        virtual int selectSkill(istream &);
+        virtual void useSkillOn(int, Character *);
+        virtual void levelUp();
+
 };
 
-#endif
+#endif 

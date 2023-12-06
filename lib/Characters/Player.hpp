@@ -1,7 +1,7 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
-#include "../Characters/Character.hpp"
+#include "Character.hpp"
 
 #include <iostream>
 #include <string>
