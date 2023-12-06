@@ -26,6 +26,7 @@ add_executable(runAllTests
     testStartNewGame.cpp 
     testshowDevelopers.cpp
     testHelpClass.cpp
+    testMenuClass.cpp
 )
 
 target_link_libraries(runAllTests gmock gtest gtest_main)
