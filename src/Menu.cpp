@@ -6,37 +6,31 @@ Menu::Menu(istream& in, ostream& out) : in(in), out(out), shouldQuit(false)  {}
 
 Menu::~Menu() {};
 
-
 void Menu::displayHelpMenu() {
-    Help help(in, out);
-    help.display();
-    
+    Help *helpMenu=new Help(in, out);
+    helpMenu->display();
+    delete helpMenu;
 }
 
 void Menu::showDevelopers() {
-    // Implementation of showDevelopers
+    // Display developers.
     ::showDevelopers(out);
 }
 
 void Menu::startNewGame() {
-    // Implementation of startNewGame
-    out << "Starting a new game." << endl;
-    StartNewGame* newGame = new StartNewGame(out, in);
+    // Start a brand new game.
+    out << "Starting a new game..." << endl;
+    StartNewGame *newGame = new StartNewGame(out, in);
     newGame->start();
-    
-}
-
-void Menu::loadGameFile() {
-    // Implementation of loadGameFile
+    delete newGame;
 }
 
 void Menu::displayMenu() {
     string input;
     out << "1. Start New Game" << endl;
-    out << "2. Load Game" << endl;
-    out << "3. Show Developers" << endl;
-    out << "4. Help" << endl;
-    out << "5. Quit" << endl;
+    out << "2. Show Developers" << endl;
+    out << "3. Help" << endl;
+    out << "4. Quit" << endl;
     out << "Enter your choice: ";
     getline(in, input);
 
@@ -44,8 +38,8 @@ void Menu::displayMenu() {
         throw runtime_error("Input failure.");
     }
 
-    while (input != "1" && input != "2" && input != "3" && input != "4" && input != "5") {
-        out << "Invalid option. Please input again:" << endl;
+    while (input != "1" && input != "2" && input != "3" && input != "4") {
+        out << "Invalid option. Please input again: " << endl;
         in.clear(); 
         in.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
         getline(in, input);
@@ -57,17 +51,15 @@ void Menu::displayMenu() {
     if (input == "1") {
         startNewGame();
     } else if (input == "2") {
-        loadGameFile();
-    } else if (input == "3") {
         showDevelopers();
-    } else if (input == "4") {
+    } else if (input == "3") {
         displayHelpMenu();
-    } else if (input == "5") {
+    } else if (input == "4") {
         quit();
     }
 }
 
 void Menu::quit() {
-    out << "quiting the game." << endl;
+    out << "\nQuiting the game..." << endl;
     shouldQuit = true;  
 }

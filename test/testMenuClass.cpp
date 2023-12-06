@@ -8,15 +8,14 @@ TEST(MenuClassSuite, testNewMenu){
 }
 
 TEST(MenuClassSuite, testMenuDisplay){
-    stringstream in("5\n");
+    stringstream in("4\n");
     stringstream testout;
 
     string expectedMenu = "1. Start New Game\n"
-    "2. Load Game\n"
-    "3. Show Developers\n"
-    "4. Help\n"
-    "5. Quit\n"
-    "Enter your choice: quiting the game.\n";
+    "2. Show Developers\n"
+    "3. Help\n"
+    "4. Quit\n"
+    "Enter your choice: \nQuiting the game...\n";
     
 
     Menu *myMenu = new Menu(in, testout);

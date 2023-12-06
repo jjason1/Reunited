@@ -14,6 +14,7 @@ class StartNewGame {
 
   public:
     StartNewGame(std::ostream&, std::istream& in);
+    ~StartNewGame(){};
     void start();
 };
 

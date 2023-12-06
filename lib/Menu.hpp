@@ -7,26 +7,23 @@ using namespace std;
 #include "showDevelopers.h"
 #include "StartNewGame.hpp"
 #include "Chapters/Chapter.hpp"
-class Menu {
-    bool shouldQuit;
-private:
-    istream& in;
-    ostream& out;
-    int choice;
-    
-public:
-    // Constructor
-    Menu(istream& , ostream&);
-    ~Menu();
-    
-    void displayHelpMenu();
-    void showDevelopers();
-    void startNewGame();
-    void loadGameFile();
-    void displayMenu();
-    void quit();
 
-    bool isQuitCalled() const { return shouldQuit; }
+class Menu {
+    private:
+        bool shouldQuit;
+        istream& in;
+        ostream& out;
+        int choice;
+    
+    public:
+        Menu(istream& , ostream&);
+        ~Menu();
+        void displayHelpMenu();
+        void showDevelopers();
+        void startNewGame();
+        void displayMenu();
+        void quit();
+        bool isQuitCalled() const { return shouldQuit; }
 };
 
 #endif // MENU_HPP
