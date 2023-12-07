@@ -82,10 +82,8 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
-
-  Link to the screenshots:
-  [Screenshot folder link](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot)
+  A link to our screenshots folder is given below:
+  [Screenshot Folder Link](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshots)
  ## Installation/Usage
  Use the following instructions to run our application on terminal:
  First, clone our repo and go to the root directory.
@@ -100,8 +98,8 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  ```
  Finally, you can use the command below to run our game.
  ```
-$ ./bin/runMain
-```
+ $ ./bin/runMain
+ ```
  ## Testing
- Our project was tested and validated using unit tests. The addition of every new feature within our program was accompanied by multiple tests. For example, our Menu class made use ostream and istream objects to validate our inputs and outputs. Additionally, we designed our tests to cover all of our code. Thus, we were able to test every feature introduced for our game.
+ Our project was tested and validated using unit tests. The addition of every new feature within our program was accompanied by multiple tests. For example, our Menu class made use of ostream and istream objects to validate our inputs and outputs. Additionally, we designed our tests to cover all of our code. Thus, we were able to test every feature introduced for our game.
  
