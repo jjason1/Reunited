@@ -12,8 +12,7 @@ using std::ostream;
 using std::string;
 
 class Chapter1Part1: public SubChapter {
-private:
-
+  
 public:
   Chapter1Part1(Character *,ostream &outout, std::istream &inin);
   void runChapter1Part1Sub1();
