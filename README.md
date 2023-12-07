@@ -85,6 +85,20 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
+ First, clone our repo and go to the root directory.
+ ```
+ $ git clone https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379.git
+ $ cd final-project-akhan197-bli181-cchua042-jlin379
+ ```
+ Second, cmake and make the files so that you can generate the executable file for playing.
+ ```
+ $ cmake .
+ $ make
+ ```
+ Finally, you can use command like below to run our game.
+ ```
+$ ./bin/runMain
+```
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
