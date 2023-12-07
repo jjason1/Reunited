@@ -19,7 +19,6 @@ class Chapter {
     public:
       Chapter(Character *, ostream &, istream &);
       virtual void runChapter();
-      void setPlayer(Player *);
       string getName();
       void setPlayer(Character *);
       Character * getPlayer();
