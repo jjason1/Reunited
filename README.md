@@ -87,7 +87,21 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
   Link to the screenshots:
   [Screenshot folder link](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot)
  ## Installation/Usage
- > Instructions on installing and running your application
+ Use the following instructions to run our application on terminal:
+ First, clone our repo and go to the root directory.
+ ```
+ $ git clone https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379.git
+ $ cd final-project-akhan197-bli181-cchua042-jlin379
+ ```
+ Second, cmake and make the files so that you can generate the executable file for playing.
+ ```
+ $ cmake .
+ $ make
+ ```
+ Finally, you can use the command below to run our game.
+ ```
+$ ./bin/runMain
+```
  ## Testing
  Our project was tested and validated using unit tests. The addition of every new feature within our program was accompanied by multiple tests. For example, our Menu class made use ostream and istream objects to validate our inputs and outputs. Additionally, we designed our tests to cover all of our code. Thus, we were able to test every feature introduced for our game.
  
