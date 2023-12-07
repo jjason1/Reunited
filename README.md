@@ -83,6 +83,7 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+
   Link to the screenshots:
   [Screenshot folder link](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot)
  ## Installation/Usage
