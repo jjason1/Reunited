@@ -82,18 +82,18 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+  Screenshots of the input/output after running your application
  ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot01.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot02.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot03.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot04.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot05.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot06.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot07.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot08.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot09.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot10.png)
-> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot11.png)
+ ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot02.png)
+![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot03.png)
+ ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot04.png)
+ ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot05.png)
+ ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot06.png)
+![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot07.png)
+![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot08.png)
+![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot09.png)
+![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot10.png)
+![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot11.png)
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
