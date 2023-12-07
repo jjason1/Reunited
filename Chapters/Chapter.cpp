@@ -12,8 +12,6 @@ Chapter::Chapter(Character *player,
 
 void Chapter::runChapter() {}
 
-void Chapter::setPlayer(Player *newPlayer) { player = newPlayer; }
-
 string Chapter::getName() { return name; }
 
 void Chapter::setPlayer(Character *newPlayer) { player = newPlayer; }
