@@ -84,6 +84,16 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  ## Screenshots
  > Screenshots of the input/output after running your application
  ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot01.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot02.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot03.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot04.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot05.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot06.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot07.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot08.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot09.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot10.png)
+> ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot11.png)
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
