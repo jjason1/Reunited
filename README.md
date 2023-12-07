@@ -84,8 +84,7 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
- 
+ Use the following instructions to run our application on terminal.
  First, clone our repo and go to the root directory.
  ```
  $ git clone https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379.git
