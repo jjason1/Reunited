@@ -86,5 +86,5 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ Our project was tested and validated using unit tests. The addition of every new feature within our program was accompanied by multiple tests. For example, our Menu class made use ostream and istream objects to validate our inputs and outputs. Additionally, we designed our tests to cover all of our code. Thus, we were able to test every feature introduced for our game.
  
