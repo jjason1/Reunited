@@ -84,7 +84,7 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- Use the following instructions to run our application on terminal.
+ Use the following instructions to run our application on terminal:
  First, clone our repo and go to the root directory.
  ```
  $ git clone https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379.git
@@ -95,7 +95,7 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  $ cmake .
  $ make
  ```
- Finally, you can use command like below to run our game.
+ Finally, you can use the command below to run our game.
  ```
 $ ./bin/runMain
 ```
