@@ -83,7 +83,7 @@ Considering the Interface-Segregation Principle, we wanted our design to not for
  
  ## Screenshots
  > Screenshots of the input/output after running your application
- ![Screenshot01]([../Screenshot/Screenshot01.png)
+ ![Screenshot01](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshot/Screenshot01.png)
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
