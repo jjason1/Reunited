@@ -76,6 +76,8 @@ When considering the Open-Closed Principle, we decided to create interfaces for 
 After considering the Liskov-Substitution Principle, we chose to design interfaces for our chapters and subchapters. Our project makes use of these interfaces in our functions, so that any instances of their subtypes may be used, without altering the correctness of our project. This allows us to write code that is more flexible and correct, as it ensures the correctness of our program regardless of whether we use base class or subtype instances.
 
 Considering the Interface-Segregation Principle, we wanted our design to not force the user to depend on methods or interfaces they wouldn’t need to use. To solve this consideration, we designed a Character Interface that our Player and Enemy classes would derive from. From there, our Player class would implement its own functionality, while the Enemy class would implement its specific functionality. Players would now be distinct from enemies, and each could rely on its own specific functionality. This allows us to only implement what is necessary and remove unrequired implementations. Through this change, our code is now more clear and efficient.
+
+ > ## Final Deliverable
  
  ## Screenshots
   A link to our screenshots folder is given here:
