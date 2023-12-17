@@ -1,6 +1,8 @@
 #include "gtest/gtest.h"
-#include "../src/Enemies/Enemy.cpp"
+#include <ctime>
+#include <cstdlib>
 #include <sstream>
+#include "../src/Enemies/Enemy.cpp"
 
 TEST(EnemyClassSuite, testNewEnemy){
     int level=1;
@@ -18,8 +20,8 @@ TEST(EnemyClassSuite, testGetName){
 TEST(EnemyClassSuite, testGetStatus){
     //Arrange.
     int level=1;
-    string name="Boyi";
-    string status="\nBoyi's Status: \n"
+    string name="Aamir";
+    string status="\nAamir's Status: \n"
                   "--------------------------\n"
                   "Level   = 1\n"
                   "Health  = 0\n"
@@ -113,8 +115,23 @@ TEST(EnemyClassSuite, testTakeDamage){
     EXPECT_EQ(e->getHealth(),90);
 }
 
+TEST(EnemyClassSuite, testNormalAttack){
+    //Arrange.
+    Enemy *e=new Enemy("Aamir", 1);
+    Character *c=new Character("Ryan");
+    e->setAttack(25);  //Setting the enemy's atk.
+    c->setHealth(100); //Setting the character's hp.
+    //Act.
+    e->normalAttack(c);
+    //Assert.
+    EXPECT_EQ(c->getHealth(),75);
+}
+
 int main(int argc, char **argv)
 {
+    //Set the random number seed.
+    srand(static_cast<unsigned int>(time(0)));
+
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

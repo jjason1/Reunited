@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <fstream>
-
-#include "../Enemies/Enemy.hpp"
+#include "Character.hpp"
+#include <istream>
+#include <ostream>
 
 using namespace std;
 
@@ -38,8 +39,9 @@ public:
     void setMovable(bool);
 
     virtual void listSkills(ostream &);
-    virtual int selectSkill();
-    virtual void useSkillOn(int, Enemy *);
+    virtual int selectSkill(istream &);
+    virtual void useSkillOn(int, Character *);
+    virtual void levelUp();
 };
 
 #endif

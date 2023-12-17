@@ -1,6 +1,5 @@
 #include "../../lib/Characters/Character.hpp"
 #include <assert.h>
-
 using namespace std;
 
 Character::Character(string name)
@@ -94,9 +93,14 @@ void Character::takeDamage(int dmg)
     this->health -= dmg;
 }
 
-void Character::listSkills(ostream &out) {}
-int Character::selectSkill()
-{
-    return 0;
+void Character::levelUp(){
+    this->level++;
 }
-void Character::useSkillOn(int skill, Enemy *e) {}
+
+void Character::listSkills(ostream &out) {}
+
+int Character::selectSkill(istream &in){
+    return 1;
+}
+void Character::useSkillOn(int skill, Character *c) {}
+
