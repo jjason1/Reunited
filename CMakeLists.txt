@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.2)
-project(unit-test-reunited)
+project(unit-tests-reunited)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
@@ -16,4 +16,5 @@ include_directories(
 )
 
 add_subdirectory(lib)
+add_subdirectory(src)
 add_subdirectory(test)

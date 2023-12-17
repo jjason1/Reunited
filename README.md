@@ -7,18 +7,22 @@
 * Our language of choice for this project is C++. Additionally, we'll be using Github as our version control system to manage our project throughout its lifecycle.
 * Input Will Include:
   * In Menu:
-    * Start game
-    * Continue game from save file
-    * Developer names
+    * Start New Game
+    * Developer Names
+    * Help
+    * Quit
   * In Game (But not in battle):
-    * Move to another area
+    * Move to another location
     * Chat with others (NPCs)
-    * Show status (Hp, def, etc.)
-  * Start battle
+    * Show status (Hp, Def, Etc.)
+  * Start Battle
+    * Once Defeated:
     * Escape/run
+    * Restart combat
     * In Battle:
     * Target enemy
-    * Escape/run
+    * Select skill
+    * Use skill
   * Between Chapters:
     * Save data
 * Output Will Include:
@@ -38,7 +42,6 @@
     * Story line will be separated into chapters with savepoints at the start of each chapter
     * Enemy AI/Boss AI
     * Enemy-scaling (Enemies of different levels have different statuses.)
-    * Character experience system
     * Combat system (How damage is calculated.)
     * Different character classes (Around 3 types.)
   * Potential Features:
@@ -62,7 +65,7 @@ This graphic illustrates the screen layouts of each of the screens that users wi
 
 ## Class Diagram
 ![Class Diagram](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Design_Doc/Reunited_%20UML%20Diagrams.png)
-We've presented two core classes, namely the "Player" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. For example, we've added the LoadFile and SaveFile classes to manage save files within our game. We've also added the Combat class to handle the combat present throughout our game. As the graphic above illustrates, we've included the PlayerTeam and EnemyTeam classes to implement team-based gameplay. These are a few examples of the classes we've designed for our game. Refer to the graphic above for more information regarding each class.
+We've presented two core classes, namely the "Player" and "Enemy" classes. Various other derived classes have been created, each incorporating distinct functions and/or variables. Additionally, we've integrated several supplementary classes to enhance the user's gaming experience. For example, we've added the Menu class to provide the user with a simple interface to navigate our game options. We've also added the Combat class to handle the combat throughout our game. As the graphic above illustrates, we've included the PlayerTeam and EnemyTeam classes to implement team-based gameplay. These are a few examples of the classes we've designed for our game. Refer to the graphic above for more information regarding each class.
  
  > ## Phase III
 
@@ -73,18 +76,28 @@ When considering the Open-Closed Principle, we decided to create interfaces for 
 After considering the Liskov-Substitution Principle, we chose to design interfaces for our chapters and subchapters. Our project makes use of these interfaces in our functions, so that any instances of their subtypes may be used, without altering the correctness of our project. This allows us to write code that is more flexible and correct, as it ensures the correctness of our program regardless of whether we use base class or subtype instances.
 
 Considering the Interface-Segregation Principle, we wanted our design to not force the user to depend on methods or interfaces they wouldn’t need to use. To solve this consideration, we designed a Character Interface that our Player and Enemy classes would derive from. From there, our Player class would implement its own functionality, while the Enemy class would implement its specific functionality. Players would now be distinct from enemies, and each could rely on its own specific functionality. This allows us to only implement what is necessary and remove unrequired implementations. Through this change, our code is now more clear and efficient.
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
+
+ > ## Final Deliverable
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+  A link to our screenshots folder is given here:
+  [Screenshots Folder Link](https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379/blob/master/Screenshots)
  ## Installation/Usage
- > Instructions on installing and running your application
+ Use the following instructions to run our application on terminal:
+ First, clone our repo and go to the root directory.
+ ```
+ $ git clone https://github.com/cs100/final-project-akhan197-bli181-cchua042-jlin379.git
+ $ cd final-project-akhan197-bli181-cchua042-jlin379
+ ```
+ Second, cmake and make the files so that you can generate the executable file for playing.
+ ```
+ $ cmake .
+ $ make
+ ```
+ Finally, you can use the command below to run our game.
+ ```
+ $ ./bin/runMain
+ ```
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ Our project was tested and validated using unit tests. The addition of every new feature within our program was accompanied by multiple tests. For example, our Menu class made use of ostream and istream objects to validate our inputs and outputs. Additionally, we designed our tests to cover all of our code. Thus, we were able to test every feature introduced for our game.
  

@@ -42,17 +42,18 @@ void Chapter1Part1::jobDescription() {
 void Chapter1Part1::chooseClass() {
   out << "What character type would you like?" << endl;
   jobDescription();
+  out<<"\nInput here: "<<endl;
   std::getline(in, input);
   checkInput(in);
   while (input != "w" && input != "m" && input != "s") {
 
-    out << "Please input class again(w for Warrior, m for Mage, s for Samurai):";
+    out << "Please input class again (w for Warrior, m for Mage, s for Samurai): ";
     std::getline(in, input);
   }
-  if (input == "w") { // warrior not complete yet
-    //out << "\nYou have chosen Warrior as your class." << endl;
-    //Warrior *w = new Warrior(name);
-    //player = w;
+  if (input == "w") { 
+    out << "\nYou have chosen Warrior as your class." << endl;
+    Warrior *w = new Warrior(name);
+    player = w;
   } else if (input == "m") {
     out << "\nYou have chosen Mage as your class." << endl;
     Mage *m = new Mage(name);
@@ -74,7 +75,6 @@ void Chapter1Part1::runChapter1Part1Sub1() {
       << endl;
   std::getline(in, name);
   checkInput(in);
-  
 
   chooseClass();
 
